@@ -80,16 +80,6 @@ import "../styles/tippy.css";
     margin-top: var(--s2);
   }
 
-  .card-img {
-    max-width: 100%;
-    max-height: 100%;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    object-position: top center;
-    margin: 0 auto;
-  }
-
   article {
     color: var(--color-bone);
     background-color: var(--color-fern);
@@ -98,7 +88,7 @@ import "../styles/tippy.css";
     flex-wrap: wrap;
     justify-content: center;
     align-items: first baseline;
-    max-width: 80ch;
+    max-width: min(80ch, calc(100% - 2rem));
     margin: 0 auto;
     padding: 2rem;
     border-radius: 1rem;
@@ -139,6 +129,7 @@ import "../styles/tippy.css";
     color: var(--color-fern);
     font-size: var(--s-1);
     font-weight: 600;
+    text-shadow: none;
     letter-spacing: 0.1em;
     border-radius: 0.5rem;
     position: absolute;
@@ -179,7 +170,7 @@ import "../styles/tippy.css";
       return template?.innerHTML || "";
     },
     allowHTML: true,
-    maxWidth: "33.333vh",
+    maxWidth: "none",
     duration: [1000, 400],
     interactive: true,
     inertia: true,
