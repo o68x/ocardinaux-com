@@ -1,59 +1,184 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import CardImg from "../components/CardImg.astro";
-import CardWide from "../assets/images/Carte-webheader-wide.webp";
-import CardNarrow from "../assets/images/Carte-webheader-narrow.webp";
+import cardWide from "../assets/images/Carte-webheader-wide.webp";
+import cardNarrow from "../assets/images/Carte-webheader-narrow.webp";
+import mrHome from "../assets/images/mr-home.webp";
+import jpHome from "../assets/images/jp-home.webp";
+import a5eHome from "../assets/images/a5e-home.webp";
+import "../styles/tippy.css";
 ---
 
 <Layout title="ocardinaux.com">
   <main>
-		<CardImg mobileImgUrl={CardNarrow} desktopImgUrl={CardWide} alt="ocardinaux.com" />
-		<article class="content">
-			<h1 class="visually-hidden">Présentation</h1>
-			<p class="large">
-			Je construis des sites internet.
-			</p>
-			<p>
-				Par exemple <a href="https://michelerouhet.fr">michelerouhet.fr</a>, <a href="https://janickponcin.com">janickponcin.com</a> et <a href="https://artistesdu5.fr">artistesdu5.fr</a>.
-			</p>
-			</article>
-			<div class="footer">
-				copyright 2024 © ocardinaux.com
-			</div>
+    <CardImg
+      mobileImgUrl={cardNarrow}
+      desktopImgUrl={cardWide}
+      alt="ocardinaux.com"
+    />
+    <article class="content">
+      <h1 class="visually-hidden">Présentation</h1>
+      <h2>Je construis des sites internet.</h2>
+      <div>
+        Par exemple <a href="https://michelerouhet.fr" data-img="mr-home" target="_blank"
+          >michelerouhet.fr</a
+        >, <a href="https://janickponcin.com" data-img="jp-home" target="_blank"
+          >janickponcin.com</a
+        > et <a href="https://artistesdu5.fr" data-img="a5e-home" target="_blank"
+          >artistesdu5.fr</a
+        >.
+      </div>
+    </article>
+    <div style="display: none;">
+      <div id="mr-home">
+        <div class="screenshot">
+          <Image
+            src={mrHome}
+            alt="Page d'accueil du site michelerouhet.fr"
+            loading="eager"
+          />
+          <a href="https://michelerouhet.fr" target="_blank">Visiter</a>
+        </div>
+      </div>
+      <div id="jp-home">
+        <div class="screenshot">
+          <Image
+            src={jpHome}
+            alt="Page d'accueil du site janickponcin.com"
+            loading="eager"
+          />
+          <a href="https://janickponcin.com" target="_blank">Visiter</a>
+        </div>
+      </div>
+      <div id="a5e-home">
+        <div class="screenshot">
+          <Image
+            src={a5eHome}
+            alt="Page d'accueil du site artistesdu5.fr"
+            loading="eager"
+          />
+          <a href="https://artistesdu5.fr" target="_blank">Visiter</a>
+        </div>
+      </div>
+    </div>
+    <article class="contact">
+      <h1 class="visually-hidden">Contact</h1>
+      <h2>Vous pouvez me contacter :</h2>
+      <div>
+        par mail à l'adresse <a href="mailto:olivier@ocardinaux.com"
+          >olivier@ocardinaux.com</a
+        > ou par téléphone au <span class='tel"'>06 89 63 80 14.</span>
+      </div>
+    </article>
+    <div class="footer">v1.0.1</div>
   </main>
 </Layout>
 
 <style>
-	.card-img {
-		max-width: 100%;
-		max-height: 100%;
-		width: 100%;
-		height: auto;
-		object-fit: contain;
-		object-position: top center;
-		margin: 0 auto;
-	}
+  main > * + * {
+    margin-top: var(--s2);
+  }
 
-	.content {
-		color: var(--color-bg);
-		background-color: var(--color-text);
-		margin: 0 1rem;
-		padding: 2rem;
-		border-radius: 1rem;
-		font-size: var(--s2);
-		box-shadow: inset -5px -5px 10px 0px rgba(255, 255, 255, 0.5), inset 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+  .card-img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: top center;
+    margin: 0 auto;
+  }
 
-		& > * {
-			max-width: 65rem;
-			margin: 0 auto;
-		}
-	}
-	.large {
-		font-size: var(--s4);
-	}
+  article {
+    color: var(--color-bone);
+    background-color: var(--color-fern);
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: first baseline;
+    margin: 0 1rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    font-size: var(--s2);
+    box-shadow:
+      inset -5px -5px 10px 0px rgba(255, 255, 255, 0.5),
+      inset 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
 
-	.footer {
-		margin: 0 1rem;
-		padding: 1rem;
-	}
+    & > * {
+      flex-grow: 1;
+      flex-basis: calc((30rem - 100%) * 999);
+      max-width: max(400px, 33vw);
+      text-wrap: balance;
+      /* margin: 0 auto; */
+    }
+  }
+  h2 {
+    display: block;
+    font-size: var(--s4);
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .tel {
+    white-space: nowrap;
+  }
+
+  .footer {
+    margin: 0 1rem;
+    padding: 1rem;
+  }
+
+  .screenshot a {
+    display: block;
+    padding: var(--s-4) var(--s-2);
+    background-color: var(--color-bone);
+    color: var(--color-fern);
+    font-size: var(--s-1);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    border-radius: 0.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, calc(var(--s-2) * -1));
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: var(--color-fern);
+      color: var(--color-bone);
+    }
+  }
+
+  .tippy-content {
+    position: relative;
+    padding: 5px 9px;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
 </style>
+
+<script>
+  import tippy from "tippy.js";
+
+  const imageLinks = document.querySelectorAll("[data-img]");
+
+  tippy(imageLinks, {
+    content(ref) {
+      const id = (ref as HTMLAnchorElement).dataset.img || "";
+      console.log("ref:", id);
+      const template = document.getElementById(id);
+      return template?.innerHTML || "";
+    },
+    allowHTML: true,
+    duration: [800, 400],
+    interactive: true,
+    inertia: true,
+  });
+</script>
