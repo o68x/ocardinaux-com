@@ -1,0 +1,39 @@
+@import url('./reset.css');
+@import url('./webfontsKit.css');
+
+:root {
+  --ff-base: 'TTCottons-Regular', sans-serif;
+  --color-bg-rgb: 235, 226, 209;
+  --color-bg: rgb(var(--color-bg-rgb));
+  --color-text-rgb: 85, 144, 98;
+  --color-text: rgb(var(--color-text-rgb));
+  --color-highlight: #E6D52E;
+  --s-5: clamp(0.4506rem, 0.4527rem + -0.0027vw, 0.4521rem);
+  --s-4: clamp(0.5425rem, 0.5353rem + 0.0359vw, 0.5632rem);
+  --s-3: clamp(0.651rem, 0.6326rem + 0.0921vw, 0.704rem);
+  --s-2: clamp(0.7813rem, 0.7469rem + 0.1717vw, 0.88rem);
+  --s-1: clamp(0.9375rem, 0.881rem + 0.2826vw, 1.1rem);
+  --s0: clamp(1.125rem, 1.038rem + 0.4348vw, 1.375rem);
+  --s1: clamp(1.35rem, 1.2217rem + 0.6413vw, 1.7188rem);
+  --s2: clamp(1.62rem, 1.4362rem + 0.919vw, 2.1484rem);
+  --s3: clamp(1.944rem, 1.6861rem + 1.2896vw, 2.6855rem);
+  --s4: clamp(2.3328rem, 1.9766rem + 1.7811vw, 3.3569rem);
+  --s5: clamp(2.7994rem, 2.3135rem + 2.4292vw, 4.1962rem);
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--ff-base);
+  font-size: clamp(16px, calc(1rem + 0.333vw), 22px);
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

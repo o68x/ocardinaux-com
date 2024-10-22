@@ -1,0 +1,105 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3655688, 2018-10-15T18:11:27-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: TTCottons-Thin by TypeType
+ * URL: https://www.myfonts.com/fonts/type-type/tt-cottons/thin/
+ *
+ * Webfont: TTCottons-Bold by TypeType
+ * URL: https://www.myfonts.com/fonts/type-type/tt-cottons/bold/
+ *
+ * Webfont: TTCottons-BlackItalic by TypeType
+ * URL: https://www.myfonts.com/fonts/type-type/tt-cottons/black-italic/
+ *
+ * Webfont: TTCottons-ExtraLight by TypeType
+ * URL: https://www.myfonts.com/fonts/type-type/tt-cottons/extra-light/
+ *
+ * Webfont: TTCottons-Black by TypeType
+ * URL: https://www.myfonts.com/fonts/type-type/tt-cottons/black/
+ *
+ * Webfont: TTCottons-BoldItalic by TypeType
+ * URL: https://www.myfonts.com/fonts/type-type/tt-cottons/bold-italic/
+ *
+ * Webfont: TTCottons-LightItalic by TypeType
+ * URL: https://www.myfonts.com/fonts/type-type/tt-cottons/light-italic/
+ *
+ * Webfont: TTCottons-MediumItalic by TypeType
+ * URL: https://www.myfonts.com/fonts/type-type/tt-cottons/medium-italic/
+ *
+ * Webfont: TTCottons-ExtraLightItalic by TypeType
+ * URL: https://www.myfonts.com/fonts/type-type/tt-cottons/extra-light-italic/
+ *
+ * Webfont: TTCottons-Italic by TypeType
+ * URL: https://www.myfonts.com/fonts/type-type/tt-cottons/italic/
+ *
+ * Webfont: TTCottons-Light by TypeType
+ * URL: https://www.myfonts.com/fonts/type-type/tt-cottons/light/
+ *
+ * Webfont: TTCottons-Medium by TypeType
+ * URL: https://www.myfonts.com/fonts/type-type/tt-cottons/medium/
+ *
+ * Webfont: TTCottons-Regular by TypeType
+ * URL: https://www.myfonts.com/fonts/type-type/tt-cottons/regular/
+ *
+ * Webfont: TTCottons-ThinItalic by TypeType
+ * URL: https://www.myfonts.com/fonts/type-type/tt-cottons/thin-italic/
+ *
+ *
+ * License: https://www.myfonts.com/viewlicense?type=web&buildid=3655688
+ * Licensed pageviews: 20,000
+ * Webfonts copyright: Copyright (c) 2015 by Typetype. Designer Ivan Gladkikh, technical designer Maria Mizeritskaya. All rights reserved.
+ *
+ * © 2018 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+/* @import url("//hello.myfonts.net/count/37c808"); */
+
+
+@font-face {font-family: 'TTCottons-Thin';src: url('../assets/webfonts/37C808_0_0.eot');src: url('../assets/webfonts/37C808_0_0.eot?#iefix') format('embedded-opentype'),url('../assets/webfonts/37C808_0_0.woff2') format('woff2'),url('../assets/webfonts/37C808_0_0.woff') format('woff'),url('../assets/webfonts/37C808_0_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'TTCottons-Bold';src: url('../assets/webfonts/37C808_1_0.eot');src: url('../assets/webfonts/37C808_1_0.eot?#iefix') format('embedded-opentype'),url('../assets/webfonts/37C808_1_0.woff2') format('woff2'),url('../assets/webfonts/37C808_1_0.woff') format('woff'),url('../assets/webfonts/37C808_1_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'TTCottons-BlackItalic';src: url('../assets/webfonts/37C808_2_0.eot');src: url('../assets/webfonts/37C808_2_0.eot?#iefix') format('embedded-opentype'),url('../assets/webfonts/37C808_2_0.woff2') format('woff2'),url('../assets/webfonts/37C808_2_0.woff') format('woff'),url('../assets/webfonts/37C808_2_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'TTCottons-ExtraLight';src: url('../assets/webfonts/37C808_3_0.eot');src: url('../assets/webfonts/37C808_3_0.eot?#iefix') format('embedded-opentype'),url('../assets/webfonts/37C808_3_0.woff2') format('woff2'),url('../assets/webfonts/37C808_3_0.woff') format('woff'),url('../assets/webfonts/37C808_3_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'TTCottons-Black';src: url('../assets/webfonts/37C808_4_0.eot');src: url('../assets/webfonts/37C808_4_0.eot?#iefix') format('embedded-opentype'),url('../assets/webfonts/37C808_4_0.woff2') format('woff2'),url('../assets/webfonts/37C808_4_0.woff') format('woff'),url('../assets/webfonts/37C808_4_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'TTCottons-BoldItalic';src: url('../assets/webfonts/37C808_5_0.eot');src: url('../assets/webfonts/37C808_5_0.eot?#iefix') format('embedded-opentype'),url('../assets/webfonts/37C808_5_0.woff2') format('woff2'),url('../assets/webfonts/37C808_5_0.woff') format('woff'),url('../assets/webfonts/37C808_5_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'TTCottons-LightItalic';src: url('../assets/webfonts/37C808_6_0.eot');src: url('../assets/webfonts/37C808_6_0.eot?#iefix') format('embedded-opentype'),url('../assets/webfonts/37C808_6_0.woff2') format('woff2'),url('../assets/webfonts/37C808_6_0.woff') format('woff'),url('../assets/webfonts/37C808_6_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'TTCottons-MediumItalic';src: url('../assets/webfonts/37C808_7_0.eot');src: url('../assets/webfonts/37C808_7_0.eot?#iefix') format('embedded-opentype'),url('../assets/webfonts/37C808_7_0.woff2') format('woff2'),url('../assets/webfonts/37C808_7_0.woff') format('woff'),url('../assets/webfonts/37C808_7_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'TTCottons-ExtraLightItalic';src: url('../assets/webfonts/37C808_8_0.eot');src: url('../assets/webfonts/37C808_8_0.eot?#iefix') format('embedded-opentype'),url('../assets/webfonts/37C808_8_0.woff2') format('woff2'),url('../assets/webfonts/37C808_8_0.woff') format('woff'),url('../assets/webfonts/37C808_8_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'TTCottons-Italic';src: url('../assets/webfonts/37C808_9_0.eot');src: url('../assets/webfonts/37C808_9_0.eot?#iefix') format('embedded-opentype'),url('../assets/webfonts/37C808_9_0.woff2') format('woff2'),url('../assets/webfonts/37C808_9_0.woff') format('woff'),url('../assets/webfonts/37C808_9_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'TTCottons-Light';src: url('../assets/webfonts/37C808_A_0.eot');src: url('../assets/webfonts/37C808_A_0.eot?#iefix') format('embedded-opentype'),url('../assets/webfonts/37C808_A_0.woff2') format('woff2'),url('../assets/webfonts/37C808_A_0.woff') format('woff'),url('../assets/webfonts/37C808_A_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'TTCottons-Medium';src: url('../assets/webfonts/37C808_B_0.eot');src: url('../assets/webfonts/37C808_B_0.eot?#iefix') format('embedded-opentype'),url('../assets/webfonts/37C808_B_0.woff2') format('woff2'),url('../assets/webfonts/37C808_B_0.woff') format('woff'),url('../assets/webfonts/37C808_B_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'TTCottons-Regular';src: url('../assets/webfonts/37C808_C_0.eot');src: url('../assets/webfonts/37C808_C_0.eot?#iefix') format('embedded-opentype'),url('../assets/webfonts/37C808_C_0.woff2') format('woff2'),url('../assets/webfonts/37C808_C_0.woff') format('woff'),url('../assets/webfonts/37C808_C_0.ttf') format('truetype');}
+
+
+@font-face {font-family: 'TTCottons-ThinItalic';src: url('../assets/webfonts/37C808_D_0.eot');src: url('../assets/webfonts/37C808_D_0.eot?#iefix') format('embedded-opentype'),url('../assets/webfonts/37C808_D_0.woff2') format('woff2'),url('../assets/webfonts/37C808_D_0.woff') format('woff'),url('../assets/webfonts/37C808_D_0.ttf') format('truetype');}
