@@ -98,7 +98,8 @@ import "../styles/tippy.css";
     flex-wrap: wrap;
     justify-content: center;
     align-items: first baseline;
-    margin: 0 1rem;
+    max-width: 80ch;
+    margin: 0 auto;
     padding: 2rem;
     border-radius: 1rem;
     font-size: var(--s2);
@@ -111,6 +112,7 @@ import "../styles/tippy.css";
       flex-basis: calc((30rem - 100%) * 999);
       max-width: max(400px, 33vw);
       text-wrap: balance;
+      text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
       /* margin: 0 auto; */
     }
   }
@@ -177,7 +179,8 @@ import "../styles/tippy.css";
       return template?.innerHTML || "";
     },
     allowHTML: true,
-    duration: [800, 400],
+    maxWidth: "33.333vh",
+    duration: [1000, 400],
     interactive: true,
     inertia: true,
   });
