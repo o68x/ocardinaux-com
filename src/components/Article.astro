@@ -1,0 +1,48 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+<article class="content">
+  <h2>{title}</h2>
+  <div>
+    <slot />
+  </div>
+</article>
+
+<style>
+  article {
+    color: var(--color-bone);
+    background-color: var(--color-fern);
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: first baseline;
+    max-width: min(80ch, calc(100% - 2rem));
+    margin-inline: auto;
+    padding: 2rem;
+    border-radius: 1rem;
+    font-size: var(--s2);
+    box-shadow:
+      inset -5px -5px 10px 0px rgba(255, 255, 255, 0.5),
+      inset 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+
+    & > * {
+      flex-grow: 1;
+      flex-basis: calc((30rem - 100%) * 999);
+      max-width: max(400px, 33vw);
+      text-wrap: balance;
+      text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
+      /* margin: 0 auto; */
+    }
+  }
+  h2 {
+    display: block;
+    font-size: var(--s4);
+    line-height: 1;
+    letter-spacing: 0;
+  }
+</style>

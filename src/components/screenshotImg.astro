@@ -1,0 +1,50 @@
+---
+import type { ImageMetadata } from "astro";
+import { getImage } from "astro:assets";
+
+interface Props {
+  imageData: ImageMetadata;
+  link: string;
+}
+
+const { imageData, link } = Astro.props;
+
+const image = await getImage({ src: imageData, format: "webp" });
+const id = imageData.src.split("/").pop()?.split(".")[0] || "";
+const altText = link.split("https://")[1] || "";
+---
+
+<div id={id}>
+  <div class="screenshot">
+    <img
+      src={image.src}
+      alt=`Capture de page de ${altText || ""}`
+      loading="eager"
+    />
+    <a href={link} target="_blank">Visiter</a>
+  </div>
+</div>
+
+<style>
+  .screenshot a {
+    display: block;
+    padding: var(--s-4) var(--s-2);
+    background-color: var(--color-bone);
+    color: var(--color-fern);
+    font-size: var(--s-1);
+    font-weight: 600;
+    text-shadow: none;
+    letter-spacing: 0.1em;
+    border-radius: 0.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, calc(var(--s-2) * -1));
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: var(--color-fern);
+      color: var(--color-bone);
+    }
+  }
+</style>
