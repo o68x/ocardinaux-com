@@ -39,9 +39,7 @@ import "../styles/tippy.css";
     </div>
 
     <Article title="Vous pouvez me contacter">
-        par mail à l'adresse <a href="mailto:olivier@ocardinaux.com"
-          >olivier@ocardinaux.com</a
-        > ou par téléphone au <span class='tel"'>06 89 63 80 14.</span>
+        par mail à l'adresse <span id="email"></span> ou par téléphone au <span class='tel"'>06 89 63 80 14.</span>
     </Article>
 
     <footer class="footer">v3.0.2</fo>
@@ -92,4 +90,10 @@ import "../styles/tippy.css";
     interactive: true,
     inertia: true,
   });
+
+  // Obfuscate email
+  const email = document.querySelector("#email");
+  const user = 'olivier';
+  const domain = 'ocardinaux.com';
+  if (email) email.innerHTML = `<a href='mailto:${user}@${domain}'>${user}@${domain}</a>`;
 </script>
