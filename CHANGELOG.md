@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.3](https://github.com/o68x/ocardinaux-com/compare/v0.0.2...v0.0.3) (2024-10-23)
+
+
+### Features
+
+* add matomo tracking ([ea79cd0](https://github.com/o68x/ocardinaux-com/commit/ea79cd091371286e5a2eec63bc6a3b322450109c))
+
+
+### Bug Fixes
+
+* obfuscate email ([b7af045](https://github.com/o68x/ocardinaux-com/commit/b7af045314fcd0aa211e1f11dc9a0b710fa8cf4e))
+
 ## [0.0.2](https://github.com/o68x/ocardinaux-com/compare/v0.0.2-0...v0.0.2) (2024-10-22)
 
 
