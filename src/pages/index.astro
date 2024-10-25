@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Article from "../components/Article.astro";
 import CardImg from "../components/CardImg.astro";
-import ScreenshotImg from "../components/screenshotImg.astro";
+import ScreenshotImg from "../components/ScreenshotImg.astro";
 
 import cardWide from "../assets/images/Carte-webheader-wide.webp";
 import cardNarrow from "../assets/images/Carte-webheader-narrow.webp";
@@ -25,10 +25,14 @@ import "../styles/tippy.css";
         href="https://michelerouhet.fr"
         data-img="mr-home"
         target="_blank">michelerouhet.fr</a
-      >, <a href="https://janickponcin.com" data-img="jp-home" target="_blank"
-        >janickponcin.com</a
-      > et <a href="https://artistesdu5.fr" data-img="a5e-home" target="_blank"
-        >artistesdu5.fr</a
+      >, <a
+        href="https://janickponcin.com"
+        data-img="jp-home"
+        target="_blank">janickponcin.com</a
+      > et <a
+        href="https://artistesdu5.fr"
+        data-img="a5e-home"
+        target="_blank">artistesdu5.fr</a
       >.
     </Article>
 
@@ -38,12 +42,13 @@ import "../styles/tippy.css";
       <ScreenshotImg imageData={a5eHome} link="https://artistesdu5.fr" />
     </div>
 
-    <Article title="Vous pouvez me contacter">
-        par mail à l'adresse <span id="email"></span> ou par téléphone au <span class='tel"'>06 89 63 80 14.</span>
+    <Article title="Contactez-moi">
+      par mail à l'adresse <span id="email"></span> ou par téléphone au <span
+        class='tel"'>06 89 63 80 14.</span
+      >
     </Article>
-
-    <footer class="footer">v3.0.2</fo>
   </main>
+  <footer class="footer">v3.0.2</footer>
 </Layout>
 
 <style is:global>
@@ -56,8 +61,9 @@ import "../styles/tippy.css";
   }
 
   .footer {
-    margin: 0 1rem;
+    margin-inline: 1rem;
     padding: 1rem;
+    margin-block-start: auto;
   }
 
   .tippy-content {
@@ -93,7 +99,8 @@ import "../styles/tippy.css";
 
   // Obfuscate email
   const email = document.querySelector("#email");
-  const user = 'olivier';
-  const domain = 'ocardinaux.com';
-  if (email) email.innerHTML = `<a href='mailto:${user}@${domain}'>${user}@${domain}</a>`;
+  const user = "olivier";
+  const domain = "ocardinaux.com";
+  if (email)
+    email.innerHTML = `<a href='mailto:${user}@${domain}'>${user}@${domain}</a>`;
 </script>

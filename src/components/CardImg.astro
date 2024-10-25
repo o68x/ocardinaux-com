@@ -22,7 +22,7 @@ const desktopImg = await getImage({
 
 ---
 <picture>
-  <source media="(orientation: portrait)" srcset={mobileImg.src} />
+  <source media="(orientation: portrait) and (max-width: 768px)" srcset={mobileImg.src} />
   <source srcset={desktopImg.src} />
   <img src={desktopImg.src} alt={alt} />
 </picture>
@@ -33,5 +33,9 @@ const desktopImg = await getImage({
     height: auto;
     object-fit: contain;
     object-position: top center;
+
+    & img {
+      margin-inline: auto;
+    }
   }
 </style>

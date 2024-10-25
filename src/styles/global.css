@@ -28,6 +28,8 @@ body {
   font-family: var(--ff-base);
   font-size: clamp(16px, calc(1rem + 0.333vw), 22px);
   letter-spacing: 0.05em;
+  min-height: 100dvh;
+  min-height: 100vh;
 }
 
 .visually-hidden:not(:focus):not(:active) {

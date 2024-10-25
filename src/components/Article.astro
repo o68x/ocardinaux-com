@@ -14,8 +14,8 @@ const { title } = Astro.props;
 
 <style>
   article {
-    color: var(--color-bone);
-    background-color: var(--color-fern);
+    color: var(--color-fern);
+    background-color: var(--color-bone);
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
@@ -24,19 +24,17 @@ const { title } = Astro.props;
     max-width: min(80ch, calc(100% - 2rem));
     margin-inline: auto;
     padding: 2rem;
-    border-radius: 1rem;
+    border-radius: 6px;
     font-size: var(--s2);
     box-shadow:
-      inset -5px -5px 10px 0px rgba(255, 255, 255, 0.5),
-      inset 5px 5px 10px 0px rgba(0, 0, 0, 0.3);
+      inset -2px -2px 4px 0px rgba(255, 255, 255, 0.5),
+      inset 2px 2px 4px 0px rgba(0, 0, 0, 0.3);
 
     & > * {
       flex-grow: 1;
       flex-basis: calc((30rem - 100%) * 999);
       max-width: max(400px, 33vw);
       text-wrap: balance;
-      text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
-      /* margin: 0 auto; */
     }
   }
 
