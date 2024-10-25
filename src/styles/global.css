@@ -2,7 +2,7 @@
 @import url('./webfontsKit.css');
 
 :root {
-  --ff-base: 'TTCottons-Regular', sans-serif;
+  --ff-base: 'TTCottons', sans-serif;
   --color-bone-rgb: 235, 226, 209;
   --color-bone: rgb(var(--color-bone-rgb)); /* rgb(235, 226, 209) */
   --color-fern-rgb: 68, 116, 78;

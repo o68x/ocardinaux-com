@@ -5,8 +5,9 @@
   max-width: calc(100vw - 10px);
 }
 .tippy-box {
+  --_tippy-background-color: var(--color-fern);
   position: relative;
-  background-color: #333;
+  background-color: var(--_tippy-background-color);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   color: #fff;
   border-radius: 4px;
@@ -60,7 +61,7 @@
 .tippy-arrow {
   width: 16px;
   height: 16px;
-  color: #333;
+  color: var(--_tippy-background-color);
 }
 .tippy-arrow:before {
   content: "";

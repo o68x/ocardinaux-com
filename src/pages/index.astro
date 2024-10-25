@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Article from "../components/Article.astro";
 import CardImg from "../components/CardImg.astro";
-import ScreenshotImg from "../components/ScreenshotImg.astro";
+import ScreenshotLink from "../components/ScreenshotLink.astro";
 
 import cardWide from "../assets/images/Carte-webheader-wide.webp";
 import cardNarrow from "../assets/images/Carte-webheader-narrow.webp";
@@ -20,27 +20,12 @@ import "../styles/tippy.css";
       desktopImgUrl={cardWide}
       alt="ocardinaux.com"
     />
-    <Article title="Je construis des sites internet.">
-      Par exemple <a
-        href="https://michelerouhet.fr"
-        data-img="mr-home"
-        target="_blank">michelerouhet.fr</a
-      >, <a
-        href="https://janickponcin.com"
-        data-img="jp-home"
-        target="_blank">janickponcin.com</a
-      > et <a
-        href="https://artistesdu5.fr"
-        data-img="a5e-home"
-        target="_blank">artistesdu5.fr</a
-      >.
-    </Article>
 
-    <div style="display: none;">
-      <ScreenshotImg imageData={mrHome} link="https://michelerouhet.fr" />
-      <ScreenshotImg imageData={jpHome} link="https://janickponcin.com" />
-      <ScreenshotImg imageData={a5eHome} link="https://artistesdu5.fr" />
-    </div>
+    <Article title="Je construis des sites internet.">
+      Par exemple <ScreenshotLink imageData={mrHome} link="https://michelerouhet.fr" />,
+      <ScreenshotLink imageData={jpHome} link="https://janickponcin.com" /> et
+      <ScreenshotLink imageData={a5eHome} link="https://artistesdu5.fr" />.
+    </Article>
 
     <Article title="Contactez-moi">
       par mail à l'adresse <span id="email"></span> ou par téléphone au <span
