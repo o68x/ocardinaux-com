@@ -3,12 +3,11 @@
 
 :root {
   --ff-base: 'TTCottons', sans-serif;
-  --color-bone-rgb: 235, 226, 209;
-  --color-bone: rgb(var(--color-bone-rgb)); /* rgb(235, 226, 209) */
-  --color-fern-rgb: 68, 116, 78;
-  --color-fern: rgb(var(--color-fern-rgb)); /* rgb(68, 116, 78) */
-  --color-citrine-rgb: 232, 211, 49;
-  --color-citrine: rgb(var(--color-citrine-rgb)); /* rgb(232, 211, 49) */
+  --color-bone: hsl(39.23 39.39 87.06);
+  --color-dark-bone: hsl(from var(--color-bone) h s calc(l - 10));
+  --color-very-dark-bone: hsl(from var(--color-bone) h calc(s - 10) calc(l - 60));
+  --color-fern: hsl(132.5 26.09 36.08); /* #44744e */
+  --color-citrine: hsl(53.11 79.91 55.1); /* #e8d331 */
   --s-5: clamp(0.4506rem, 0.4527rem + -0.0027vw, 0.4521rem);
   --s-4: clamp(0.5425rem, 0.5353rem + 0.0359vw, 0.5632rem);
   --s-3: clamp(0.651rem, 0.6326rem + 0.0921vw, 0.704rem);
@@ -27,6 +26,7 @@ body {
   color: var(--color-fern);
   font-family: var(--ff-base);
   font-size: clamp(16px, calc(1rem + 0.333vw), 22px);
+  line-height: 1.2;
   font-display: swap;
   letter-spacing: 0.05em;
   min-height: 100dvh;
