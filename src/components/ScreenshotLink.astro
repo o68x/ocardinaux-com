@@ -43,14 +43,15 @@ const altText = link.split("https://")[1] || "";
   }
 
   .screenshot > a {
+    position: relative;
     display: block;
     padding: var(--s-3) var(--s-2);
-    padding-right: var(--s-1);
+    padding-right: var(--s2);
     background-color: var(--color-fern);
     color: var(--color-bone);
     border: 1px solid var(--color-bone);
     font-size: var(--s1);
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
     font-style: italic;
     text-shadow: none;
@@ -62,18 +63,19 @@ const altText = link.split("https://")[1] || "";
     transition: all 0.3s ease-in-out;
 
     &::after {
-      content: " ⇗";
+      content: "⇗";
+      position: absolute;
+      top: 10px;
+      right: -25px;
+      width: 2em;
       opacity: 0.3;
       font-style: normal;
+      color: var(--color-citrine);
       transition: all 0.3s ease-in-out;
     }
 
-    &:hover {
-      border: 1px solid var(--color-fern);
-
-      &::after {
-        opacity: 1;
-      }
+    &:hover::after {
+      opacity: 1;
     }
   }
 </style>
