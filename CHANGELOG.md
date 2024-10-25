@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.4](https://github.com/o68x/ocardinaux-com/compare/v0.0.3...v0.0.4) (2024-10-25)
+
+
+### Bug Fixes
+
+* lighter box and favicon and tweaks ([0b8cbf9](https://github.com/o68x/ocardinaux-com/commit/0b8cbf9295da2cb57c329b683974d8c0f327e27b))
+
 ## [0.0.3](https://github.com/o68x/ocardinaux-com/compare/v0.0.2...v0.0.3) (2024-10-23)
 
 
