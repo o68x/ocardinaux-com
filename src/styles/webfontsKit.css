@@ -18,7 +18,7 @@
 /* @import must be at top of file, otherwise CSS will not work */
 /* @import url("//hello.myfonts.net/count/37c808"); */
 
-@font-face {
+/* @font-face {
   font-family: "TTCottons";
   src: url("../assets/webfonts/37C808_0_0.eot");
   src: url("../assets/webfonts/37C808_0_0.eot?#iefix")
@@ -27,7 +27,7 @@
     url("../assets/webfonts/37C808_0_0.woff") format("woff"),
     url("../assets/webfonts/37C808_0_0.ttf") format("truetype");
   font-weight: 100;
-}
+} */
 
 @font-face {
   font-family: "TTCottons";
@@ -52,7 +52,7 @@
   font-style: italic;
 }
 
-@font-face {
+/* @font-face {
   font-family: "TTCottons";
   src: url("../assets/webfonts/37C808_3_0.eot");
   src: url("../assets/webfonts/37C808_3_0.eot?#iefix")
@@ -61,7 +61,7 @@
     url("../assets/webfonts/37C808_3_0.woff") format("woff"),
     url("../assets/webfonts/37C808_3_0.ttf") format("truetype");
   font-weight: 200;
-}
+} */
 
 @font-face {
   font-family: "TTCottons";
@@ -110,7 +110,7 @@
   font-style: italic;
 }
 
-@font-face {
+/* @font-face {
   font-family: "TTCottons";
   src: url("../assets/webfonts/37C808_8_0.eot");
   src: url("../assets/webfonts/37C808_8_0.eot?#iefix")
@@ -120,7 +120,7 @@
     url("../assets/webfonts/37C808_8_0.ttf") format("truetype");
   font-weight: 200;
   font-style: italic;
-}
+} */
 
 @font-face {
   font-family: "TTCottons";
@@ -167,7 +167,7 @@
   font-weight: 400;
 }
 
-@font-face {
+/* @font-face {
   font-family: "TTCottons";
   src: url("../assets/webfonts/37C808_D_0.eot");
   src: url("../assets/webfonts/37C808_D_0.eot?#iefix")
@@ -176,4 +176,4 @@
     url("../assets/webfonts/37C808_D_0.woff") format("woff"),
     url("../assets/webfonts/37C808_D_0.ttf") format("truetype");
   font-weight: 100;
-}
+} */
