@@ -4,7 +4,6 @@ import Article from "../components/Article.astro";
 import CardImg from "../components/CardImg.astro";
 import ScreenshotLink from "../components/ScreenshotLink.astro";
 import Footer from "../components/Footer.astro";
-import RawSvg from "../components/RawSvg.astro";
 
 import cardWide from "../assets/images/Carte-webheader-wide.webp";
 import cardNarrow from "../assets/images/Carte-webheader-narrow.webp";
@@ -33,11 +32,6 @@ import "../styles/tippy.css";
         class='tel"'>06 89 63 80 14.</span
       >
     </Article>
-
-    <RawSvg
-      className="svg-separator"
-      svgFile="paper-tear"
-    />
   </main>
   <Footer />
 </Layout>
@@ -50,19 +44,6 @@ import "../styles/tippy.css";
   .tel {
     white-space: nowrap;
   }
-
-  .svg-separator {
-    width: 100%;
-    height: auto;
-    background-color: #fefefe;
-    color: var(--color-bone);
-
-    & .drop-shadow {
-      -webkit-filter: drop-shadow(rgba(21, 20, 15, .2) .06em .06em .06em);
-      filter: drop-shadow(rgba(21, 20, 15, .2) .06em .06em .06em);
-    }
-  }
-
 
   .tippy-content {
     position: relative;

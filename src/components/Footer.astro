@@ -1,16 +1,43 @@
-<footer class="footer">
+---
+import { getImage } from "astro:assets";
+
+import RawSvg from "../components/RawSvg.astro";
+import codeScreenshot from "../assets/images/code-screen.webp";
+
+const bgImage = await getImage({
+  src: codeScreenshot,
+  format: "webp"
+})
+---
+
+<!--  -->
+<footer class="footer" style={`background: url('${bgImage.src}') center / cover no-repeat`}>
+<!-- <footer class="footer"> -->
+  <RawSvg
+  className="svg-separator"
+  svgFile="paper-tear"
+  />
   <span>v3.1.5</span>
 </footer>
 
-<style>
+<style is:global>
   .footer {
     font-family: monospace;
     font-size: var(--s-2);
-    padding: 1rem;
     margin-block-start: auto;
-    background-color: #fff;
-    color: #333;
-    padding: 1rem;
+    background-color: #fefefe;
+    color: var(--color-bone);
     margin-block-start: auto;
+  }
+
+  .svg-separator {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+
+    & .drop-shadow {
+      -webkit-filter: drop-shadow(rgba(21, 20, 15, .2) .06em .06em .06em);
+      filter: drop-shadow(rgba(21, 20, 15, .2) .06em .06em .06em);
+    }
   }
 </style>
