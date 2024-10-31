@@ -11,7 +11,7 @@ const bgImage = await getImage({
 ---
 
 <!--  -->
-<footer class="footer" style={`background: url('${bgImage.src}') center / cover no-repeat`}>
+<footer class="footer">
 <!-- <footer class="footer"> -->
   <RawSvg
   className="svg-separator"
@@ -25,14 +25,15 @@ const bgImage = await getImage({
     font-family: monospace;
     font-size: var(--s-2);
     margin-block-start: auto;
-    background-color: #fefefe;
-    color: var(--color-bone);
+    background-color: var(--color-light-bone);
+    color: var(--color-fern);
     margin-block-start: auto;
   }
 
   .svg-separator {
     width: 100%;
     height: auto;
+    color: var(--color-bone);
     background-color: transparent;
 
     & .drop-shadow {

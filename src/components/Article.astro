@@ -5,35 +5,70 @@ interface Props {
 
 const { title } = Astro.props;
 ---
+
 <article class="content">
-  <h2>{title}</h2>
-  <div>
-    <slot />
+  <div class="inner">
+    <h2>{title}</h2>
+    <div>
+      <slot />
+    </div>
   </div>
 </article>
 
 <style>
   article {
+    --_border-extension: 0.8rem;
+
+    position: relative;
     color: var(--color-fern);
-    background-color: transparent;
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: first baseline;
     max-width: min(80ch, calc(100% - 2rem));
     margin-inline: auto;
-    padding: 2rem;
-    border-radius: 2px;
+    padding: 1px;
     font-size: var(--s2);
-    box-shadow:
-      inset 2px 2px 4px 0px rgba(21, 20, 15, 0.2);
 
-    & > * {
-      flex-grow: 1;
-      flex-basis: calc((30rem - 100%) * 999);
-      max-width: max(400px, 33vw);
-      text-wrap: balance;
+    .inner {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: first baseline;
+      margin: var(--_border-extension);
+      padding: 1rem;
+      background-color: var(--color-light-bone);
+      width: calc(100% - var(--_border-extension) * 2);
+      height: 100%;
+
+      & > * {
+        flex-grow: 1;
+        flex-basis: calc((30rem - 100%) * 999);
+        max-width: max(400px, 33vw);
+        text-wrap: balance;
+      }
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: -1px;
+      bottom: -1px;
+      left: -1px;
+      right: -1px;
+      border: 1px solid var(--color-very-dark-bone);
+      background-color: transparent;
+      z-index: -1;
+    }
+
+    &::before {
+      top: var(--_border-extension);
+      bottom: var(--_border-extension);
+      border-inline: 0;
+    }
+
+    &::after {
+      left: var(--_border-extension);
+      right: var(--_border-extension);
+      border-block: 0;
     }
   }
 

@@ -8,6 +8,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  /* outline: 2px solid hsl(0, 100%, 50%, 0.8);
+  background: hsl(256, 100%, 50%, 0.1); */
 }
 
 /* Prevent font size inflation */
