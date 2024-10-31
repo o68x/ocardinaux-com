@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.6](https://github.com/o68x/ocardinaux-com/compare/v0.0.5...v0.0.6) (2024-10-31)
+
+
+### Features
+
+* add svg paper tear separator ([2338e04](https://github.com/o68x/ocardinaux-com/commit/2338e04942133100fa0a65e5c8af3b11ca5af466))
+* animated astrology with mask too ([695ee64](https://github.com/o68x/ocardinaux-com/commit/695ee648d10eb7bb635dd158e011f5e3ba8ba169))
+* new hero section ([de33d67](https://github.com/o68x/ocardinaux-com/commit/de33d673222bcec470539f332289fcdfe3b8290a))
+
+
+### Bug Fixes
+
+* article styling more better ([4ab0fca](https://github.com/o68x/ocardinaux-com/commit/4ab0fca6febde22ab701748fb5d0c50493f84556))
+* put font files in public folder ([76ca203](https://github.com/o68x/ocardinaux-com/commit/76ca20389b1a4067b14fa82d1c5a9dd3f3a15c69))
+* simple themed favicon ([0ed8d33](https://github.com/o68x/ocardinaux-com/commit/0ed8d33f115400f621003c034b9059d525e6216f))
+* use HSL colors and color calc ([5f9c13d](https://github.com/o68x/ocardinaux-com/commit/5f9c13df57d0c228fd4b453897de5b762603fe97))
+
 ## [0.0.5](https://github.com/o68x/ocardinaux-com/compare/v0.0.4...v0.0.5) (2024-10-25)
 
 
