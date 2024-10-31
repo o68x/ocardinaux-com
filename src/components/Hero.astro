@@ -3,21 +3,31 @@ import { Image } from "astro:assets";
 import RawSvg from "../components/RawSvg.astro";
 import astronomyFig from "../assets/images/astronomy-fig-38.webp";
 ---
+
 <div class="hero">
   <div class="name">
-    <RawSvg
-    className="svg"
-    svgFile="oc-ellipse"
-    />
+    <RawSvg className="svg" svgFile="oc-ellipse" />
   </div>
-  <div class="astronomy-fig">
-    <Image src={astronomyFig} alt="astronomy-fig-38" />
-  </div>
+  <figure
+    class="astronomy-fig"
+    style=`aspect-ratio: ${astronomyFig.width / astronomyFig.height}; mask-image: url(${astronomyFig.src});`
+  >
+    <Image src={astronomyFig} alt="astronomy-fig-38" loading="eager" />
+  </figure>
   <div class="line">Construction de sites internet</div>
   <div class="more">vvv</div>
 </div>
 
 <style>
+  @keyframes astronomy {
+    0% {
+      background-position: left;
+    }
+    100% {
+      background-position: right;
+    }
+  }
+
   .hero {
     padding-top: 10vh;
     min-height: 100vh;
@@ -29,19 +39,38 @@ import astronomyFig from "../assets/images/astronomy-fig-38.webp";
   .name,
   .astronomy-fig,
   .line {
-    width: 50%;
+    width: clamp(200px, 50%, 600px);
     place-self: start center;
+  }
+
+  .astronomy-fig {
+    mask-size: contain;
+    background-image: linear-gradient(
+      150deg,
+      var(--color-light-bone),
+      var(--color-bone),
+      var(--color-dark-bone)
+    );
+    background-size: 250%;
+    background-position: left;
+    animation: 5s infinite alternate astronomy linear;
   }
 
   .astronomy-fig > img {
     object-fit: contain;
     height: auto;
+    mix-blend-mode: multiply;
   }
 
   .line {
-    font-size: var(--s3);
+    margin-top: var(--s2);
+    font-size: var(--s4);
+    letter-spacing: 2px;
     font-weight: 600;
     text-align: center;
+    text-wrap: balance;
+    font-style: italic;
+    line-height: 1;
   }
 
   .more {
@@ -50,5 +79,4 @@ import astronomyFig from "../assets/images/astronomy-fig-38.webp";
     text-align: center;
     padding: 1em;
   }
-
 </style>

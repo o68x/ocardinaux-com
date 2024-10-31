@@ -3,8 +3,8 @@
 :root {
   --ff-base: 'TTCottons', sans-serif;
   --color-bone: hsl(39.23 39.39 87.06);
-  --color-light-bone: hsl(from var(--color-bone) h s calc(l + 10));
-  --color-dark-bone: hsl(from var(--color-bone) h s calc(l - 10));
+  --color-light-bone: hsl(from var(--color-bone) h s calc(l + 15));
+  --color-dark-bone: hsl(from var(--color-bone) h s calc(l - 15));
   --color-very-dark-bone: hsl(from var(--color-bone) h calc(s - 10) calc(l - 60));
   --color-fern: hsl(132.5 26.09 36.08); /* #44744e */
   --color-citrine: hsl(53.11 79.91 55.1); /* #e8d331 */

@@ -38,6 +38,7 @@
     url("/webfonts/37C808_1_0.woff") format("woff"),
     url("/webfonts/37C808_1_0.ttf") format("truetype");
   font-weight: 600;
+  font-display: swap;
 }
 
 @font-face {
@@ -50,6 +51,7 @@
     url("/webfonts/37C808_2_0.ttf") format("truetype");
   font-weight: 800;
   font-style: italic;
+  font-display: swap;
 }
 
 /* @font-face {
@@ -61,6 +63,7 @@
     url("/webfonts/37C808_3_0.woff") format("woff"),
     url("/webfonts/37C808_3_0.ttf") format("truetype");
   font-weight: 200;
+  font-display: swap;
 } */
 
 @font-face {
@@ -72,6 +75,7 @@
     url("/webfonts/37C808_4_0.woff") format("woff"),
     url("/webfonts/37C808_4_0.ttf") format("truetype");
   font-weight: 800;
+  font-display: swap;
 }
 
 @font-face {
@@ -84,6 +88,7 @@
     url("/webfonts/37C808_5_0.ttf") format("truetype");
   font-weight: 600;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -96,6 +101,7 @@
     url("/webfonts/37C808_6_0.ttf") format("truetype");
   font-weight: 300;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -108,6 +114,7 @@
     url("/webfonts/37C808_7_0.ttf") format("truetype");
   font-weight: 500;
   font-style: italic;
+  font-display: swap;
 }
 
 /* @font-face {
@@ -120,6 +127,7 @@
     url("/webfonts/37C808_8_0.ttf") format("truetype");
   font-weight: 200;
   font-style: italic;
+  font-display: swap;
 } */
 
 @font-face {
@@ -132,6 +140,7 @@
     url("/webfonts/37C808_9_0.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -143,6 +152,7 @@
     url("/webfonts/37C808_A_0.woff") format("woff"),
     url("/webfonts/37C808_A_0.ttf") format("truetype");
   font-weight: 300;
+  font-display: swap;
 }
 
 @font-face {
@@ -154,6 +164,7 @@
     url("/webfonts/37C808_B_0.woff") format("woff"),
     url("/webfonts/37C808_B_0.ttf") format("truetype");
   font-weight: 500;
+  font-display: swap;
 }
 
 @font-face {
@@ -165,6 +176,7 @@
     url("/webfonts/37C808_C_0.woff") format("woff"),
     url("/webfonts/37C808_C_0.ttf") format("truetype");
   font-weight: 400;
+  font-display: swap;
 }
 
 /* @font-face {
@@ -176,4 +188,5 @@
     url("/webfonts/37C808_D_0.woff") format("woff"),
     url("/webfonts/37C808_D_0.ttf") format("truetype");
   font-weight: 100;
+  font-display: swap;
 } */
