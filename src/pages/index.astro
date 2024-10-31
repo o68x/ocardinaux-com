@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Article from "../components/Article.astro";
 import CardImg from "../components/CardImg.astro";
+import Hero from "../components/Hero.astro";
 import ScreenshotLink from "../components/ScreenshotLink.astro";
 import Footer from "../components/Footer.astro";
 
@@ -15,12 +16,7 @@ import "../styles/tippy.css";
 
 <Layout title="ocardinaux.com">
   <main>
-    <CardImg
-      mobileImgUrl={cardNarrow}
-      desktopImgUrl={cardWide}
-      alt="ocardinaux.com"
-    />
-
+    <Hero />
     <Article title="Je construis des sites internet.">
       Par exemple <ScreenshotLink imageData={mrHome} link="https://michelerouhet.fr" />,
       <ScreenshotLink imageData={jpHome} link="https://janickponcin.com" /> et

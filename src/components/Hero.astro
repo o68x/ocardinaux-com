@@ -1,0 +1,54 @@
+---
+import { Image } from "astro:assets";
+import RawSvg from "../components/RawSvg.astro";
+import astronomyFig from "../assets/images/astronomy-fig-38.webp";
+---
+<div class="hero">
+  <div class="name">
+    <RawSvg
+    className="svg"
+    svgFile="oc-ellipse"
+    />
+  </div>
+  <div class="astronomy-fig">
+    <Image src={astronomyFig} alt="astronomy-fig-38" />
+  </div>
+  <div class="line">Construction de sites internet</div>
+  <div class="more">vvv</div>
+</div>
+
+<style>
+  .hero {
+    padding-top: 10vh;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: max-content max-content minmax(0, 1fr) max-content;
+  }
+
+  .name,
+  .astronomy-fig,
+  .line {
+    width: 50%;
+    place-self: start center;
+  }
+
+  .astronomy-fig > img {
+    object-fit: contain;
+    height: auto;
+  }
+
+  .line {
+    font-size: var(--s3);
+    font-weight: 600;
+    text-align: center;
+  }
+
+  .more {
+    font-size: var(--s0);
+    font-weight: 900;
+    text-align: center;
+    padding: 1em;
+  }
+
+</style>
