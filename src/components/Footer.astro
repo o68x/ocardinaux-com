@@ -13,32 +13,21 @@ const bgImage = await getImage({
 <!--  -->
 <footer class="footer">
 <!-- <footer class="footer"> -->
-  <RawSvg
-  className="svg-separator"
-  svgFile="paper-tear"
-  />
   <span>v3.1.5</span>
 </footer>
 
 <style is:global>
   .footer {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     font-family: monospace;
     font-size: var(--s-2);
-    margin-block-start: auto;
     background-color: var(--color-light-bone);
     color: var(--color-fern);
-    margin-block-start: auto;
-  }
-
-  .svg-separator {
-    width: 100%;
-    height: auto;
-    color: var(--color-bone);
-    background-color: transparent;
-
-    & .drop-shadow {
-      -webkit-filter: drop-shadow(rgba(21, 20, 15, .2) .06em .06em .06em);
-      filter: drop-shadow(rgba(21, 20, 15, .2) .06em .06em .06em);
-    }
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
   }
 </style>

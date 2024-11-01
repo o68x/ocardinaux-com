@@ -4,7 +4,7 @@ import Article from "../components/Article.astro";
 import Hero from "../components/Hero.astro";
 import ScreenshotLink from "../components/ScreenshotLink.astro";
 import Footer from "../components/Footer.astro";
-
+import RawSvg from "../components/RawSvg.astro";
 import mrHome from "../assets/images/mr-home.webp";
 import jpHome from "../assets/images/jp-home.webp";
 import a5eHome from "../assets/images/a5e-home.webp";
@@ -25,13 +25,36 @@ import "../styles/tippy.css";
         class='tel"'>06 89 63 80 14.</span
       >
     </Article>
-  </main>
+    <RawSvg
+    className="svg-separator"
+    svgFile="paper-tear"
+    />
+    </main>
   <Footer />
 </Layout>
 
 <style is:global>
+  main {
+    position: relative;
+    min-height: 100vh;
+    background-color: var(--color-bone);
+    z-index: 1;
+  }
+
   main > * + * {
     margin-top: var(--s2);
+  }
+
+  .svg-separator {
+    width: 100%;
+    height: auto;
+    color: var(--color-bone);
+    background-color: var(--color-light-bone);
+
+    & .drop-shadow {
+      -webkit-filter: drop-shadow(rgba(21, 20, 15, .2) .06em .06em .06em);
+      filter: drop-shadow(rgba(21, 20, 15, .2) .06em .06em .06em);
+    }
   }
 
   .tel {
