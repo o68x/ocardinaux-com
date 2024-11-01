@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import Icon from "../components/Icon.astro";
 import RawSvg from "../components/RawSvg.astro";
 import astronomyFig from "../assets/images/astronomy-fig-38.webp";
 ---
@@ -15,22 +16,18 @@ import astronomyFig from "../assets/images/astronomy-fig-38.webp";
     <Image src={astronomyFig} alt="astronomy-fig-38" loading="eager" />
   </figure>
   <div class="line">Construction de sites internet</div>
-  <div class="more">vvv</div>
+  <div class="more">
+    <span>
+      <Icon icon="caret-double-down" />
+    </span>
+  </div>
 </div>
 
 <style>
-  @keyframes astronomy {
-    0% {
-      background-position: left;
-    }
-    100% {
-      background-position: right;
-    }
-  }
-
   .hero {
     padding-top: 10vh;
     min-height: 100vh;
+    min-height: 100dvh;
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: max-content max-content minmax(0, 1fr) max-content;
@@ -56,6 +53,15 @@ import astronomyFig from "../assets/images/astronomy-fig-38.webp";
     animation: 5s infinite alternate astronomy linear;
   }
 
+  @keyframes astronomy {
+    0% {
+      background-position: left;
+    }
+    100% {
+      background-position: right;
+    }
+  }
+
   .astronomy-fig > img {
     object-fit: contain;
     height: auto;
@@ -73,10 +79,83 @@ import astronomyFig from "../assets/images/astronomy-fig-38.webp";
     line-height: 1;
   }
 
+  /* ----------------------------------------------
+ * Modified from Animista on 2024-11-1 4:18:21
+ * Licensed under FreeBSD License.
+ * ---------------------------------------------- */
+
+  @keyframes bounce-top {
+    0% {
+      transform: translateY(-13px);
+      animation-timing-function: ease-in;
+      opacity: 1;
+    }
+    12% {
+      opacity: 1;
+    }
+    20% {
+      transform: translateY(-8px);
+      animation-timing-function: ease-in;
+    }
+    32% {
+      transform: translateY(-5px);
+      animation-timing-function: ease-in;
+    }
+    41% {
+      transform: translateY(-3px);
+      animation-timing-function: ease-in;
+    }
+    46% {
+      transform: translateY(-2px);
+      animation-timing-function: ease-in;
+    }
+    13%,
+    27%,
+    38%,
+    44% {
+      transform: translateY(0px);
+      animation-timing-function: ease-out;
+    }
+    50% {
+      transform: translateY(0px);
+      animation-timing-function: ease-out;
+      opacity: 1;
+    }
+  }
+
   .more {
     font-size: var(--s0);
     font-weight: 900;
     text-align: center;
     padding: 1em;
+    animation: bounce-top 5s infinite;
+
+    &.faded-out {
+      animation: more-fade-out 1s;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  @keyframes more-fade-out {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0);
+    }
   }
 </style>
+
+<script>
+  const more = document.querySelector(".more");
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("faded-out");
+      }
+    });
+  }, { rootMargin: "-200px" });
+  if (more) observer.observe(more);
+</script>
