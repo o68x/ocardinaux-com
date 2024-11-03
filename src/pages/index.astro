@@ -2,38 +2,63 @@
 import Layout from "../layouts/Layout.astro";
 import Article from "../components/Article.astro";
 import Hero from "../components/Hero.astro";
+import Screenshot from "../components/Screenshot.astro";
 import ScreenshotLink from "../components/ScreenshotLink.astro";
 import Footer from "../components/Footer.astro";
 import RawSvg from "../components/RawSvg.astro";
-import mrHome from "../assets/images/mr-home.webp";
-import jpHome from "../assets/images/jp-home.webp";
-import a5eHome from "../assets/images/a5e-home.webp";
+import mrHome from "../assets/images/mrHome.webp";
+import jpHome from "../assets/images/jpHome.webp";
+import a5eHome from "../assets/images/a5eHome.webp";
 import "../styles/tippy.css";
 ---
 
 <Layout title="ocardinaux.com">
   <main>
     <Hero />
-    <Article title="Je construis des sites internet.">
-      Par exemple <ScreenshotLink imageData={mrHome} link="https://michelerouhet.fr" />,
-      <ScreenshotLink imageData={jpHome} link="https://janickponcin.com" /> et
-      <ScreenshotLink imageData={a5eHome} link="https://artistesdu5.fr" />.
+    <Article title="Je construis des sites internet." class="cut-out">
+      Par exemple <ScreenshotLink img="mrHome" link="https://michelerouhet.fr" />
+      <ScreenshotLink img="jpHome" link="https://janickponcin.com" /> et
+      <ScreenshotLink img="a5eHome" link="https://artistesdu5.fr" />.
     </Article>
 
-    <Article title="Contactez-moi">
+    <div class="shots">
+      <Screenshot
+        src={mrHome} alt="mrHome"
+      />
+      <Screenshot
+        src={jpHome} alt="jpHome"
+      />
+      <Screenshot
+        src={a5eHome} alt="a5eHome"
+      />
+    </div>
+
+    <style>
+      .shots {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: var(--s1);
+        font-size: var(--s2);
+      }
+    </style>
+
+    <Article title="Contactez-moi" class="cut-out">
       par mail à l'adresse <span id="email"></span> ou par téléphone au <span
         class='tel"'>06 89 63 80 14.</span
       >
     </Article>
-    <RawSvg
-    className="svg-separator"
-    svgFile="paper-tear"
-    />
     </main>
+    <div class="separator">
+      <RawSvg
+      className="svg-separator"
+      svgFile="paper-tear"
+      />
+    </div>
   <Footer />
 </Layout>
 
 <style is:global>
+  /* https://css-tricks.com/the-slideout-footer/ */
   main {
     position: relative;
     min-height: 100vh;
@@ -41,15 +66,26 @@ import "../styles/tippy.css";
     z-index: 1;
   }
 
+  main > * {
+    max-width: min(80ch, calc(100% - 2rem));
+    margin-inline: auto;
+  }
+
   main > * + * {
     margin-top: var(--s2);
+  }
+
+  .separator {
+    position: relative;
+    background-color: transparent;
+    z-index: 10;
   }
 
   .svg-separator {
     width: 100%;
     height: auto;
     color: var(--color-bone);
-    background-color: var(--color-light-bone);
+    background-color: transparent;
 
     & .drop-shadow {
       -webkit-filter: drop-shadow(rgba(21, 20, 15, .2) .06em .06em .06em);
@@ -75,23 +111,6 @@ import "../styles/tippy.css";
 </style>
 
 <script>
-  import tippy from "tippy.js";
-
-  const imageLinks = document.querySelectorAll("[data-img]");
-
-  tippy(imageLinks, {
-    content(ref) {
-      const id = (ref as HTMLAnchorElement).dataset.img || "";
-      const template = document.getElementById(id);
-      return template?.innerHTML || "";
-    },
-    allowHTML: true,
-    maxWidth: "none",
-    duration: [1000, 400],
-    interactive: true,
-    inertia: true,
-  });
-
   // Obfuscate email
   const email = document.querySelector("#email");
   const user = "olivier";
