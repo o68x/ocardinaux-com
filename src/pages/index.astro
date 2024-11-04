@@ -15,38 +15,46 @@ import "../styles/tippy.css";
 <Layout title="ocardinaux.com">
   <main>
     <Hero />
-    <Article title="Je construis des sites internet." class="cut-out">
-      Par exemple <ScreenshotLink img="mrHome" link="https://michelerouhet.fr" />
-      <ScreenshotLink img="jpHome" link="https://janickponcin.com" /> et
-      <ScreenshotLink img="a5eHome" link="https://artistesdu5.fr" />.
-    </Article>
+    <section>
+      <Article title="Je construis des sites internet." class="cut-out">
+        <p>
+          Par exemple <ScreenshotLink img="mrHome" link="https://michelerouhet.fr" />
+          <ScreenshotLink img="jpHome" link="https://janickponcin.com" /> et
+          <ScreenshotLink img="a5eHome" link="https://artistesdu5.fr" />.
+        </p>
+      </Article>
 
-    <div class="shots">
-      <Screenshot
-        src={mrHome} alt="mrHome"
-      />
-      <Screenshot
-        src={jpHome} alt="jpHome"
-      />
-      <Screenshot
-        src={a5eHome} alt="a5eHome"
-      />
-    </div>
+      <div class="shots-wrapper">
+        <div class="shots">
+          <Screenshot
+            src={mrHome} alt="michelerouhet.fr" class="cut-out"
+          />
+          <Screenshot
+            src={jpHome} alt="janickponcin.com" class="cut-out"
+          />
+          <Screenshot
+            src={a5eHome} alt="artistesdu5.fr" class="cut-out"
+          />
+        </div>
+      </div>
+      <div class="text">
+        <p><strong>Mes sites sont assez jolis, allez les regarder. Je les fait avec beaucoup d'attention.</strong></p>
+        <ul>
+          <li>Considérant que la reconnaissance de la dignité inhérente à tous les membres de la famille humaine et de leurs droits égaux et inaliénables constitue le fondement de la liberté, de la justice et de la paix dans le monde,</li>
+          <li>Considérant que la méconnaissance et le mépris des droits de l’homme ont conduit à des actes de barbarie qui révoltent la conscience de l’humanité et que l’avènement d’un monde où les êtres humains seront libres de parler et de croire, libérés de la terreur et de la misère, a été proclamé comme la plus haute aspiration de l’homme,</li>
+          <li>Considérant qu’il est essentiel que les droits de l’homme soient protégés par un régime de droit pour que l’homme ne soit pas contraint, en suprême recours, à la révolte contre la tyrannie et l’oppression,</li>
+        </ul>
+        <p>Mes sites sont assez jolis, allez les regarder. Je les fait avec beaucoup d'attention.</p>
+      </div>
+    </section>
 
-    <style>
-      .shots {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-gap: var(--s1);
-        font-size: var(--s2);
-      }
-    </style>
-
-    <Article title="Contactez-moi" class="cut-out">
-      par mail à l'adresse <span id="email"></span> ou par téléphone au <span
-        class='tel"'>06 89 63 80 14.</span
-      >
-    </Article>
+    <section>
+      <Article title="Contactez-moi" class="cut-out">
+        par mail à l'adresse <span id="email"></span> ou par téléphone au <span
+          class='tel"'>06 89 63 80 14.</span
+        >
+      </Article>
+    </section>
     </main>
     <div class="separator">
       <RawSvg
@@ -66,13 +74,61 @@ import "../styles/tippy.css";
     z-index: 1;
   }
 
-  main > * {
-    max-width: min(80ch, calc(100% - 2rem));
+  main > *:not(section) {
+    max-width: min(900px, calc(100% - 2 * var(--s2)));
     margin-inline: auto;
   }
 
   main > * + * {
     margin-top: var(--s2);
+  }
+
+  section {
+    position: relative;
+    min-height: 100vh;
+    font-size: var(--s2);
+    padding-block: var(--s3);
+
+    & > * {
+    max-width: min(900px, calc(100% - 2 * var(--s2)));
+    margin-inline: auto;
+    margin-block-start: var(--s4);
+  }
+
+    &::before {
+      position: absolute;
+      top: calc(var(--s3) * -1);
+      left: calc(var(--s2) * -1);
+      right: calc(var(--s2) * -1);
+      content: "";
+      background: repeating-linear-gradient(-45deg,#00000000,#00000000 6px,var(--color-very-dark-bone) 0, var(--color-very-dark-bone) 8px);
+      height: 1rem;
+    }
+  }
+
+  .shots-wrapper {
+    max-width: none;
+    background-color: var(--color-light-bone);
+  }
+
+  .shots {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-gap: var(--s1);
+    font-size: var(--s2);
+    max-width: min(1200px, calc(100% - 2 * var(--s2)));
+    /* max-width: none; */
+    margin-inline: auto;
+    padding-block: var(--s2);
+    padding-inline: 0;
+  }
+
+  .text {
+    color: var(--color-very-dark-bone);
+    font-size: var(--s0);
+    hyphens: auto;
+    columns: 22ch 3;
+    max-width: min(1200px, calc(100% - 2 * var(--s2)));
   }
 
   .separator {
@@ -97,17 +153,6 @@ import "../styles/tippy.css";
     white-space: nowrap;
   }
 
-  .tippy-content {
-    position: relative;
-    padding: 5px 9px;
-    z-index: 1;
-
-    img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-    }
-  }
 </style>
 
 <script>

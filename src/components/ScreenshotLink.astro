@@ -14,13 +14,16 @@ const linkText = link.split("https://")[1] || "";
 <a href={link} data-img={img}>{text ?? linkText}</a>
 
 <style is:global>
-  main:has([data-img="mrHome"]:hover) #mrHome img {
-    transform: rotate3d(0, 0, 0, 0) scale(1);
+  main:has([data-img="mrHome"]:hover) .screenshot:not(#mrHome) img {
+    filter: blur(1px);
+    opacity: 0.5;
   }
-  main:has([data-img="jpHome"]:hover) #jpHome img {
-    transform: rotate3d(0, 0, 0, 0) scale(1);
+  main:has([data-img="jpHome"]:hover) .screenshot:not(#jpHome) img {
+    filter: blur(1px);
+    opacity: 0.5;
   }
-  main:has([data-img="a5eHome"]:hover) #a5eHome img {
-    transform: rotate3d(0, 0, 0, 0) scale(1);
+  main:has([data-img="a5eHome"]:hover) .screenshot:not(#a5eHome) img {
+    filter: blur(1px);
+    opacity: 0.5;
   }
 </style>
