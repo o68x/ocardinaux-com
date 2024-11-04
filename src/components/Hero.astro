@@ -7,7 +7,7 @@ import astronomyFig from "../assets/images/astronomy-fig-38.webp";
 
 <div class="hero">
   <div class="name">
-    <RawSvg className="svg" svgFile="oc-ellipse-curves" />
+    <RawSvg className="svg" svgFile="grenze-oc_min" />
   </div>
   <figure
     class="astronomy-fig"
@@ -15,7 +15,10 @@ import astronomyFig from "../assets/images/astronomy-fig-38.webp";
   >
     <Image src={astronomyFig} alt="astronomy-fig-38" loading="eager" />
   </figure>
-  <div class="line">Construction de sites internet</div>
+  <div class="line">
+    <RawSvg className="svg" svgFile="grenze-construction_min" />
+    <p>Paris · Lausanne · L'Isle-sur-la-Sorgue</p>
+  </div>
   <div class="more">
     <span>
       <Icon icon="caret-double-down" />
@@ -70,12 +73,12 @@ import astronomyFig from "../assets/images/astronomy-fig-38.webp";
 
   .line {
     margin-top: var(--s2);
-    font-size: var(--s4);
+    font-size: var(--s-2);
     letter-spacing: 2px;
-    font-weight: 600;
+    font-variation-settings: "wght" 500, "wdth" 125;
     text-align: center;
     text-wrap: balance;
-    font-style: italic;
+    text-transform: uppercase;
     line-height: 1;
   }
 
