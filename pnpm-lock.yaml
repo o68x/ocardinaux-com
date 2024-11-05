@@ -14,6 +14,9 @@ importers:
       astro:
         specifier: 5.0.0-beta.6
         version: 5.0.0-beta.6(rollup@4.24.0)(typescript@5.6.3)
+      swiper:
+        specifier: ^11.1.14
+        version: 11.1.14
       tippy.js:
         specifier: ^6.3.7
         version: 6.3.7
@@ -1464,6 +1467,10 @@ packages:
   strip-bom@3.0.0:
     resolution: {integrity: sha512-vavAMRXOgBVNF6nyEEmL3DBK19iRpDcoIwW+swQ+CbGiu7lju6t+JklA1MHweoWtadgt4ISVUsXLyDq34ddcwA==}
     engines: {node: '>=4'}
+
+  swiper@11.1.14:
+    resolution: {integrity: sha512-VbQLQXC04io6AoAjIUWuZwW4MSYozkcP9KjLdrsG/00Q/yiwvhz9RQyt0nHXV10hi9NVnDNy1/wv7Dzq1lkOCQ==}
+    engines: {node: '>= 4.7.0'}
 
   tinyexec@0.3.1:
     resolution: {integrity: sha512-WiCJLEECkO18gwqIp6+hJg0//p23HXp4S+gGtAKu3mI2F2/sXC4FvHvXvB0zJVVaTPhx1/tOwdbRsa1sOBIKqQ==}
@@ -3439,6 +3446,8 @@ snapshots:
       ansi-regex: 6.1.0
 
   strip-bom@3.0.0: {}
+
+  swiper@11.1.14: {}
 
   tinyexec@0.3.1: {}
 

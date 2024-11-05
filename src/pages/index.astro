@@ -4,6 +4,7 @@ import Article from "../components/Article.astro";
 import Hero from "../components/Hero.astro";
 import Screenshot from "../components/Screenshot.astro";
 import ScreenshotLink from "../components/ScreenshotLink.astro";
+import ScreenshotSlider from "../components/ScreenshotSlider.astro";
 import Footer from "../components/Footer.astro";
 import RawSvg from "../components/RawSvg.astro";
 import mrHome from "../assets/images/mrHome.webp";
@@ -25,20 +26,19 @@ import "../styles/tippy.css";
         </p>
       </Article>
 
-      <div class="shots-wrapper">
-        <div class="shots">
+      <ScreenshotSlider>
           <Screenshot
-            src={mrHome} alt="michelerouhet.fr" class="cut-out"
+            src={mrHome} link="https://michelerouhet.fr" alt="michelerouhet.fr" class="cut-out"
           >
-          Michèle Rouhet nous présente ses photographies de nature, ses activités de conteuse et formatrice, ainsi que son engagement en faveur des arbres et de la flore, à Paris et ailleurs.
+          Michèle Rouhet partage avec nous ses photographies de nature, ses activités de conteuse et de formatrice, ainsi que son engagement en faveur des arbres et de la flore.
           </Screenshot>
           <Screenshot
-            src={jpHome} alt="janickponcin.com" class="cut-out"
+            src={jpHome} link="https://janickponcin.com" alt="janickponcin.com" class="cut-out"
           >
           Janick Poncin est pastelliste, et elle présente sur son site des galeries de ses œuvres et toutes les informations sur ses expositions.
           </Screenshot>
           <Screenshot
-            src={a5eHome} alt="artistesdu5.fr" class="cut-out"
+            src={a5eHome} link="https://artistesdu5.fr" alt="artistesdu5.fr" class="cut-out"
           >
           L'association des Artistes du V<sup>e</sup> vous propose de découvrir les œuvres de ses artistes et ses dernères expositions.
           </Screenshot>
@@ -47,9 +47,9 @@ import "../styles/tippy.css";
           >
           Rencontrons-nous pour discuter de vos projets !
           </Screenshot>
-        </div>
-      </div>
-      <div class="text">
+        </ScreenshotSlider>
+
+        <div class="text">
         <p><strong>Mes sites sont assez jolis, allez les regarder. Je les fait avec beaucoup d'attention.</strong></p>
         <ul>
           <li>Considérant que la reconnaissance de la dignité inhérente à tous les membres de la famille humaine et de leurs droits égaux et inaliénables constitue le fondement de la liberté, de la justice et de la paix dans le monde,</li>
@@ -116,23 +116,6 @@ import "../styles/tippy.css";
       background: repeating-linear-gradient(-45deg,#00000000,#00000000 6px,var(--color-very-dark-bone) 0, var(--color-very-dark-bone) 8px);
       height: 1rem;
     }
-  }
-
-  .shots-wrapper {
-    max-width: none;
-    background-color: var(--color-light-bone);
-  }
-
-  .shots {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    grid-gap: var(--s1);
-    font-size: var(--s2);
-    max-width: min(1200px, calc(100% - 2 * var(--s2)));
-    /* max-width: none; */
-    margin-inline: auto;
-    padding-block: var(--s2);
-    padding-inline: 0;
   }
 
   .text {

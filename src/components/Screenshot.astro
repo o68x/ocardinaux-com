@@ -4,24 +4,24 @@ import { Image } from "astro:assets";
 
 export interface Props {
   src: ImageMetadata;
+  link?: string;
   alt: string;
   class?: string;
 }
 
-const { src, alt, class: className } = Astro.props;
+const { src, link, alt, class: className } = Astro.props;
 
 const filename = src.src.split("/").pop();
 const filenameWithoutExtension = filename?.split(".")[0];
 
 const hasContent = Astro.slots.has("default");
-console.log(filenameWithoutExtension,hasContent);
-
 ---
 
 <div
-  class:list={[className, "screenshot"]}
+  class:list={[className, "screenshot swiper-slide show-home"]}
   id={filenameWithoutExtension}
   data-img="screenshot"
+  tabindex="0"
 >
   <figure>
     <Image
@@ -29,7 +29,7 @@ console.log(filenameWithoutExtension,hasContent);
       alt={alt}
       style=`aspect-ratio: ${src.width / src.height};`
     />
-    <figcaption>{alt}</figcaption>
+    <figcaption><a href={link} target="_blank">{alt}</a></figcaption>
   </figure>
   {hasContent && <div class="backside"><slot /></div>}
 </div>
@@ -59,15 +59,34 @@ console.log(filenameWithoutExtension,hasContent);
 
   .screenshot {
     z-index: 1;
+    flex: 0 0 max(340px, 35vw);
+    margin-inline: var(--s-3);
 
     & > figure {
       padding: var(--s-1);
       position: relative;
+      transition: background-color 0.2s ease;
     }
 
     & figcaption {
+      --_border-color: transparent;
       text-align: center;
       font-size: var(--s-2);
+
+      & a {
+        border: 1px solid var(--_border-color);
+        border-radius: var(--s-1);
+        color: var(--color-fern);
+        padding: var(--s-5) var(--s-2);
+        cursor: default;
+        text-decoration: none;
+        transition: all 0.5s ease;
+      }
+    }
+
+    &.show-back figcaption a[href] {
+      --_border-color: var(--color-fern);
+      cursor: pointer;
     }
 
     & img {
@@ -88,7 +107,7 @@ console.log(filenameWithoutExtension,hasContent);
       left: 0;
       opacity: 0;
       transition: opacity 0.2s ease-in;
-      font-size: var(--s0);
+      font-size: var(--s-1);
       font-variation-settings: "wght" 400, "wdth" 75;
       padding: var(--s-3);
       color: var(--color-very-dark-bone);
@@ -120,19 +139,37 @@ console.log(filenameWithoutExtension,hasContent);
       }
     }
 
+    &:hover figure {
+      background-color: var(--color-bone);
+    }
   }
 </style>
 
 <script>
   const imgs = document.querySelectorAll("[data-img='screenshot']");
-  imgs.forEach((img) => {
-    img.addEventListener("mouseenter", () => {
-      img.classList.add("show-back");
-      img.classList.remove("show-home");
-    });
-    img.addEventListener("mouseleave", () => {
-      img.classList.remove("show-back");
-      img.classList.add("show-home");
-    });
-  });
+  const imgWrapper = document.querySelector(".swiper-wrapper");
+
+  // Use mouseenter/mouseleave events for desktop
+  // imgs.forEach((img) => {
+  //   img.addEventListener("click", () => {
+  //     img.classList.toggle("show-back");
+  //     img.classList.toggle("show-home");
+  //   });
+  // });
+
+  imgWrapper?.addEventListener("click", (event) => {
+    const otherParents = imgWrapper.querySelectorAll("[data-img='screenshot']");
+    // get the elements that are not the target
+    // get the parent with class swiper-slide
+    if (event.target instanceof Element) {
+      const parent = event.target.closest(".swiper-slide");
+      const notTarget = [...otherParents].filter((el) => el !== parent);
+      parent?.classList.toggle("show-back");
+      parent?.classList.toggle("show-home");
+      notTarget.forEach((el) => {
+        el.classList.remove("show-back");
+        el.classList.add("show-home");
+      });
+    }
+  })
 </script>
