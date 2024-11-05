@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [0.0.7](https://github.com/o68x/ocardinaux-com/compare/v0.0.6...v0.0.7) (2024-11-05)
+
+
+### Features
+
+* add swiper slider ([49019fe](https://github.com/o68x/ocardinaux-com/commit/49019fe9783fd3a1ba28ef8a750b4ad9f22cff1d))
+* animated more icon on hero ([434a177](https://github.com/o68x/ocardinaux-com/commit/434a177f32ed02ecd5e7fe45121f48c6a9168ad5))
+* new fonts ([c8f0b7b](https://github.com/o68x/ocardinaux-com/commit/c8f0b7b98f0a76740f8e5883bc9d95c8afe56ad5))
+* new look hero ([1d3e7f4](https://github.com/o68x/ocardinaux-com/commit/1d3e7f4ee25fa1b56196b27b64629bf3be72b545))
+* screenshot component with backside ([fefdd32](https://github.com/o68x/ocardinaux-com/commit/fefdd32410f12a0622981df2d04ed3b6fc75e37a))
+* screenshots not tooltips ([3e12871](https://github.com/o68x/ocardinaux-com/commit/3e1287189f7a0213ec35e8832345220e01b03aa5))
+* sticky slideout footer ([39e1f87](https://github.com/o68x/ocardinaux-com/commit/39e1f87dc2320f04a060dbc25ac687e9b66ddc27))
+
+
+### Bug Fixes
+
+* add construction warning on hero ([8e124f8](https://github.com/o68x/ocardinaux-com/commit/8e124f898520e25cd7e36be9b9a280622b6cf937))
+* add some content and a pic to the footer ([ae1bdf2](https://github.com/o68x/ocardinaux-com/commit/ae1bdf27248edd4eb1142a1af164d62c94a6253d))
+* cut-out effect as class ([bfbc9d3](https://github.com/o68x/ocardinaux-com/commit/bfbc9d321e35253e59bb459864bc02e59e52116f))
+* replace text with curves ([979c37c](https://github.com/o68x/ocardinaux-com/commit/979c37c70cf92b73f5b517a6702f67a37350f2fd))
+* screenshots looking better ([10aed87](https://github.com/o68x/ocardinaux-com/commit/10aed872c4c02d2e5ba17a0e15d4476e443b5566))
+
 ## [0.0.6](https://github.com/o68x/ocardinaux-com/compare/v0.0.5...v0.0.6) (2024-10-31)
 
 
