@@ -81,18 +81,21 @@ p + p {
     right: -1px;
     border: 1px solid var(--color-very-dark-bone);
     background-color: transparent;
-    z-index: -1;
+    /* z-index: -1; */
   }
 
   &::before {
     top: calc(var(--_border-extension) * 1);
     bottom: calc(var(--_border-extension) * 1);
+    z-index: 1;
+    pointer-events: none;
     border-inline: 0;
   }
 
   &::after {
     left: calc(var(--_border-extension) * 1);
     right: calc(var(--_border-extension) * 1);
+    pointer-events: none;
     border-block: 0;
   }
 }
