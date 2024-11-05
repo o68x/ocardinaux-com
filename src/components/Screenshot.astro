@@ -12,16 +12,51 @@ const { src, alt, class: className } = Astro.props;
 
 const filename = src.src.split("/").pop();
 const filenameWithoutExtension = filename?.split(".")[0];
+
+const hasContent = Astro.slots.has("default");
+console.log(filenameWithoutExtension,hasContent);
+
 ---
 
-<div class:list={[className, "screenshot"]} id={filenameWithoutExtension} data-img="screenshot">
+<div
+  class:list={[className, "screenshot"]}
+  id={filenameWithoutExtension}
+  data-img="screenshot"
+>
   <figure>
-    <Image src={src} alt={alt} style=`aspect-ratio: ${src.width / src.height};` />
+    <Image
+      src={src}
+      alt={alt}
+      style=`aspect-ratio: ${src.width / src.height};`
+    />
     <figcaption>{alt}</figcaption>
   </figure>
+  {hasContent && <div class="backside"><slot /></div>}
 </div>
 
 <style>
+  @keyframes show-backside {
+    0% {
+      transform: rotate3d(20, 40, 0, 30deg);
+      opacity: 1;
+    }
+    100% {
+      transform: rotate3d(20, 40, 0, 90deg) scale(0.5);
+      opacity: 0;
+    }
+  }
+
+  @keyframes show-frontside {
+    0% {
+      transform: rotate3d(20, 40, 0, 90deg) scale(0.5);
+      opacity: 0;
+    }
+    100% {
+      transform: rotate3d(20, 40, 0, 30deg);
+      opacity: 1;
+    }
+  }
+
   .screenshot {
     z-index: 1;
 
@@ -33,9 +68,6 @@ const filenameWithoutExtension = filename?.split(".")[0];
     & figcaption {
       text-align: center;
       font-size: var(--s-2);
-      opacity: 0;
-      transition: opacity 0.3s ease-in;
-      transition-delay: 0.1s;
     }
 
     & img {
@@ -47,16 +79,60 @@ const filenameWithoutExtension = filename?.split(".")[0];
       object-fit: contain;
       padding: var(--s-5);
       will-change: transform;
-      transition: all 0.6s ease;
+      transition: filter 0.5s ease-in-out;
     }
 
-    &:hover {
+    & .backside {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.2s ease-in;
+      font-size: var(--s0);
+      font-variation-settings: "wght" 400, "wdth" 75;
+      padding: var(--s-3);
+      color: var(--color-very-dark-bone);
+    }
+
+    &.show-back:has(.backside) {
       img {
-      transform: none;
+        animation-name: show-backside;
+        animation-duration: 0.4s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: both;
+      }
+
+      .backside {
+        opacity: 1;
+      }
     }
 
-    figcaption {
-      opacity: 1;
+    &.show-home:has(.backside) {
+      img {
+        animation-name: show-frontside;
+        animation-duration: 0.2s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: both;
+      }
+
+      .backside {
+        opacity: 0;
+      }
     }
+
   }
 </style>
+
+<script>
+  const imgs = document.querySelectorAll("[data-img='screenshot']");
+  imgs.forEach((img) => {
+    img.addEventListener("mouseenter", () => {
+      img.classList.add("show-back");
+      img.classList.remove("show-home");
+    });
+    img.addEventListener("mouseleave", () => {
+      img.classList.remove("show-back");
+      img.classList.add("show-home");
+    });
+  });
+</script>

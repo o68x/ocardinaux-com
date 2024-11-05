@@ -9,6 +9,7 @@ import RawSvg from "../components/RawSvg.astro";
 import mrHome from "../assets/images/mrHome.webp";
 import jpHome from "../assets/images/jpHome.webp";
 import a5eHome from "../assets/images/a5eHome.webp";
+import votreSite from "../assets/images/votreSite.webp";
 import "../styles/tippy.css";
 ---
 
@@ -28,13 +29,24 @@ import "../styles/tippy.css";
         <div class="shots">
           <Screenshot
             src={mrHome} alt="michelerouhet.fr" class="cut-out"
-          />
+          >
+          Michèle Rouhet nous présente ses photographies de nature, ses activités de conteuse et formatrice, ainsi que son engagement en faveur des arbres et de la flore, à Paris et ailleurs.
+          </Screenshot>
           <Screenshot
             src={jpHome} alt="janickponcin.com" class="cut-out"
-          />
+          >
+          Janick Poncin est pastelliste, et elle présente sur son site des galeries de ses œuvres et toutes les informations sur ses expositions.
+          </Screenshot>
           <Screenshot
             src={a5eHome} alt="artistesdu5.fr" class="cut-out"
-          />
+          >
+          L'association des Artistes du V<sup>e</sup> vous propose de découvrir les œuvres de ses artistes et ses dernères expositions.
+          </Screenshot>
+          <Screenshot
+            src={votreSite} alt="… votre site ?" class="cut-out"
+          >
+          Rencontrons-nous pour discuter de vos projets !
+          </Screenshot>
         </div>
       </div>
       <div class="text">
