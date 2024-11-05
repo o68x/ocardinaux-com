@@ -1,8 +1,9 @@
 ---
-import { getImage } from "astro:assets";
+import { Image, getImage } from "astro:assets";
 
 import RawSvg from "../components/RawSvg.astro";
 import codeScreenshot from "../assets/images/code-screen.webp";
+import portrait from "../assets/images/portrait.webp";
 
 const bgImage = await getImage({
   src: codeScreenshot,
@@ -14,8 +15,13 @@ const bgImage = await getImage({
 <footer class="footer">
 <!-- <footer class="footer"> -->
  <div class="about">
+  <figure class="portrait cut-out">
+    <Image src={portrait} alt="moi" />
+  </figure>
   <h1>À propos de moi</h1>
-  <p>Je ne sais pas quoi dire…</p>
+  <p>Je suis né en 1966 à Lausanne (Suisse). Économiste et statisticien de formation, j'ai travaillé dans la recherche, puis dans le marketing, puis dans diverses choses, le plus récemment dans le domaine associatif.</p>
+  <p>Tout au long de ma vie professionnelle, j'ai utilisé des outils informatiques, et les ai créés lorsque ceux-ci faisaient défaut. De plus en plus, ces outils étaient basés sur des technologies web.</p>
+  <p>En 2019, j'ai finalement suivi une formation pour devenir développeur web.</p>
  </div>
   <span>v3.2.8</span>
 </footer>
@@ -33,6 +39,20 @@ const bgImage = await getImage({
     min-height: 100vh;
     display: grid;
     place-items: center;
+  }
+
+  .portrait {
+    width: min(33vw, 15em);
+    height: min(33vw, 15em);
+
+    img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      z-index: 10;
+    }
   }
 
   .about {
