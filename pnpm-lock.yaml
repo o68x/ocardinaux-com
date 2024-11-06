@@ -12,8 +12,8 @@ importers:
         specifier: ^0.9.4
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.6.3)
       astro:
-        specifier: 5.0.0-beta.6
-        version: 5.0.0-beta.6(rollup@4.24.0)(typescript@5.6.3)
+        specifier: 5.0.0-beta.7
+        version: 5.0.0-beta.7(rollup@4.24.0)(typescript@5.6.3)(yaml@2.6.0)
       swiper:
         specifier: ^11.1.14
         version: 11.1.14
@@ -98,10 +98,6 @@ packages:
 
   '@babel/helper-string-parser@7.25.7':
     resolution: {integrity: sha512-CbkjYdsJNHFk8uqpEkpCvRs3YRp9tY6FmFY7wLMSYuGYkrdUi7r2lc4/wqsvlHoMznX3WJ9IP8giGPq68T/Y6g==}
-    engines: {node: '>=6.9.0'}
-
-  '@babel/helper-validator-identifier@7.25.7':
-    resolution: {integrity: sha512-AM6TzwYqGChO45oiuPqwL2t20/HdMC1rTPAesnBCgPCSF1x3oN9MVUwQV2iyz4xqWrctwK5RNC8LV22kaQCNYg==}
     engines: {node: '>=6.9.0'}
 
   '@babel/helper-validator-identifier@7.25.9':
@@ -882,8 +878,8 @@ packages:
     resolution: {integrity: sha512-AGsGgcg7Jg9UpyCDgvl/EkdYpe1oMkFdmC2Zl+KWneoieLCtQIFjmcY8yt41gcNx4mby0w8BBJQcBmPuf8UAoQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  astro@5.0.0-beta.6:
-    resolution: {integrity: sha512-QDKX+0SV5qGTHJy0ltv+1jKwVDv18m2DmGYdyT1hGsSuMSyISvXumiURJF1h8xJRUDjhiXjHSqMEL5/fpDAF9g==}
+  astro@5.0.0-beta.7:
+    resolution: {integrity: sha512-0gwb80vd78srzP1PATCOEJQDxQjZswD8tL/2bfrryM4FaSHXJ847oV4uj5eomRD9G0zZPv2UOWJKNksuyG3X2w==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -2189,21 +2185,26 @@ packages:
   vfile@6.0.3:
     resolution: {integrity: sha512-KzIbH/9tXat2u30jf+smMwFCsno4wHVdNmzFyL+T/L3UGqqk6JKfVqOFOZEpZSHADH1k40ab6NUIXZq422ov3Q==}
 
-  vite@6.0.0-beta.2:
-    resolution: {integrity: sha512-TdrjEhCnVNjT3kjohFhVJQL9V3SguxMAphP2RW085QbE0Xc+lRvql9l5hTIr/mttO2jhivYXEP4xfaIRPjzqiw==}
+  vite@6.0.0-beta.6:
+    resolution: {integrity: sha512-XbMzqwx2CDrOOKDDRvenHMQx+JwUTSm/1a/GgjTL6oC5XwpAk+PgoxmB6vGh2UQi0t9EIVS5d2GZXMWd4P5ahA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
       '@types/node': ^18.0.0 || >=20.0.0
+      jiti: '>=1.21.0'
       less: '*'
       lightningcss: ^1.21.0
       sass: '*'
       sass-embedded: '*'
       stylus: '*'
       sugarss: '*'
-      terser: ^5.4.0
+      terser: ^5.16.0
+      tsx: ^4.8.1
+      yaml: ^2.4.2
     peerDependenciesMeta:
       '@types/node':
+        optional: true
+      jiti:
         optional: true
       less:
         optional: true
@@ -2218,6 +2219,10 @@ packages:
       sugarss:
         optional: true
       terser:
+        optional: true
+      tsx:
+        optional: true
+      yaml:
         optional: true
 
   vitefu@1.0.3:
@@ -2533,8 +2538,6 @@ snapshots:
 
   '@babel/helper-string-parser@7.25.7': {}
 
-  '@babel/helper-validator-identifier@7.25.7': {}
-
   '@babel/helper-validator-identifier@7.25.9': {}
 
   '@babel/parser@7.25.8':
@@ -2544,7 +2547,7 @@ snapshots:
   '@babel/types@7.25.8':
     dependencies:
       '@babel/helper-string-parser': 7.25.7
-      '@babel/helper-validator-identifier': 7.25.7
+      '@babel/helper-validator-identifier': 7.25.9
       to-fast-properties: 2.0.0
 
   '@csstools/css-parser-algorithms@3.0.4(@csstools/css-tokenizer@3.0.3)':
@@ -3144,7 +3147,7 @@ snapshots:
       - supports-color
       - typescript
 
-  astro@5.0.0-beta.6(rollup@4.24.0)(typescript@5.6.3):
+  astro@5.0.0-beta.7(rollup@4.24.0)(typescript@5.6.3)(yaml@2.6.0):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.1
@@ -3194,8 +3197,8 @@ snapshots:
       tsconfck: 3.1.4(typescript@5.6.3)
       unist-util-visit: 5.0.0
       vfile: 6.0.3
-      vite: 6.0.0-beta.2
-      vitefu: 1.0.3(vite@6.0.0-beta.2)
+      vite: 6.0.0-beta.6(yaml@2.6.0)
+      vitefu: 1.0.3(vite@6.0.0-beta.6(yaml@2.6.0))
       which-pm: 3.0.0
       xxhash-wasm: 1.0.2
       yargs-parser: 21.1.1
@@ -3207,6 +3210,7 @@ snapshots:
       sharp: 0.33.5
     transitivePeerDependencies:
       - '@types/node'
+      - jiti
       - less
       - lightningcss
       - rollup
@@ -3216,7 +3220,9 @@ snapshots:
       - sugarss
       - supports-color
       - terser
+      - tsx
       - typescript
+      - yaml
 
   astrojs-compiler-sync@1.0.1(@astrojs/compiler@2.10.3):
     dependencies:
@@ -4851,17 +4857,18 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-  vite@6.0.0-beta.2:
+  vite@6.0.0-beta.6(yaml@2.6.0):
     dependencies:
       esbuild: 0.24.0
       postcss: 8.4.47
       rollup: 4.24.0
     optionalDependencies:
       fsevents: 2.3.3
+      yaml: 2.6.0
 
-  vitefu@1.0.3(vite@6.0.0-beta.2):
+  vitefu@1.0.3(vite@6.0.0-beta.6(yaml@2.6.0)):
     optionalDependencies:
-      vite: 6.0.0-beta.2
+      vite: 6.0.0-beta.6(yaml@2.6.0)
 
   volar-service-css@0.0.61(@volar/language-service@2.4.6):
     dependencies:
