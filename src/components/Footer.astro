@@ -5,6 +5,8 @@ import RawSvg from "../components/RawSvg.astro";
 import codeScreenshot from "../assets/images/code-screen.webp";
 import portrait from "../assets/images/portrait.webp";
 
+import {version} from "../../package.json";
+
 const bgImage = await getImage({
   src: codeScreenshot,
   format: "webp"
@@ -23,7 +25,7 @@ const bgImage = await getImage({
   <p>Tout au long de ma vie professionnelle, j'ai utilisé des outils informatiques, et les ai créés lorsque ceux-ci faisaient défaut. De plus en plus, ces outils étaient basés sur des technologies web.</p>
   <p>En 2019, j'ai finalement suivi une formation pour devenir développeur web.</p>
  </div>
-  <span>v3.2.8</span>
+  <span>{version}</span>
 </footer>
 
 <style is:global>
