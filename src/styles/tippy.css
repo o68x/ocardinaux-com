@@ -1,3 +1,4 @@
+/* stylelint-disable */
 .tippy-box[data-animation="fade"][data-state="hidden"] {
   opacity: 0;
 }

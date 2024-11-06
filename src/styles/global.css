@@ -44,14 +44,16 @@ body {
   width: 1px;
 }
 
-h2 {
-  display: block;
+:is(h1, h2, h3) {
   font-family: var(--ff-heading);
-  font-size: var(--s3);
   font-weight: unset;
   font-variation-settings: "wght" 400, "wdth" 87.5;
   line-height: 1;
   letter-spacing: 1px;
+}
+
+h2 {
+  font-size: var(--s3);
 }
 
 p + ul,
