@@ -62,12 +62,15 @@ import WIP from "./WIP.astro";
     0% {
       background-position: left;
     }
+
     25% {
       background-position: right;
     }
+
     75% {
       background-position: right;
     }
+
     100% {
       background-position: left;
     }
@@ -83,7 +86,9 @@ import WIP from "./WIP.astro";
     margin-top: var(--s2);
     font-size: var(--s-2);
     letter-spacing: 2px;
-    font-variation-settings: "wght" 500, "wdth" 125;
+    font-variation-settings:
+      "wght" 500,
+      "wdth" 125;
     text-align: center;
     text-wrap: balance;
     text-transform: uppercase;
@@ -101,34 +106,41 @@ import WIP from "./WIP.astro";
       animation-timing-function: ease-in;
       opacity: 1;
     }
+
     12% {
       opacity: 1;
     }
+
     20% {
       transform: translateY(-8px);
       animation-timing-function: ease-in;
     }
+
     32% {
       transform: translateY(-5px);
       animation-timing-function: ease-in;
     }
+
     41% {
       transform: translateY(-3px);
       animation-timing-function: ease-in;
     }
+
     46% {
       transform: translateY(-2px);
       animation-timing-function: ease-in;
     }
+
     13%,
     27%,
     38%,
     44% {
-      transform: translateY(0px);
+      transform: translateY(0);
       animation-timing-function: ease-out;
     }
+
     50% {
-      transform: translateY(0px);
+      transform: translateY(0);
       animation-timing-function: ease-out;
       opacity: 1;
     }
@@ -152,6 +164,7 @@ import WIP from "./WIP.astro";
       opacity: 1;
       transform: scale(1);
     }
+
     100% {
       opacity: 0;
       transform: scale(0);
@@ -161,12 +174,15 @@ import WIP from "./WIP.astro";
 
 <script>
   const more = document.querySelector(".more");
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("faded-out");
-      }
-    });
-  }, { rootMargin: "-200px" });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("faded-out");
+        }
+      });
+    },
+    { rootMargin: "-200px" },
+  );
   if (more) observer.observe(more);
 </script>
