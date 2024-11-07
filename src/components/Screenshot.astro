@@ -1,5 +1,4 @@
 ---
-
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 
@@ -160,16 +159,7 @@ const hasContent = Astro.slots.has("default");
 </style>
 
 <script>
-  const imgs = document.querySelectorAll("[data-img='screenshot']");
   const imgWrapper = document.querySelector(".swiper-wrapper");
-
-  // Use mouseenter/mouseleave events for desktop
-  // imgs.forEach((img) => {
-  //   img.addEventListener("click", () => {
-  //     img.classList.toggle("show-back");
-  //     img.classList.toggle("show-home");
-  //   });
-  // });
 
   imgWrapper?.addEventListener("click", (event) => {
     const otherParents = imgWrapper.querySelectorAll("[data-img='screenshot']");
