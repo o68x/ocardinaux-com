@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.0.2](https://github.com/o68x/ocardinaux-com/compare/v1.0.1...v1.0.2) (2024-11-07)
+
+
+### Bug Fixes
+
+* add flex wrap ([7c5a244](https://github.com/o68x/ocardinaux-com/commit/7c5a2448509e1778492c621dff3fcf9b317ad1df))
+
 ## [1.0.1](https://github.com/o68x/ocardinaux-com/compare/v1.0.0...v1.0.1) (2024-11-07)
 
 
