@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.0.0](https://github.com/o68x/ocardinaux-com/compare/v0.0.7...v1.0.0) (2024-11-07)
+
+
+### Features
+
+* add a 404 page, good practice ([aafc953](https://github.com/o68x/ocardinaux-com/commit/aafc953d38dd5cd6ee1998cc67d10f405f30dda7))
+* more serious content ([c773133](https://github.com/o68x/ocardinaux-com/commit/c773133900db3609cfa21142378853aa09526f8a))
+
+
+### Bug Fixes
+
+* move from public to static, better naming ([82a61f3](https://github.com/o68x/ocardinaux-com/commit/82a61f33920d6ebf1597443d5667d7fa34fccea0))
+* read version from package.json ([989d786](https://github.com/o68x/ocardinaux-com/commit/989d786e144ea0e77f9a2c05daca178a17c09643))
+
 ## [0.0.7](https://github.com/o68x/ocardinaux-com/compare/v0.0.6...v0.0.7) (2024-11-05)
 
 
