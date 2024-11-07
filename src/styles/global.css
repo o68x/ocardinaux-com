@@ -56,8 +56,16 @@ h2 {
   font-size: var(--s3);
 }
 
+.strong, b, strong {
+  font-family: var(--ff-heading);
+  font-variation-settings: "wght" 600;
+  font-style: italic;
+}
+
 p + ul,
+p + ol,
 ul + p,
+ol + p,
 li + li,
 p + p {
   margin-top: var(--s0);
