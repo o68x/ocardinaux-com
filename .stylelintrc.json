@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "stylelint-config-html",
+    "stylelint-config-standard"
+  ],
+  "rules": {
+    "custom-property-pattern": null,
+    "selector-id-pattern": null
+  }
+}

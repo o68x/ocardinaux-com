@@ -1,29 +1,28 @@
 ---
-import { Image, getImage } from "astro:assets";
-
-import RawSvg from "../components/RawSvg.astro";
-import codeScreenshot from "../assets/images/code-screen.webp";
+import { Image } from "astro:assets";
 import portrait from "../assets/images/portrait.webp";
-
-const bgImage = await getImage({
-  src: codeScreenshot,
-  format: "webp"
-})
+import { version } from "../../package.json";
 ---
 
-<!--  -->
 <footer class="footer">
-<!-- <footer class="footer"> -->
- <div class="about">
-  <figure class="portrait cut-out">
-    <Image src={portrait} alt="moi" />
-  </figure>
-  <h1>À propos de moi</h1>
-  <p>Je suis né en 1966 à Lausanne (Suisse). Économiste et statisticien de formation, j'ai travaillé dans la recherche, puis dans le marketing, puis dans diverses choses, le plus récemment dans le domaine associatif.</p>
-  <p>Tout au long de ma vie professionnelle, j'ai utilisé des outils informatiques, et les ai créés lorsque ceux-ci faisaient défaut. De plus en plus, ces outils étaient basés sur des technologies web.</p>
-  <p>En 2019, j'ai finalement suivi une formation pour devenir développeur web.</p>
- </div>
-  <span>v3.2.8</span>
+  <div class="about">
+    <figure class="portrait cut-out">
+      <Image src={portrait} alt="moi" />
+    </figure>
+    <h1>À propos de moi</h1>
+    <p>
+      Je suis né en 1966 à Lausanne (Suisse). Économiste et statisticien de formation, j'ai
+      travaillé dans la recherche, puis dans le marketing, puis dans diverses choses, le plus
+      récemment dans le domaine associatif.
+    </p>
+    <p>
+      Tout au long de ma vie professionnelle, j'ai utilisé des outils informatiques, et les ai créés
+      lorsque ceux-ci faisaient défaut. De plus en plus, ces outils étaient basés sur des
+      technologies web.
+    </p>
+    <p>En 2019, j'ai finalement suivi une formation pour devenir développeur web.</p>
+  </div>
+  <span>v{version}</span>
 </footer>
 
 <style is:global>
@@ -61,7 +60,8 @@ const bgImage = await getImage({
     margin-inline: auto;
     margin-block-start: var(--s4);
 
-    h1 {
+    & > h1 {
+      font-family: monospace;
       text-align: center;
       padding-block: var(--s2);
     }

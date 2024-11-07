@@ -1,5 +1,4 @@
 ---
-
 interface Props {
   title: string;
   class?: string;
@@ -10,7 +9,10 @@ const { title, class: className } = Astro.props;
 
 <article class:list={[className, "content"]}>
   <div class="inner">
-    <h2>{title}</h2>
+    <div class="title-block">
+      <h2>{title}</h2>
+      <slot name="subtitle" />
+    </div>
     <div>
       <slot />
     </div>
@@ -20,20 +22,18 @@ const { title, class: className } = Astro.props;
 <style>
   article {
     color: var(--color-fern);
-    font-size: var(--s2);
+    font-size: var(--s1);
     font-variation-settings: "wght" 300, "wdth" 75;
     line-height: 1.3;
 
     .inner {
       display: flex;
       gap: 1rem;
-      flex-wrap: wrap;
       justify-content: center;
       align-items: first baseline;
       padding: 1rem;
       background-color: var(--color-light-bone);
       transform: translate(5px, 5px);
-      /* opacity: 0.8; */
 
       & > * {
         flex-grow: 1;
@@ -42,6 +42,10 @@ const { title, class: className } = Astro.props;
         text-wrap: balance;
       }
     }
+  }
 
+  .title-block {
+      font-size: var(--s-1);
+      font-variation-settings: "wght" 400, "wdth" 75;
   }
 </style>

@@ -16,10 +16,11 @@
 */
 
 /* @import must be at top of file, otherwise CSS will not work */
+
 /* @import url("//hello.myfonts.net/count/37c808"); */
 
 /* @font-face {
-  font-family: "TTCottons";
+  font-family: TTCottons;
   src: url("/webfonts/37C808_0_0.eot");
   src: url("/webfonts/37C808_0_0.eot?#iefix")
       format("embedded-opentype"),
@@ -30,7 +31,7 @@
 } */
 
 @font-face {
-  font-family: "TTCottons";
+  font-family: TTCottons;
   src: url("/webfonts/37C808_1_0.eot");
   src: url("/webfonts/37C808_1_0.eot?#iefix")
       format("embedded-opentype"),
@@ -42,7 +43,7 @@
 }
 
 @font-face {
-  font-family: "TTCottons";
+  font-family: TTCottons;
   src: url("/webfonts/37C808_2_0.eot");
   src: url("/webfonts/37C808_2_0.eot?#iefix")
       format("embedded-opentype"),
@@ -55,7 +56,7 @@
 }
 
 /* @font-face {
-  font-family: "TTCottons";
+  font-family: TTCottons;
   src: url("/webfonts/37C808_3_0.eot");
   src: url("/webfonts/37C808_3_0.eot?#iefix")
       format("embedded-opentype"),
@@ -67,7 +68,7 @@
 } */
 
 @font-face {
-  font-family: "TTCottons";
+  font-family: TTCottons;
   src: url("/webfonts/37C808_4_0.eot");
   src: url("/webfonts/37C808_4_0.eot?#iefix")
       format("embedded-opentype"),
@@ -79,7 +80,7 @@
 }
 
 @font-face {
-  font-family: "TTCottons";
+  font-family: TTCottons;
   src: url("/webfonts/37C808_5_0.eot");
   src: url("/webfonts/37C808_5_0.eot?#iefix")
       format("embedded-opentype"),
@@ -92,7 +93,7 @@
 }
 
 @font-face {
-  font-family: "TTCottons";
+  font-family: TTCottons;
   src: url("/webfonts/37C808_6_0.eot");
   src: url("/webfonts/37C808_6_0.eot?#iefix")
       format("embedded-opentype"),
@@ -105,7 +106,7 @@
 }
 
 @font-face {
-  font-family: "TTCottons";
+  font-family: TTCottons;
   src: url("/webfonts/37C808_7_0.eot");
   src: url("/webfonts/37C808_7_0.eot?#iefix")
       format("embedded-opentype"),
@@ -118,7 +119,7 @@
 }
 
 /* @font-face {
-  font-family: "TTCottons";
+  font-family: TTCottons;
   src: url("/webfonts/37C808_8_0.eot");
   src: url("/webfonts/37C808_8_0.eot?#iefix")
       format("embedded-opentype"),
@@ -131,7 +132,7 @@
 } */
 
 @font-face {
-  font-family: "TTCottons";
+  font-family: TTCottons;
   src: url("/webfonts/37C808_9_0.eot");
   src: url("/webfonts/37C808_9_0.eot?#iefix")
       format("embedded-opentype"),
@@ -144,7 +145,7 @@
 }
 
 @font-face {
-  font-family: "TTCottons";
+  font-family: TTCottons;
   src: url("/webfonts/37C808_A_0.eot");
   src: url("/webfonts/37C808_A_0.eot?#iefix")
       format("embedded-opentype"),
@@ -156,7 +157,7 @@
 }
 
 @font-face {
-  font-family: "TTCottons";
+  font-family: TTCottons;
   src: url("/webfonts/37C808_B_0.eot");
   src: url("/webfonts/37C808_B_0.eot?#iefix")
       format("embedded-opentype"),
@@ -168,7 +169,7 @@
 }
 
 @font-face {
-  font-family: "TTCottons";
+  font-family: TTCottons;
   src: url("/webfonts/37C808_C_0.eot");
   src: url("/webfonts/37C808_C_0.eot?#iefix")
       format("embedded-opentype"),
@@ -180,7 +181,7 @@
 }
 
 /* @font-face {
-  font-family: "TTCottons";
+  font-family: TTCottons;
   src: url("/webfonts/37C808_D_0.eot");
   src: url("/webfonts/37C808_D_0.eot?#iefix")
       format("embedded-opentype"),

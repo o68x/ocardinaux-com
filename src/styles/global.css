@@ -2,13 +2,14 @@
 
 :root {
   --ff-base: 'Asap', sans-serif;
-  --color-bone: hsl(39.23 39.39 87.06);
+  --ff-heading: 'Saira', sans-serif;
+  --color-bone: hsl(39.23deg 39.39 87.06);
   --color-light-bone: hsl(from var(--color-bone) h s calc(l + 5));
   --color-dark-bone: hsl(from var(--color-bone) h s calc(l - 15));
   --color-very-dark-bone: hsl(from var(--color-bone) h calc(s - 10) calc(l - 40));
-  --color-fern: hsl(132.5 26.09 36.08); /* #44744e */
+  --color-fern: hsl(132.5deg 26.09 36.08); /* #44744e */
   --color-light-fern: hsl(from var(--color-fern) h s calc(l + 15));
-  --color-citrine: hsl(53.11 79.91 55.1); /* #e8d331 */
+  --color-citrine: hsl(53.11deg 79.91 55.1); /* #e8d331 */
   --s-5: clamp(0.4506rem, 0.4527rem + -0.0027vw, 0.4521rem);
   --s-4: clamp(0.5425rem, 0.5353rem + 0.0359vw, 0.5632rem);
   --s-3: clamp(0.651rem, 0.6326rem + 0.0921vw, 0.704rem);
@@ -33,7 +34,7 @@ body {
   min-height: 100vh;
 }
 
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden:not(:focus, :active) {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
@@ -43,18 +44,28 @@ body {
   width: 1px;
 }
 
-h2 {
-  display: block;
-  font-family: "Saira", sans-serif;
-  font-size: var(--s3);
+:is(h1, h2, h3) {
+  font-family: var(--ff-heading);
   font-weight: unset;
   font-variation-settings: "wght" 400, "wdth" 87.5;
   line-height: 1;
   letter-spacing: 1px;
 }
 
+h2 {
+  font-size: var(--s3);
+}
+
+.strong, b, strong {
+  font-family: var(--ff-heading);
+  font-variation-settings: "wght" 600;
+  font-style: italic;
+}
+
 p + ul,
+p + ol,
 ul + p,
+ol + p,
 li + li,
 p + p {
   margin-top: var(--s0);
@@ -75,13 +86,9 @@ p + p {
   &::after {
     content: "";
     position: absolute;
-    top: -1px;
-    bottom: -1px;
-    left: -1px;
-    right: -1px;
+    inset: -1px;
     border: 1px solid var(--color-very-dark-bone);
     background-color: transparent;
-    /* z-index: -1; */
   }
 
   &::before {

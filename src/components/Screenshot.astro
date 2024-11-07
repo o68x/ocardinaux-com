@@ -1,4 +1,5 @@
 ---
+
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 
@@ -24,14 +25,16 @@ const hasContent = Astro.slots.has("default");
   tabindex="0"
 >
   <figure>
-    <Image
-      src={src}
-      alt={alt}
-      style=`aspect-ratio: ${src.width / src.height};`
-    />
-    <figcaption><a href={link} target="_blank">{alt}</a></figcaption>
+    <Image src={src} alt={alt} style=`aspect-ratio: ${src.width / src.height};` />
+    <figcaption><a href={`${link}?ref=ocx`} target="_blank">{alt}</a></figcaption>
   </figure>
-  {hasContent && <div class="backside"><slot /></div>}
+  {
+    hasContent && (
+      <div class="backside">
+        <slot />
+      </div>
+    )
+  }
 </div>
 
 <style>
@@ -40,6 +43,7 @@ const hasContent = Astro.slots.has("default");
       transform: rotate3d(20, 40, 0, 30deg);
       opacity: 1;
     }
+
     100% {
       transform: rotate3d(20, 40, 0, 90deg) scale(0.5);
       opacity: 0;
@@ -51,6 +55,7 @@ const hasContent = Astro.slots.has("default");
       transform: rotate3d(20, 40, 0, 90deg) scale(0.5);
       opacity: 0;
     }
+
     100% {
       transform: rotate3d(20, 40, 0, 30deg);
       opacity: 1;
@@ -61,6 +66,7 @@ const hasContent = Astro.slots.has("default");
     z-index: 1;
     flex: 0 0 max(340px, 35vw);
     margin-inline: var(--s-3);
+    cursor: pointer;
 
     & > figure {
       padding: var(--s-1);
@@ -70,6 +76,7 @@ const hasContent = Astro.slots.has("default");
 
     & figcaption {
       --_border-color: transparent;
+
       text-align: center;
       font-size: var(--s-2);
 
@@ -86,13 +93,18 @@ const hasContent = Astro.slots.has("default");
 
     &.show-back figcaption a[href] {
       --_border-color: var(--color-fern);
+
       cursor: pointer;
+
+      &:hover {
+        background-color: var(--color-light-bone);
+      }
     }
 
     & img {
       width: 100%;
       transform: rotate3d(20, 40, 0, 30deg);
-      filter: drop-shadow(var(--s-5) var(--s-5) 10px rgb(0 0 0 / 0.2));
+      filter: drop-shadow(var(--s-5) var(--s-5) 10px rgb(0 0 0 / 20%));
       transform-origin: center;
       height: auto;
       object-fit: contain;
@@ -108,7 +120,9 @@ const hasContent = Astro.slots.has("default");
       opacity: 0;
       transition: opacity 0.2s ease-in;
       font-size: var(--s-1);
-      font-variation-settings: "wght" 400, "wdth" 75;
+      font-variation-settings:
+        "wght" 400,
+        "wdth" 75;
       padding: var(--s-3);
       color: var(--color-very-dark-bone);
     }
@@ -171,5 +185,5 @@ const hasContent = Astro.slots.has("default");
         el.classList.add("show-home");
       });
     }
-  })
+  });
 </script>
