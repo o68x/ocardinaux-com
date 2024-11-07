@@ -85,8 +85,7 @@ import "../styles/tippy.css";
     <section id="contact">
       <Article title="Contactez-moi" class="cut-out">
         par mail à l'adresse <span class="strong" id="email"></span> ou par téléphone au <span
-          class="tel strong">06 89 63 80 14.</span
-        >
+          id="tel" class="tel strong"></span>
       </Article>
       <div class="text">
         <p class="strong">Discutons de votre projet ! Pas besoin d’avoir une idée précise en tête. Lors d’un premier échange, nous pourrons définir ensemble ce que vous voulez faire avec votre site et le public que vous souhaitez toucher.</p>
@@ -205,4 +204,10 @@ import "../styles/tippy.css";
   const user = "olivier";
   const domain = "ocardinaux.com";
   if (email) email.innerHTML = `<a href='mailto:${user}@${domain}'>${user}@${domain}</a>`;
+
+  // Obfuscate tel number
+  const tel = document.querySelector("#tel");
+  const telNumber = "+33689638014";
+  const telText = "06 89 63 80 14";
+  if (tel) tel.innerHTML = `<a href='tel:${telNumber}'>${telText}</a>`;
 </script>
