@@ -7,7 +7,8 @@ export default [
   {
     rules: {
       // override/add rules settings here, such as:
-      "astro/no-unused-css-selector": "error"
+      "astro/no-unused-css-selector": "error",
+      "no-irregular-whitespace": false
     }
   }
 ];
