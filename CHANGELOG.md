@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.0.1](https://github.com/o68x/ocardinaux-com/compare/v1.0.0...v1.0.1) (2024-11-07)
+
+
+### Bug Fixes
+
+* corrections copie par chatgpt ([7f31409](https://github.com/o68x/ocardinaux-com/commit/7f314096604d4a917a2c1b27034eb104f0d1381c))
+
 ## [1.0.0](https://github.com/o68x/ocardinaux-com/compare/v0.0.7...v1.0.0) (2024-11-07)
 
 
