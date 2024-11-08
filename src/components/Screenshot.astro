@@ -12,6 +12,9 @@ export interface Props {
 
 const { src, link, alt, class: className } = Astro.props;
 
+// test if link is anchor link
+const isAnchorLink =link?.startsWith("#");
+
 const filename = src.src.split("/").pop();
 const filenameWithoutExtension = filename?.split(".")[0];
 
@@ -26,7 +29,10 @@ const hasContent = Astro.slots.has("default");
 >
   <figure>
     <Image src={src} alt={alt} style=`aspect-ratio: ${src.width / src.height};` />
-    <figcaption><a href={`${link}?ref=ocx`} target="_blank">{alt}</a></figcaption>
+    <figcaption>
+      <!-- Adapt link to anchor -->
+      <a href={isAnchorLink ? link : `${link}?ref=ocx`} target={isAnchorLink ? "_self" : "_blank"}>{alt}</a>
+    </figcaption>
   </figure>
   {
     hasContent && (
