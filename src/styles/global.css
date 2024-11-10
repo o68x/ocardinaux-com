@@ -58,7 +58,7 @@ h2 {
 
 .strong, b, strong {
   font-family: var(--ff-heading);
-  font-variation-settings: "wght" 600;
+  font-variation-settings: "wght" 500, "wdth" 87.5;
   font-style: italic;
 }
 
