@@ -58,7 +58,7 @@ import "../styles/tippy.css";
           L'association des Artistes du V<sup>e</sup> vous propose de découvrir les œuvres de ses artistes
           et ses dernères expositions.
         </Screenshot>
-        <Screenshot src={votreSite} alt="… votre site ?" class="cut-out">
+        <Screenshot src={votreSite} link="#contact" alt="… votre site ?" class="cut-out">
           Rencontrons-nous pour discuter de vos projets !
         </Screenshot>
       </ScreenshotSlider>
@@ -195,6 +195,7 @@ import "../styles/tippy.css";
 
   .tel {
     white-space: nowrap;
+    letter-spacing: -1px;
   }
 </style>
 
@@ -205,7 +206,7 @@ import "../styles/tippy.css";
   const domain = "ocardinaux.com";
   if (email) email.innerHTML = `<a href='mailto:${user}@${domain}'>${user}@${domain}</a>`;
 
-  // Obfuscate tel number
+  // Obfuscate tel number (useful?)
   const tel = document.querySelector("#tel");
   const telNumber = "+33689638014";
   const telText = "06 89 63 80 14";
