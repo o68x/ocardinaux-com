@@ -17,15 +17,20 @@ import "../styles/tippy.css";
   <main>
     <Hero />
     <section id="intro">
-      <Article title="Je construis des sites internet sur mesure." class="cut-out">
+      <Article
+        title="Je construis des sites internet sur mesure."
+        class="cut-out"
+      >
         <p slot="subtitle">Sites vitrine, blogs personnels, etc.</p>
         <ol>
           <li>
-            <strong>Personnalisés</strong> — dans l'esthétique, la structure et les fonctionnalités
+            <strong>Personnalisés</strong> — dans l'esthétique, la structure et les
+            fonctionnalités
           </li>
           <li><strong>Simples</strong> — dans la gestion et la maintenance</li>
           <li>
-            <strong>Solides et évolutifs</strong> — avec une base de code fiable et un support de qualité
+            <strong>Solides et évolutifs</strong> — avec une base de code fiable
+            et un support de qualité
           </li>
         </ol>
       </Article>
@@ -37,8 +42,9 @@ import "../styles/tippy.css";
           alt="michelerouhet.fr"
           class="cut-out"
         >
-          Michèle Rouhet partage avec nous ses photographies de nature, ses activités de conteuse et
-          de formatrice, ainsi que son engagement en faveur des arbres et de la flore.
+          Michèle Rouhet partage avec nous ses photographies de nature, ses
+          activités de conteuse et de formatrice, ainsi que son engagement en
+          faveur des arbres et de la flore.
         </Screenshot>
         <Screenshot
           src={jpHome}
@@ -46,8 +52,8 @@ import "../styles/tippy.css";
           alt="janickponcin.com"
           class="cut-out"
         >
-          Janick Poncin est pastelliste, et elle présente sur son site des galeries de ses œuvres et
-          toutes les informations sur ses expositions.
+          Janick Poncin est pastelliste, et elle présente sur son site des
+          galeries de ses œuvres et toutes les informations sur ses expositions.
         </Screenshot>
         <Screenshot
           src={a5eHome}
@@ -55,62 +61,97 @@ import "../styles/tippy.css";
           alt="artistesdu5.fr"
           class="cut-out"
         >
-          L'association des Artistes du V<sup>e</sup> vous propose de découvrir les œuvres de ses artistes
-          et ses dernères expositions.
+          L'association des Artistes du V<sup>e</sup> vous propose de découvrir les
+          œuvres de ses artistes et ses dernères expositions.
         </Screenshot>
-        <Screenshot src={votreSite} link="#contact" alt="… votre site ?" class="cut-out">
+        <Screenshot
+          src={votreSite}
+          link="#contact"
+          alt="… votre site ?"
+          class="cut-out"
+        >
           Rencontrons-nous pour discuter de vos projets !
         </Screenshot>
       </ScreenshotSlider>
 
       <div class="text">
         <p class="strong">
-          Mes sites, je les crée avec soin, chaque détail compte. Jetez-y un œil ! Chaque projet est pensé pour être unique, pratique et attrayant.
+          Mes sites, je les crée avec soin, chaque détail compte. Jetez-y un œil
+          ! Chaque projet est pensé pour être unique, pratique et attrayant.
         </p>
-        <ul>
+        <ol>
           <li>
-            Chaque site que je crée est fait « à la main », sans thèmes standardisés. Cela me permet de concevoir un site vraiment personnalisé, adapté à vos besoins, votre style et surtout facile à utiliser sur tous les écrans (ordinateur, tablette, smartphone). Tout est pensé : l’esthétique (choix des couleurs, polices, etc.), l’organisation du contenu et les fonctionnalités.
+            Chaque site que je crée est fait « à la main », sans thèmes
+            standardisés. Cela me permet de concevoir un site vraiment
+            personnalisé, adapté à vos besoins, votre style et surtout facile à
+            utiliser sur tous les écrans (ordinateur, tablette, smartphone).
+            Tout est pensé : l’esthétique (choix des couleurs, polices, etc.),
+            l’organisation du contenu et les fonctionnalités.
           </li>
           <li>
-            Pour que vous puissiez gérer facilement votre site, j’utilise <strong><a href="https://getkirby.com" target="_blank">KIRBY</a></strong>, un système simple et intuitif pour mettre à jour le contenu (textes, photos, etc.). Pas besoin d’être expert ! Kirby est conçu pour que vous puissiez apporter les modifications de base sans souci.
+            J’utilise <strong
+              ><a href="https://getkirby.com" target="_blank">Kirby</a></strong
+            >, pour que vous puissiez gérer facilement votre site. Kirby est un
+            système simple et intuitif pour mettre à jour le contenu (textes,
+            photos, etc.). Pas besoin d’être expert ! Kirby est conçu pour que
+            vous puissiez apporter les modifications de base sans souci.
           </li>
           <li>
-            Grâce à cette méthode, votre site sera solide et stable, car il ne dépend pas de modules ou plugins extérieurs. Et comme je suis seul en charge de la maintenance, je peux vous offrir un support de qualité. Un site solide ne veut pas dire rigide ! On peut ajouter des fonctionnalités, ajuster le design, et faire évoluer le site au fil de vos besoins.
+            Grâce à cette méthode, votre site sera solide et stable, car il ne
+            dépend pas de modules ou plugins extérieurs. Et comme je suis seul
+            en charge de la maintenance, je peux vous offrir un support de
+            qualité. Un site solide ne veut pas dire rigide ! On peut ajouter
+            des fonctionnalités, ajuster le design, et faire évoluer le site au
+            fil de vos besoins.
           </li>
-        </ul>
-        <p>Mon travail, c'est avant tout de traduire vos idées en un site fonctionnel, esthétique et évolutif, conçu pour durer.</p>
+        </ol>
+        <p>
+          Mon travail, c'est avant tout de traduire vos idées en un site
+          fonctionnel, esthétique et évolutif, conçu pour durer.
+        </p>
       </div>
     </section>
 
     <section id="contact">
       <Article title="Contactez-moi" class="cut-out">
-        par mail à l'adresse <span class="strong" id="email"></span> ou par téléphone au <span
-          id="tel" class="tel strong"></span>
+        par mail à l'adresse <span class="strong" id="email"></span> ou par téléphone
+        au <span id="tel" class="tel strong"></span>
       </Article>
+
       <div class="text">
-        <p class="strong">Discutons de votre projet ! Pas besoin d’avoir une idée précise en tête. Lors d’un premier échange, nous pourrons définir ensemble ce que vous voulez faire avec votre site et le public que vous souhaitez toucher.</p>
+        <p class="strong">
+          Discutons de votre projet ! Pas besoin d’avoir une idée précise en
+          tête. Lors d’un premier échange, nous pourrons définir ensemble ce que
+          vous voulez faire avec votre site et le public que vous souhaitez
+          toucher.
+        </p>
         <ol>
           <li>
-            Vous pourrez définir <strong>les objectifs du site</strong>, son public, et le type de contenus qu'il
-            contiendra. En y ajoutant vos attentes en matière de style et d'<strong>apparence visuelle</strong>, nous
-            pouvons arriver à une base commune et une définition plus précise du projet.
+            Vous pourrez définir <strong>les objectifs du site</strong>, son
+            public, et le type de contenus qu'il contiendra. En y ajoutant vos
+            attentes en matière de style et d'<strong>apparence visuelle</strong
+            >, nous pouvons arriver à une base commune et une définition plus
+            précise du projet.
           </li>
           <li>
-            Je prépare alors une <strong>première ébauche</strong> de la structure des pages et du site : les menus,
-            les emplacements pour les textes et les images, les sections importantes, et plus
-            encore. Je commence aussi à créer la partie gestion du site.
+            Je prépare alors une <strong>première ébauche</strong> de la structure
+            des pages et du site : les menus, les emplacements pour les textes et
+            les images, les sections importantes, et plus encore. Je commence aussi
+            à créer la partie gestion du site.
           </li>
           <li>
-            À partir de là, vous pourrez créer, collecter et me transmettre les éléments de contenu.
-            En parallèle, je commencerai à donner vie au site en y appliquant des styles et des
-            éléments visuels.
+            À partir de là, vous pourrez créer, collecter et me transmettre les
+            éléments de contenu. En parallèle, je commencerai à donner vie au
+            site en y appliquant des styles et des éléments visuels.
           </li>
           <li>
-            Nous pouvons alors voir ensemble cette première version du site, corriger et affiner ce
-            qui doit l'être.
+            Nous pouvons alors voir ensemble cette première version du site,
+            corriger et affiner ce qui doit l'être.
           </li>
         </ol>
-        <p class="strong">Une fois tout en place, votre site est prêt à être lancé !</p>
+        <p class="strong">
+          Une fois tout en place, votre site est prêt à être lancé !
+        </p>
       </div>
     </section>
   </main>
@@ -176,6 +217,24 @@ import "../styles/tippy.css";
     max-width: min(1200px, calc(100% - 2 * var(--s2)));
   }
 
+  ol {
+    list-style-type: none;
+    counter-reset: list;
+    padding: 0;
+  }
+
+  ol li {
+    counter-increment: list;
+
+    &::before {
+      content: counter(list);
+      padding-inline: var(--s-3);
+      color: var(--color-fern);
+      background-color: var(--color-dark-bone);
+      border-radius: 50%;
+    }
+  }
+
   .separator {
     position: relative;
     background-color: transparent;
@@ -204,7 +263,8 @@ import "../styles/tippy.css";
   const email = document.querySelector("#email");
   const user = "olivier";
   const domain = "ocardinaux.com";
-  if (email) email.innerHTML = `<a href='mailto:${user}@${domain}'>${user}@${domain}</a>`;
+  if (email)
+    email.innerHTML = `<a href='mailto:${user}@${domain}'>${user}@${domain}</a>`;
 
   // Obfuscate tel number (useful?)
   const tel = document.querySelector("#tel");
