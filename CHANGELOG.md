@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.1.0](https://github.com/o68x/ocardinaux-com/compare/v0.0.7...v1.1.0) (2024-11-12)
+
+
+### Features
+
+* use oklch colors ([2c076d3](https://github.com/o68x/ocardinaux-com/commit/2c076d3205a9c337de9578b01d94d4d02d10dac5))
+
+
+### Bug Fixes
+
+*  tel link with obfuscation ([fe6760c](https://github.com/o68x/ocardinaux-com/commit/fe6760cca2d4f873ca9bf026d0e15567f7d1ea74))
+* font width on strong ([f92faf6](https://github.com/o68x/ocardinaux-com/commit/f92faf60cca02c93d73190622f6fea4aef871417))
+* link to anchor working ([a91f9c2](https://github.com/o68x/ocardinaux-com/commit/a91f9c2c8210238b3816cf34d3886c486de17d53))
+* use lightningcss because stephanie eckles likes it ([a8f9b78](https://github.com/o68x/ocardinaux-com/commit/a8f9b786ea55e6d84df5e1f8f54e065e628275fd))
+
 ## [1.0.2](https://github.com/o68x/ocardinaux-com/compare/v1.0.1...v1.0.2) (2024-11-07)
 
 
