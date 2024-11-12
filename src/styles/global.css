@@ -1,15 +1,16 @@
+/* stylelint-disable hue-degree-notation */
 @import url('./reset.css');
 
 :root {
   --ff-base: 'Asap', sans-serif;
   --ff-heading: 'Saira', sans-serif;
-  --color-bone: hsl(39.23deg 39.39 87.06);
-  --color-light-bone: hsl(from var(--color-bone) h s calc(l + 5));
-  --color-dark-bone: hsl(from var(--color-bone) h s calc(l - 15));
-  --color-very-dark-bone: hsl(from var(--color-bone) h calc(s - 10) calc(l - 40));
-  --color-fern: hsl(132.5deg 26.09 36.08); /* #44744e */
-  --color-light-fern: hsl(from var(--color-fern) h s calc(l + 15));
-  --color-citrine: hsl(53.11deg 79.91 55.1); /* #e8d331 */
+  --color-bone: oklch(91.53% 0.0247 83.41);
+  --color-light-bone: oklch(from var(--color-bone) calc(l * 1.08) c h);
+  --color-dark-bone: oklch(from var(--color-bone) calc(l * 0.95) c h);
+  --color-very-dark-bone: oklch(from var(--color-bone) calc(l * 0.7) calc(c * 0.9) h);
+  --color-fern: oklch(51.37% 0.0798 149.57); /* #44744e */
+  --color-light-fern: oklch(from var(--color-fern) calc(l * 1.08) c h);
+  --color-citrine: oklch(85.86% 0.1674 101.41); /* #e8d331 */
   --s-5: clamp(0.4506rem, 0.4527rem + -0.0027vw, 0.4521rem);
   --s-4: clamp(0.5425rem, 0.5353rem + 0.0359vw, 0.5632rem);
   --s-3: clamp(0.651rem, 0.6326rem + 0.0921vw, 0.704rem);
