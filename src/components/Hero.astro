@@ -1,24 +1,22 @@
 ---
 import { Image } from "astro:assets";
 import Icon from "../components/Icon.astro";
-import RawSvg from "../components/RawSvg.astro";
 import astronomyFig from "../assets/images/astronomy-fig-38.webp";
 import WIP from "./WIP.astro";
 ---
 
 <div class="hero">
   <div class="name">
-    <!-- <svg viewBox="0 0 500 550">
-      <defs>
-        <path id="curve" d="M0,0 A 120 500 0 0 1 500 0" />
-      </defs>
-      <text width="100">
-        <textPath dominant-baseline="middle" startOffset="50%" xlink:href="#curve" text-anchor="middle">
+    <svg class="title" viewBox="0 0 600 400" width="100%" height="auto" style="fill: transparent;">
+        <path id="curve" d="
+          M150,300
+          a 300 120 0 1 1 300 0" />
+      <text width="300">
+        <textPath dominant-baseline="middle" startOffset="50%" xlink:href="#curve" text-anchor="middle" style="fill: currentcolor;">
           Olivier Cardinaux
         </textPath>
       </text>
-    </svg> -->
-    <RawSvg className="svg" svgFile="grenze-oc_min" />
+    </svg>
   </div>
   <figure
     class="astronomy-fig"
@@ -27,7 +25,7 @@ import WIP from "./WIP.astro";
     <Image src={astronomyFig} alt="" loading="eager" />
   </figure>
   <div class="line">
-    <RawSvg className="svg" svgFile="grenze-construction_min" />
+    <p class="subtitle">Construction de sites internet</p>
     <p>Paris · Lausanne · L'Isle-sur-la-Sorgue</p>
     <WIP />
   </div>
@@ -41,12 +39,13 @@ import WIP from "./WIP.astro";
 <style>
   .hero {
     position: relative;
-    padding-top: 10vh;
+    font-size: var(--s4);
+    padding-top: 15vh;
     min-height: 100vh;
     min-height: 100dvh;
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: max-content max-content minmax(0, 1fr) max-content;
+    grid-template-rows: max-content minmax(0, 1fr) max-content;
   }
 
   .name,
@@ -54,6 +53,23 @@ import WIP from "./WIP.astro";
   .line {
     width: clamp(300px, 50vw, 600px);
     place-self: start center;
+  }
+
+  .name,
+  .astronomy-fig {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .name {
+    margin-top: max(-15%, -15vh);
+    font-family: var(--ff-heading);
+  }
+
+  .subtitle {
+    font-family: var(--ff-base-light);
+    font-size: var(--s1);
+    letter-spacing: 0.1em;
   }
 
   .astronomy-fig {
@@ -97,9 +113,6 @@ import WIP from "./WIP.astro";
     margin-top: var(--s2);
     font-size: var(--s-2);
     letter-spacing: 2px;
-    font-variation-settings:
-      "wght" 500,
-      "wdth" 125;
     text-align: center;
     text-wrap: balance;
     text-transform: uppercase;
