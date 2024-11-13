@@ -228,10 +228,14 @@ import "../styles/tippy.css";
 
     &::before {
       content: counter(list);
+      display: inline-block;
       padding-inline: var(--s-3);
       color: var(--color-fern);
       background-color: var(--color-dark-bone);
       border-radius: 50%;
+      line-height: 1.4;
+      height: 1.3em;
+      transform: translateY(-0.1em);
     }
   }
 

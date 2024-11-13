@@ -1,13 +1,16 @@
 /* stylelint-disable hue-degree-notation */
 @import url('./reset.css');
+@import url('./venus.css');
 
 :root {
-  --ff-base: 'Asap', sans-serif;
-  --ff-heading: 'Saira', sans-serif;
-  --color-bone: oklch(91.53% 0.0247 83.41);
-  --color-light-bone: oklch(from var(--color-bone) calc(l * 1.08) c h);
+  --ff-base: 'Venus-Plomb', sans-serif;
+  --ff-base-bold: 'Venus-Cormier', sans-serif;
+  --ff-base-light: 'Venus-Acier', sans-serif;
+  --ff-heading: 'Venus-Martre', sans-serif;
+  --color-bone: oklch(91.53% 0.023 83.41);
+  --color-light-bone: oklch(from var(--color-bone) calc(l * 1.1) calc(c * 0.5) h);
   --color-dark-bone: oklch(from var(--color-bone) calc(l * 0.95) c h);
-  --color-very-dark-bone: oklch(from var(--color-bone) calc(l * 0.7) calc(c * 0.9) h);
+  --color-very-dark-bone: oklch(from var(--color-bone) calc(l * 0.6) calc(c * 0.9) h);
   --color-fern: oklch(51.37% 0.0798 149.57); /* #44744e */
   --color-light-fern: oklch(from var(--color-fern) calc(l * 1.08) c h);
   --color-citrine: oklch(85.86% 0.1674 101.41); /* #e8d331 */
@@ -29,8 +32,8 @@ body {
   color: var(--color-fern);
   font-family: var(--ff-base);
   font-size: clamp(16px, calc(1rem + 0.333vw), 22px);
-  line-height: 1.2;
-  letter-spacing: 0.05em;
+  line-height: 1.4;
+  letter-spacing: 0.025em;
   min-height: 100dvh;
   min-height: 100vh;
 }
@@ -48,19 +51,19 @@ body {
 :is(h1, h2, h3) {
   font-family: var(--ff-heading);
   font-weight: unset;
-  font-variation-settings: "wght" 400, "wdth" 87.5;
   line-height: 1;
   letter-spacing: 1px;
 }
 
 h2 {
   font-size: var(--s3);
+  opacity: 0.75;
 }
 
 .strong, b, strong {
-  font-family: var(--ff-heading);
-  font-variation-settings: "wght" 500, "wdth" 87.5;
-  font-style: italic;
+  font-family: var(--ff-base-bold);
+  font-weight: 400;
+  opacity: 0.75;
 }
 
 p + ul,

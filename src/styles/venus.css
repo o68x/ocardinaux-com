@@ -1,0 +1,49 @@
+@font-face {
+  font-family: Venus-Acier;
+  src:
+    url("/webfonts/Venus-Acier.woff2") format("woff2"),
+    url("/webfonts/Venus-Acier.woff") format("woff"),
+    url("/webfonts/Venus-Acier.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Venus-Carrare;
+  src:
+    url("/webfonts/Venus-Carrare.woff2") format("woff2"),
+    url("/webfonts/Venus-Carrare.woff") format("woff"),
+    url("/webfonts/Venus-Carrare.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Venus-Cormier;
+  src:
+    url("/webfonts/Venus-Cormier.woff2") format("woff2"),
+    url("/webfonts/Venus-Cormier.woff") format("woff"),
+    url("/webfonts/Venus-Cormier.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Venus-Martre;
+  src:
+    url("/webfonts/Venus-Martre.woff2") format("woff2"),
+    url("/webfonts/Venus-Martre.woff") format("woff"),
+    url("/webfonts/Venus-Martre.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Venus-Plomb;
+  src:
+    url("/webfonts/Venus-Plomb.woff2") format("woff2"),
+    url("/webfonts/Venus-Plomb.woff") format("woff"),
+    url("/webfonts/Venus-Plomb.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
