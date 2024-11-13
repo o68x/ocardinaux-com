@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.2.0](https://github.com/o68x/ocardinaux-com/compare/v1.1.0...v1.2.0) (2024-11-13)
+
+
+### Features
+
+* real SVG hero title ([1263188](https://github.com/o68x/ocardinaux-com/commit/1263188160586827d280982c28bf21fcdec556b2))
+* use Venus font family ([791d1d5](https://github.com/o68x/ocardinaux-com/commit/791d1d598cddcad5a748a35aad32e2f2442bf712))
+
 ## [1.1.0](https://github.com/o68x/ocardinaux-com/compare/v0.0.7...v1.1.0) (2024-11-12)
 
 
