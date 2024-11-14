@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.0](https://github.com/o68x/ocardinaux-com/compare/v1.2.0...v2.0.0) (2024-11-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* add markdoc content
+
+### Features
+
+* add markdoc content ([a76ee84](https://github.com/o68x/ocardinaux-com/commit/a76ee840b85dbb184e094e3af91148a411fcadc0))
+
 ## [1.2.0](https://github.com/o68x/ocardinaux-com/compare/v1.1.0...v1.2.0) (2024-11-13)
 
 
