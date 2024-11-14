@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.1](https://github.com/o68x/ocardinaux-com/compare/v2.0.0...v2.0.1) (2024-11-14)
+
+
+### Bug Fixes
+
+* add rotation icon to screenshot ([15249fd](https://github.com/o68x/ocardinaux-com/commit/15249fd3c200e21c59c1aa37d18415bbecf4d93e))
+
 ## [2.0.0](https://github.com/o68x/ocardinaux-com/compare/v1.2.0...v2.0.0) (2024-11-14)
 
 
