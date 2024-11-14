@@ -5,7 +5,10 @@ const sectionsCollection = defineCollection({
   loader: glob({pattern: "**\/[^_]*.mdoc", base: 'content/sections'}),
   schema: z.object({
     tagline: z.string().describe("The tagline of the section"),
-    type: z.literal("section").default("section"),
+    type: z.union([
+      z.literal("section"),
+      z.literal("footer"),
+    ]).default("section"),
     draft: z.boolean().default(false),
   })
 })

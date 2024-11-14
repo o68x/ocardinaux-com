@@ -1,7 +1,7 @@
 ---
-import { getEntry, render } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Article from "../components/Article.astro";
+import Section from "../components/Section.astro";
 import Hero from "../components/Hero.astro";
 import Screenshot from "../components/Screenshot.astro";
 import ScreenshotSlider from "../components/ScreenshotSlider.astro";
@@ -12,71 +12,59 @@ import jpHome from "../assets/images/jpHome.webp";
 import a5eHome from "../assets/images/a5eHome.webp";
 import votreSite from "../assets/images/votreSite.webp";
 import "../styles/tippy.css";
-
-const entry = await getEntry("sections", "contact");
-const { Content } = await render(entry);
-console.log(entry);
 ---
 
 <Layout title="ocardinaux.com">
   <main>
     <Hero />
-    <div class="something">
-      <Content frontmatter={entry.data} />
-    </div>
+
+    <Section id="construction" />
+
     <section id="intro">
-      <Article
-        title="Je construis des sites internet sur mesure."
-        class="cut-out"
-      >
+      <Article title="Je construis des sites internet sur mesure." class="cut-out">
         <p slot="subtitle">Sites vitrine, blogs personnels, etc.</p>
         <ol>
           <li>
-            <strong>Personnalisés</strong> — dans l'esthétique, la structure et les
-            fonctionnalités
+            <strong>Personnalisés</strong> — dans l'esthétique, la structure et les fonctionnalités
           </li>
           <li><strong>Simples</strong> — dans la gestion et la maintenance</li>
           <li>
-            <strong>Solides et évolutifs</strong> — avec une base de code fiable
-            et un support de qualité
+            <strong>Solides et évolutifs</strong> — avec une base de code fiable et un support de qualité
           </li>
         </ol>
       </Article>
 
       <div class="text">
         <p class="strong">
-          Mes sites, je les crée avec soin, chaque détail compte. Jetez-y un œil
-          ! Chaque projet est pensé pour être unique, pratique et attrayant.
+          Mes sites, je les crée avec soin, chaque détail compte. Jetez-y un œil ! Chaque projet est
+          pensé pour être unique, pratique et attrayant.
         </p>
         <ol>
           <li>
-            Chaque site que je crée est fait « à la main », sans thèmes
-            standardisés. Cela me permet de concevoir un site vraiment
-            personnalisé, adapté à vos besoins, votre style et surtout facile à
-            utiliser sur tous les écrans (ordinateur, tablette, smartphone).
-            Tout est pensé : l’esthétique (choix des couleurs, polices, etc.),
-            l’organisation du contenu et les fonctionnalités.
+            Chaque site que je crée est fait « à la main », sans thèmes standardisés. Cela me permet
+            de concevoir un site vraiment personnalisé, adapté à vos besoins, votre style et surtout
+            facile à utiliser sur tous les écrans (ordinateur, tablette, smartphone). Tout est pensé
+            : l’esthétique (choix des couleurs, polices, etc.), l’organisation du contenu et les
+            fonctionnalités.
           </li>
           <li>
             J’utilise <strong
-              ><a href="https://getkirby.com" target="_blank" title="Nouvelle fenêtre">Kirby</a></strong
-            >, pour que vous puissiez gérer facilement votre site. Kirby est un
-            système simple et intuitif pour mettre à jour le contenu (textes,
-            photos, etc.). Pas besoin d’être expert ! Kirby est conçu pour que
-            vous puissiez apporter les modifications de base sans souci.
+              ><a href="https://getkirby.com" target="_blank" title="Nouvelle fenêtre">Kirby</a
+              ></strong
+            >, pour que vous puissiez gérer facilement votre site. Kirby est un système simple et
+            intuitif pour mettre à jour le contenu (textes, photos, etc.). Pas besoin d’être expert
+            ! Kirby est conçu pour que vous puissiez apporter les modifications de base sans souci.
           </li>
           <li>
-            Grâce à cette méthode, votre site sera solide et stable, car il ne
-            dépend pas de modules ou plugins extérieurs. Et comme je suis seul
-            en charge de la maintenance, je peux vous offrir un support de
-            qualité. Un site solide ne veut pas dire rigide ! On peut ajouter
-            des fonctionnalités, ajuster le design, et faire évoluer le site au
-            fil de vos besoins.
+            Grâce à cette méthode, votre site sera solide et stable, car il ne dépend pas de modules
+            ou plugins extérieurs. Et comme je suis seul en charge de la maintenance, je peux vous
+            offrir un support de qualité. Un site solide ne veut pas dire rigide ! On peut ajouter
+            des fonctionnalités, ajuster le design, et faire évoluer le site au fil de vos besoins.
           </li>
         </ol>
         <p>
-          Mon travail, c'est avant tout de traduire vos idées en un site
-          fonctionnel, esthétique et évolutif, conçu pour durer.
+          Mon travail, c'est avant tout de traduire vos idées en un site fonctionnel, esthétique et
+          évolutif, conçu pour durer.
         </p>
       </div>
 
@@ -87,9 +75,8 @@ console.log(entry);
           alt="michelerouhet.fr"
           class="cut-out"
         >
-          Michèle Rouhet partage avec nous ses photographies de nature, ses
-          activités de conteuse et de formatrice, ainsi que son engagement en
-          faveur des arbres et de la flore.
+          Michèle Rouhet partage avec nous ses photographies de nature, ses activités de conteuse et
+          de formatrice, ainsi que son engagement en faveur des arbres et de la flore.
         </Screenshot>
         <Screenshot
           src={jpHome}
@@ -97,8 +84,8 @@ console.log(entry);
           alt="janickponcin.com"
           class="cut-out"
         >
-          Janick Poncin est pastelliste, et elle présente sur son site des
-          galeries de ses œuvres et toutes les informations sur ses expositions.
+          Janick Poncin est pastelliste, et elle présente sur son site des galeries de ses œuvres et
+          toutes les informations sur ses expositions.
         </Screenshot>
         <Screenshot
           src={a5eHome}
@@ -106,61 +93,51 @@ console.log(entry);
           alt="artistesdu5.fr"
           class="cut-out"
         >
-          L'association des Artistes du V<sup>e</sup> vous propose de découvrir les
-          œuvres de ses artistes et ses dernères expositions.
+          L'association des Artistes du V<sup>e</sup> vous propose de découvrir les œuvres de ses artistes
+          et ses dernères expositions.
         </Screenshot>
-        <Screenshot
-          src={votreSite}
-          link="#contact"
-          alt="… votre site ?"
-          class="cut-out"
-        >
+        <Screenshot src={votreSite} link="#contact" alt="… votre site ?" class="cut-out">
           Rencontrons-nous pour discuter de vos projets !
         </Screenshot>
       </ScreenshotSlider>
-
     </section>
 
     <section id="contact">
       <Article title="Contactez-moi" class="cut-out">
-        par mail à l'adresse <span class="strong" id="email"></span> ou par téléphone
-        au <span id="tel" class="tel strong"></span>
+        par mail à l'adresse <span class="strong" id="email"></span> ou par téléphone au <span
+          id="tel"
+          class="tel strong"></span>
       </Article>
 
       <div class="text">
         <p class="strong">
-          Discutons de votre projet ! Pas besoin d’avoir une idée précise en
-          tête. Lors d’un premier échange, nous pourrons définir ensemble ce que
-          vous voulez faire avec votre site et le public que vous souhaitez
-          toucher.
+          Discutons de votre projet ! Pas besoin d’avoir une idée précise en tête. Lors d’un premier
+          échange, nous pourrons définir ensemble ce que vous voulez faire avec votre site et le
+          public que vous souhaitez toucher.
         </p>
         <ol>
           <li>
-            Vous pourrez définir <strong>les objectifs du site</strong>, son
-            public, et le type de contenus qu'il contiendra. En y ajoutant vos
-            attentes en matière de style et d'<strong>apparence visuelle</strong
-            >, nous pouvons arriver à une base commune et une définition plus
-            précise du projet.
+            Vous pourrez définir <strong>les objectifs du site</strong>, son public, et le type de
+            contenus qu'il contiendra. En y ajoutant vos attentes en matière de style et d'<strong
+              >apparence visuelle</strong
+            >, nous pouvons arriver à une base commune et une définition plus précise du projet.
           </li>
           <li>
-            Je prépare alors une <strong>première ébauche</strong> de la structure
-            des pages et du site : les menus, les emplacements pour les textes et
-            les images, les sections importantes, et plus encore. Je commence aussi
-            à créer la partie gestion du site.
+            Je prépare alors une <strong>première ébauche</strong> de la structure des pages et du site :
+            les menus, les emplacements pour les textes et les images, les sections importantes, et plus
+            encore. Je commence aussi à créer la partie gestion du site.
           </li>
           <li>
-            À partir de là, vous pourrez créer, collecter et me transmettre les
-            éléments de contenu. En parallèle, je commencerai à donner vie au
-            site en y appliquant des styles et des éléments visuels.
+            À partir de là, vous pourrez créer, collecter et me transmettre les éléments de contenu.
+            En parallèle, je commencerai à donner vie au site en y appliquant des styles et des
+            éléments visuels.
           </li>
           <li>
-            Nous pouvons alors voir ensemble cette première version du site,
-            corriger et affiner ce qui doit l'être.
+            Nous pouvons alors voir ensemble cette première version du site, corriger et affiner ce
+            qui doit l'être.
           </li>
         </ol>
-        <p class="strong">
-          Une fois tout en place, votre site est prêt à être lancé !
-        </p>
+        <p class="strong">Une fois tout en place, votre site est prêt à être lancé !</p>
       </div>
     </section>
   </main>
@@ -279,8 +256,7 @@ console.log(entry);
   const email = document.querySelector("#email");
   const user = "olivier";
   const domain = "ocardinaux.com";
-  if (email)
-    email.innerHTML = `<a href='mailto:${user}@${domain}'>${user}@${domain}</a>`;
+  if (email) email.innerHTML = `<a href='mailto:${user}@${domain}'>${user}@${domain}</a>`;
 
   // Obfuscate tel number (useful?)
   const tel = document.querySelector("#tel");

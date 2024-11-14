@@ -1,0 +1,17 @@
+---
+import { getEntry, render } from "astro:content";
+
+export interface Props {
+  id: string,
+}
+
+const { id } = Astro.props;
+
+const entry = await getEntry("sections", id);
+const { Content } = await render(entry);
+
+---
+
+<section id={id}>
+  <Content frontmatter={entry.data} />
+</section>
