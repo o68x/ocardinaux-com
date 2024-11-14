@@ -2,6 +2,7 @@
 
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
+import Icon from "./Icon.astro";
 
 export interface Props {
   src: ImageMetadata;
@@ -33,6 +34,9 @@ const hasContent = Astro.slots.has("default");
       <!-- Adapt link to anchor -->
       <a href={isAnchorLink ? link : `${link}?ref=ocx`} title="Nouvelle fenêtre" target={isAnchorLink ? "_self" : "_blank"}>{alt}</a>
     </figcaption>
+    <div class="rotate-icon">
+      <Icon icon="arrows-clockwise" />
+    </div>
   </figure>
   {
     hasContent && (
@@ -156,9 +160,27 @@ const hasContent = Astro.slots.has("default");
       }
     }
 
-    &:hover figure {
+    &:hover {
+      & figure {
       background-color: var(--color-bone);
+      }
+
+      & .rotate-icon {
+        transform: translate(-10%, -10%) scale(0.5) rotate(270deg);
+        opacity: 1;
+      }
     }
+  }
+
+  /* stylelint-disable-next-line no-descending-specificity */
+  .rotate-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-10%, -10%) scale(0.5) rotate(90deg);
+    opacity: 0;
+    transition: opacity 0.2s ease-in, transform 0.3s ease-in;
+    will-change: transform;
   }
 </style>
 

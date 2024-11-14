@@ -3,8 +3,8 @@
 @import url('./venus.css');
 
 :root {
-  --ff-base: 'Venus-Plomb', sans-serif;
-  --ff-base-bold: 'Venus-Cormier', sans-serif;
+  --ff-base: 'Venus-Acier', sans-serif;
+  --ff-base-bold: 'Venus-Plomb', sans-serif;
   --ff-base-light: 'Venus-Acier', sans-serif;
   --ff-heading: 'Venus-Martre', sans-serif;
   --color-bone: oklch(91.53% 0.023 83.41);
@@ -63,7 +63,7 @@ h2 {
 .strong, b, strong {
   font-family: var(--ff-base-bold);
   font-weight: 400;
-  opacity: 0.75;
+  letter-spacing: 0.06em;
 }
 
 p + ul,
