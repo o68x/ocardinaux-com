@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [2.0.2](https://github.com/o68x/ocardinaux-com/compare/v2.0.1...v2.0.2) (2024-11-14)
+
+
+### Bug Fixes
+
+* better section with markdoc ([795eda2](https://github.com/o68x/ocardinaux-com/commit/795eda2f53b70e3170c62f3d74aef56947ecfa84))
+* fix font size in hero ([55ec77a](https://github.com/o68x/ocardinaux-com/commit/55ec77ac256ca14cd313c40bc9dc9b40324c0fc3))
+
 ## [2.0.1](https://github.com/o68x/ocardinaux-com/compare/v2.0.0...v2.0.1) (2024-11-14)
 
 
