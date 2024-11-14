@@ -1,4 +1,5 @@
 ---
+import { getEntry, render } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import Article from "../components/Article.astro";
 import Hero from "../components/Hero.astro";
@@ -11,11 +12,18 @@ import jpHome from "../assets/images/jpHome.webp";
 import a5eHome from "../assets/images/a5eHome.webp";
 import votreSite from "../assets/images/votreSite.webp";
 import "../styles/tippy.css";
+
+const entry = await getEntry("sections", "contact");
+const { Content } = await render(entry);
+console.log(entry);
 ---
 
 <Layout title="ocardinaux.com">
   <main>
     <Hero />
+    <div class="something">
+      <Content frontmatter={entry.data} />
+    </div>
     <section id="intro">
       <Article
         title="Je construis des sites internet sur mesure."
@@ -34,6 +42,43 @@ import "../styles/tippy.css";
           </li>
         </ol>
       </Article>
+
+      <div class="text">
+        <p class="strong">
+          Mes sites, je les crée avec soin, chaque détail compte. Jetez-y un œil
+          ! Chaque projet est pensé pour être unique, pratique et attrayant.
+        </p>
+        <ol>
+          <li>
+            Chaque site que je crée est fait « à la main », sans thèmes
+            standardisés. Cela me permet de concevoir un site vraiment
+            personnalisé, adapté à vos besoins, votre style et surtout facile à
+            utiliser sur tous les écrans (ordinateur, tablette, smartphone).
+            Tout est pensé : l’esthétique (choix des couleurs, polices, etc.),
+            l’organisation du contenu et les fonctionnalités.
+          </li>
+          <li>
+            J’utilise <strong
+              ><a href="https://getkirby.com" target="_blank" title="Nouvelle fenêtre">Kirby</a></strong
+            >, pour que vous puissiez gérer facilement votre site. Kirby est un
+            système simple et intuitif pour mettre à jour le contenu (textes,
+            photos, etc.). Pas besoin d’être expert ! Kirby est conçu pour que
+            vous puissiez apporter les modifications de base sans souci.
+          </li>
+          <li>
+            Grâce à cette méthode, votre site sera solide et stable, car il ne
+            dépend pas de modules ou plugins extérieurs. Et comme je suis seul
+            en charge de la maintenance, je peux vous offrir un support de
+            qualité. Un site solide ne veut pas dire rigide ! On peut ajouter
+            des fonctionnalités, ajuster le design, et faire évoluer le site au
+            fil de vos besoins.
+          </li>
+        </ol>
+        <p>
+          Mon travail, c'est avant tout de traduire vos idées en un site
+          fonctionnel, esthétique et évolutif, conçu pour durer.
+        </p>
+      </div>
 
       <ScreenshotSlider>
         <Screenshot
@@ -74,42 +119,6 @@ import "../styles/tippy.css";
         </Screenshot>
       </ScreenshotSlider>
 
-      <div class="text">
-        <p class="strong">
-          Mes sites, je les crée avec soin, chaque détail compte. Jetez-y un œil
-          ! Chaque projet est pensé pour être unique, pratique et attrayant.
-        </p>
-        <ol>
-          <li>
-            Chaque site que je crée est fait « à la main », sans thèmes
-            standardisés. Cela me permet de concevoir un site vraiment
-            personnalisé, adapté à vos besoins, votre style et surtout facile à
-            utiliser sur tous les écrans (ordinateur, tablette, smartphone).
-            Tout est pensé : l’esthétique (choix des couleurs, polices, etc.),
-            l’organisation du contenu et les fonctionnalités.
-          </li>
-          <li>
-            J’utilise <strong
-              ><a href="https://getkirby.com" target="_blank">Kirby</a></strong
-            >, pour que vous puissiez gérer facilement votre site. Kirby est un
-            système simple et intuitif pour mettre à jour le contenu (textes,
-            photos, etc.). Pas besoin d’être expert ! Kirby est conçu pour que
-            vous puissiez apporter les modifications de base sans souci.
-          </li>
-          <li>
-            Grâce à cette méthode, votre site sera solide et stable, car il ne
-            dépend pas de modules ou plugins extérieurs. Et comme je suis seul
-            en charge de la maintenance, je peux vous offrir un support de
-            qualité. Un site solide ne veut pas dire rigide ! On peut ajouter
-            des fonctionnalités, ajuster le design, et faire évoluer le site au
-            fil de vos besoins.
-          </li>
-        </ol>
-        <p>
-          Mon travail, c'est avant tout de traduire vos idées en un site
-          fonctionnel, esthétique et évolutif, conçu pour durer.
-        </p>
-      </div>
     </section>
 
     <section id="contact">
@@ -228,14 +237,17 @@ import "../styles/tippy.css";
 
     &::before {
       content: counter(list);
-      display: inline-block;
-      padding-inline: var(--s-3);
+      display: inline-grid;
+      place-items: center;
+      margin-inline-end: var(--s-5);
       color: var(--color-fern);
       background-color: var(--color-dark-bone);
       border-radius: 50%;
-      line-height: 1.4;
-      height: 1.3em;
-      transform: translateY(-0.1em);
+      line-height: 1;
+      width: var(--s2);
+      height: var(--s2);
+      text-align: left;
+      letter-spacing: 0;
     }
   }
 

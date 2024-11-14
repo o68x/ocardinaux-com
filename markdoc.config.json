@@ -1,0 +1,12 @@
+[
+  {
+    "id": "ocardinaux.com",
+    "path": "content",
+    "schema": {
+      "path": "markdoc.config.js",
+      "type": "esm",
+      "property": "default",
+      "watch": true
+    }
+  }
+]
