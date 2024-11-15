@@ -19,7 +19,8 @@ const isAnchorLink =url?.startsWith("#");
 const filename = src.src.split("/").pop();
 const filenameWithoutExtension = filename?.split(".")[0];
 
-const hasContent = true;
+// extract domain fromm url
+const domain = url?.replace(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:/\n]+)/, "$1");
 ---
 
 <div
@@ -32,19 +33,17 @@ const hasContent = true;
     <Image src={src} alt={alt} style=`aspect-ratio: ${src.width / src.height};` />
     <figcaption>
       <!-- Adapt link to anchor -->
-      <a href={isAnchorLink ? url : `${url}?ref=ocx`} title="Nouvelle fenêtre" target={isAnchorLink ? "_self" : "_blank"}>{alt}</a>
+      <a href={isAnchorLink ? url : `${url}?ref=ocx`} title="Nouvelle fenêtre" target={isAnchorLink ? "_self" : "_blank"}>{alt || domain}</a>
     </figcaption>
     <div class="rotate-icon">
       <Icon icon="arrows-clockwise" />
     </div>
   </figure>
-  {
-    hasContent && (
-      <div class="backside">
-        {backside}
-      </div>
-    )
-  }
+  <div class="backside">
+    <p>
+      <Fragment set:html={backside} />
+    </p>
+  </div>
 </div>
 
 <style>

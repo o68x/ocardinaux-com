@@ -24,7 +24,7 @@
     "id": "votreSite",
     "src": "./votreSite.webp",
     "url": "#contact",
-    "alt": "",
-    "backside": "Rencontrons-nous pour discuter de vos projets !"
+    "alt": "Votre site ?",
+    "backside": "<strong>Rencontrons-nous pour discuter de vos projets !</strong>"
   }
 ]
