@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.1.3](https://github.com/o68x/ocardinaux-com/compare/v3.1.2...v3.1.3) (2024-11-15)
+
+
+### Bug Fixes
+
+* backside text as HTML fragment ([a303e42](https://github.com/o68x/ocardinaux-com/commit/a303e42d7bf39f7ad0d67cdd6eb78f17af17b2bb))
+
 ## [3.1.2](https://github.com/o68x/ocardinaux-com/compare/v3.1.1...v3.1.2) (2024-11-15)
 
 
