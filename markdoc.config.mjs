@@ -22,5 +22,9 @@ export default defineMarkdocConfig({
       attributes: {},
       render: "div",
     },
+    span: {
+      attributes: {},
+      render: "span",
+    },
   },
 });
