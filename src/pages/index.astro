@@ -31,7 +31,7 @@ import "../styles/tippy.css";
   const email = document.querySelector("#email");
   const user = "olivier";
   const domain = "ocardinaux.com";
-  if (email) email.innerHTML = `<a href='mailto:${user}@${domain}'>${user}@${domain}</a>`;
+  if (email) email.innerHTML = `<a href='mailto:${user}@${domain}?subject=Mon site'>${user}@${domain}</a>`;
 
   // Obfuscate tel number (useful?)
   const tel = document.querySelector("#tel");
