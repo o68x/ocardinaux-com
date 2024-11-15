@@ -1,16 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Article from "../components/Article.astro";
-import Section from "../components/Section.astro";
+import NewSection from "../components/NewSection.astro";
 import Hero from "../components/Hero.astro";
-import Screenshot from "../components/Screenshot.astro";
 import ScreenshotSlider from "../components/ScreenshotSlider.astro";
 import Footer from "../components/Footer.astro";
 import RawSvg from "../components/RawSvg.astro";
-import mrHome from "../assets/images/mrHome.webp";
-import jpHome from "../assets/images/jpHome.webp";
-import a5eHome from "../assets/images/a5eHome.webp";
-import votreSite from "../assets/images/votreSite.webp";
 import "../styles/tippy.css";
 ---
 
@@ -18,238 +12,19 @@ import "../styles/tippy.css";
   <main>
     <Hero />
 
-    <Section id="construction" />
+    <NewSection id="construction" />
 
-    <section id="intro">
-      <Article title="Je construis des sites internet sur mesure." class="cut-out">
-        <p slot="subtitle">Sites vitrine, blogs personnels, etc.</p>
-        <ol>
-          <li>
-            <strong>Personnalisés</strong> — dans l'esthétique, la structure et les fonctionnalités
-          </li>
-          <li><strong>Simples</strong> — dans la gestion et la maintenance</li>
-          <li>
-            <strong>Solides et évolutifs</strong> — avec une base de code fiable et un support de qualité
-          </li>
-        </ol>
-      </Article>
+    <ScreenshotSlider class="cut-out" />
 
-      <div class="text">
-        <p class="strong">
-          Mes sites, je les crée avec soin, chaque détail compte. Jetez-y un œil ! Chaque projet est
-          pensé pour être unique, pratique et attrayant.
-        </p>
-        <ol>
-          <li>
-            Chaque site que je crée est fait « à la main », sans thèmes standardisés. Cela me permet
-            de concevoir un site vraiment personnalisé, adapté à vos besoins, votre style et surtout
-            facile à utiliser sur tous les écrans (ordinateur, tablette, smartphone). Tout est pensé
-            : l’esthétique (choix des couleurs, polices, etc.), l’organisation du contenu et les
-            fonctionnalités.
-          </li>
-          <li>
-            J’utilise <strong
-              ><a href="https://getkirby.com" target="_blank" title="Nouvelle fenêtre">Kirby</a
-              ></strong
-            >, pour que vous puissiez gérer facilement votre site. Kirby est un système simple et
-            intuitif pour mettre à jour le contenu (textes, photos, etc.). Pas besoin d’être expert
-            ! Kirby est conçu pour que vous puissiez apporter les modifications de base sans souci.
-          </li>
-          <li>
-            Grâce à cette méthode, votre site sera solide et stable, car il ne dépend pas de modules
-            ou plugins extérieurs. Et comme je suis seul en charge de la maintenance, je peux vous
-            offrir un support de qualité. Un site solide ne veut pas dire rigide ! On peut ajouter
-            des fonctionnalités, ajuster le design, et faire évoluer le site au fil de vos besoins.
-          </li>
-        </ol>
-        <p>
-          Mon travail, c'est avant tout de traduire vos idées en un site fonctionnel, esthétique et
-          évolutif, conçu pour durer.
-        </p>
-      </div>
-
-      <ScreenshotSlider>
-        <Screenshot
-          src={mrHome}
-          link="https://michelerouhet.fr"
-          alt="michelerouhet.fr"
-          class="cut-out"
-        >
-          Michèle Rouhet partage avec nous ses photographies de nature, ses activités de conteuse et
-          de formatrice, ainsi que son engagement en faveur des arbres et de la flore.
-        </Screenshot>
-        <Screenshot
-          src={jpHome}
-          link="https://janickponcin.com"
-          alt="janickponcin.com"
-          class="cut-out"
-        >
-          Janick Poncin est pastelliste, et elle présente sur son site des galeries de ses œuvres et
-          toutes les informations sur ses expositions.
-        </Screenshot>
-        <Screenshot
-          src={a5eHome}
-          link="https://artistesdu5.fr"
-          alt="artistesdu5.fr"
-          class="cut-out"
-        >
-          L'association des Artistes du V<sup>e</sup> vous propose de découvrir les œuvres de ses artistes
-          et ses dernères expositions.
-        </Screenshot>
-        <Screenshot src={votreSite} link="#contact" alt="… votre site ?" class="cut-out">
-          Rencontrons-nous pour discuter de vos projets !
-        </Screenshot>
-      </ScreenshotSlider>
-    </section>
-
-    <section id="contact">
-      <Article title="Contactez-moi" class="cut-out">
-        par mail à l'adresse <span class="strong" id="email"></span> ou par téléphone au <span
-          id="tel"
-          class="tel strong"></span>
-      </Article>
-
-      <div class="text">
-        <p class="strong">
-          Discutons de votre projet ! Pas besoin d’avoir une idée précise en tête. Lors d’un premier
-          échange, nous pourrons définir ensemble ce que vous voulez faire avec votre site et le
-          public que vous souhaitez toucher.
-        </p>
-        <ol>
-          <li>
-            Vous pourrez définir <strong>les objectifs du site</strong>, son public, et le type de
-            contenus qu'il contiendra. En y ajoutant vos attentes en matière de style et d'<strong
-              >apparence visuelle</strong
-            >, nous pouvons arriver à une base commune et une définition plus précise du projet.
-          </li>
-          <li>
-            Je prépare alors une <strong>première ébauche</strong> de la structure des pages et du site :
-            les menus, les emplacements pour les textes et les images, les sections importantes, et plus
-            encore. Je commence aussi à créer la partie gestion du site.
-          </li>
-          <li>
-            À partir de là, vous pourrez créer, collecter et me transmettre les éléments de contenu.
-            En parallèle, je commencerai à donner vie au site en y appliquant des styles et des
-            éléments visuels.
-          </li>
-          <li>
-            Nous pouvons alors voir ensemble cette première version du site, corriger et affiner ce
-            qui doit l'être.
-          </li>
-        </ol>
-        <p class="strong">Une fois tout en place, votre site est prêt à être lancé !</p>
-      </div>
-    </section>
+    <NewSection id="contact" />
   </main>
+
   <div class="separator">
     <RawSvg className="svg-separator" svgFile="paper-tear" />
   </div>
+
   <Footer />
 </Layout>
-
-<style is:global>
-  /* https://css-tricks.com/the-slideout-footer/ */
-  main {
-    position: relative;
-    min-height: 100vh;
-    background-color: var(--color-bone);
-    z-index: 1;
-  }
-
-  main > * + * {
-    margin-top: var(--s2);
-  }
-
-  main > *:not(section) {
-    max-width: min(900px, calc(100% - 2 * var(--s2)));
-    margin-inline: auto;
-  }
-
-  section {
-    position: relative;
-    min-height: 100vh;
-    font-size: var(--s2);
-    padding-block: var(--s3);
-
-    /* stylelint-disable-next-line no-descending-specificity */
-    & > * {
-      max-width: min(900px, calc(100% - 2 * var(--s2)));
-      margin-inline: auto;
-      margin-block-start: var(--s4);
-    }
-
-    &::before {
-      position: absolute;
-      top: calc(var(--s3) * -1);
-      left: calc(var(--s2) * -1);
-      right: calc(var(--s2) * -1);
-      content: "";
-      background: repeating-linear-gradient(
-        -45deg,
-        #0000,
-        #0000 6px,
-        var(--color-very-dark-bone) 0,
-        var(--color-very-dark-bone) 8px
-      );
-      height: 1rem;
-    }
-  }
-
-  .text {
-    color: var(--color-very-dark-bone);
-    font-size: var(--s0);
-    hyphens: auto;
-    columns: 22ch 3;
-    max-width: min(1200px, calc(100% - 2 * var(--s2)));
-  }
-
-  ol {
-    list-style-type: none;
-    counter-reset: list;
-    padding: 0;
-  }
-
-  ol li {
-    counter-increment: list;
-
-    &::before {
-      content: counter(list);
-      display: inline-grid;
-      place-items: center;
-      margin-inline-end: var(--s-5);
-      color: var(--color-fern);
-      background-color: var(--color-dark-bone);
-      border-radius: 50%;
-      line-height: 1;
-      width: var(--s2);
-      height: var(--s2);
-      text-align: left;
-      letter-spacing: 0;
-    }
-  }
-
-  .separator {
-    position: relative;
-    background-color: transparent;
-    z-index: 10;
-  }
-
-  .svg-separator {
-    width: 100%;
-    height: auto;
-    color: var(--color-bone);
-    background-color: transparent;
-
-    & .drop-shadow {
-      filter: drop-shadow(rgba(21 20 15 / 20%) 0.06em 0.06em 0.06em);
-    }
-  }
-
-  .tel {
-    white-space: nowrap;
-    letter-spacing: -1px;
-  }
-</style>
 
 <script>
   // Obfuscate email

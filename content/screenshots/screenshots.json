@@ -1,0 +1,30 @@
+[
+  {
+    "id": "mrHome",
+    "src": "./mrHome.webp",
+    "url": "https://michelerouhet.fr",
+    "alt": "",
+    "backside": "Michèle Rouhet partage avec nous ses photographies de nature, ses activités de conteuse et de formatrice, ainsi que son engagement en faveur des arbres et de la flore."
+  },
+  {
+    "id": "jpHome",
+    "src": "./jpHome.webp",
+    "url": "https://janickponcin.com",
+    "alt": "",
+    "backside": "Janick Poncin est pastelliste, et elle présente sur son site des galeries de ses œuvres et toutes les informations sur ses expositions."
+  },
+  {
+    "id": "a5eHome",
+    "src": "./a5eHome.webp",
+    "url": "https://artistesdu5.fr",
+    "alt": "",
+    "backside": "L'association des Artistes du V<sup>e</sup> vous propose de découvrir les œuvres de ses artistes et ses dernères expositions."
+  },
+  {
+    "id": "votreSite",
+    "src": "./votreSite.webp",
+    "url": "#contact",
+    "alt": "",
+    "backside": "Rencontrons-nous pour discuter de vos projets !"
+  }
+]

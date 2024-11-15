@@ -1,10 +1,31 @@
 ---
+import { getCollection } from "astro:content";
+import { Image, getImage } from "astro:assets";
 import "swiper/css";
 import "swiper/css/navigation";
+
+const screenshots = await getCollection("screenshots");
+import Screenshot from "./Screenshot.astro";
+interface Props {
+  class?: string
+}
+
+const { class: className } = Astro.props;
+
+console.log(screenshots);
+
 ---
 <div class="swiper">
   <div class="swiper-wrapper">
-    <slot />
+    {screenshots.map((screenshot) => (
+      <Screenshot
+        src={screenshot.data.src}
+        url={screenshot.data.url}
+        alt={screenshot.data.alt || ""}
+        backside={screenshot.data.backside || ""
+        }
+      />
+    ))}
   </div>
   <div class="swiper-navigation">
     <div class="swiper-button-prev"></div>

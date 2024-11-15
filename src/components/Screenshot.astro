@@ -1,29 +1,29 @@
 ---
-
 import type { ImageMetadata } from "astro";
 import { Image } from "astro:assets";
 import Icon from "./Icon.astro";
 
 export interface Props {
   src: ImageMetadata;
-  link?: string;
+  url: string;
   alt: string;
+  backside: string;
   class?: string;
 }
 
-const { src, link, alt, class: className } = Astro.props;
+const { src, url, alt, backside, class: className } = Astro.props;
 
 // test if link is anchor link
-const isAnchorLink =link?.startsWith("#");
+const isAnchorLink =url?.startsWith("#");
 
 const filename = src.src.split("/").pop();
 const filenameWithoutExtension = filename?.split(".")[0];
 
-const hasContent = Astro.slots.has("default");
+const hasContent = true;
 ---
 
 <div
-  class:list={[className, "screenshot swiper-slide show-home"]}
+  class:list={[className, "screenshot swiper-slide show-home cut-out"]}
   id={filenameWithoutExtension}
   data-img="screenshot"
   tabindex="0"
@@ -32,7 +32,7 @@ const hasContent = Astro.slots.has("default");
     <Image src={src} alt={alt} style=`aspect-ratio: ${src.width / src.height};` />
     <figcaption>
       <!-- Adapt link to anchor -->
-      <a href={isAnchorLink ? link : `${link}?ref=ocx`} title="Nouvelle fenêtre" target={isAnchorLink ? "_self" : "_blank"}>{alt}</a>
+      <a href={isAnchorLink ? url : `${url}?ref=ocx`} title="Nouvelle fenêtre" target={isAnchorLink ? "_self" : "_blank"}>{alt}</a>
     </figcaption>
     <div class="rotate-icon">
       <Icon icon="arrows-clockwise" />
@@ -41,7 +41,7 @@ const hasContent = Astro.slots.has("default");
   {
     hasContent && (
       <div class="backside">
-        <slot />
+        {backside}
       </div>
     )
   }
@@ -125,9 +125,12 @@ const hasContent = Astro.slots.has("default");
 
     & .backside {
       position: absolute;
-      top: 0;
-      left: 0;
+      inset: 0;
       opacity: 0;
+      pointer-events: none;
+      display: grid;
+      grid-template-columns: min(0, 1fr);
+      place-items: center;
       transition: opacity 0.2s ease-in;
       font-size: var(--s-1);
       padding: var(--s-3);
@@ -166,7 +169,7 @@ const hasContent = Astro.slots.has("default");
       }
 
       & .rotate-icon {
-        transform: translate(-10%, -10%) scale(0.5) rotate(270deg);
+        transform: translate(-10%, -5%) scale(1) rotate(270deg);
         opacity: 1;
       }
     }
