@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.0.0](https://github.com/o68x/ocardinaux-com/compare/v2.0.2...v3.0.0) (2024-11-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* screenshots is JSON collection
+
+### Features
+
+* screenshots is JSON collection ([b7a495e](https://github.com/o68x/ocardinaux-com/commit/b7a495ee8f46fabfcbf079d5761e0a2b66b7a90d))
+
 ## [2.0.2](https://github.com/o68x/ocardinaux-com/compare/v2.0.1...v2.0.2) (2024-11-14)
 
 
