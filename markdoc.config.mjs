@@ -1,3 +1,5 @@
+/** @type {import('@markdoc/markdoc').Config} */
+
 import { component, defineMarkdocConfig, nodes } from "@astrojs/markdoc/config";
 
 export default defineMarkdocConfig({
@@ -13,10 +15,12 @@ export default defineMarkdocConfig({
   },
   tags: {
     tldr: {
-      attributes: {
-        title: { type: String, render: "title" },
-      },
-      render: component("./src/components/Tldr.astro"),
+      attributes: {},
+      render: component("./src/components/SectionTldr.astro"),
+    },
+    div: {
+      attributes: {},
+      render: "div",
     },
   },
 });

@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import NewSection from "../components/NewSection.astro";
 import Hero from "../components/Hero.astro";
+import Section from "../components/Section.astro";
 import ScreenshotSlider from "../components/ScreenshotSlider.astro";
 import Footer from "../components/Footer.astro";
 import RawSvg from "../components/RawSvg.astro";
@@ -12,11 +12,11 @@ import "../styles/tippy.css";
   <main>
     <Hero />
 
-    <NewSection id="construction" />
+    <Section id="construction" />
 
     <ScreenshotSlider class="cut-out" />
 
-    <NewSection id="contact" />
+    <Section id="contact" />
   </main>
 
   <div class="separator">

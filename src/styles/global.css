@@ -38,6 +38,77 @@ body {
   min-height: 100vh;
 }
 
+main {
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--color-bone);
+  z-index: 1;
+}
+
+main > * + * {
+  margin-top: var(--s2);
+}
+
+main > *:not(section) {
+  max-width: min(900px, calc(100% - 2 * var(--s2)));
+  margin-inline: auto;
+}
+
+.text {
+  color: var(--color-very-dark-bone);
+  font-size: var(--s0);
+  hyphens: auto;
+  columns: 22ch 3;
+  max-width: min(1200px, calc(100% - 2 * var(--s2)));
+}
+
+ol {
+  list-style-type: none;
+  counter-reset: list;
+  padding: 0;
+}
+
+ol li {
+  counter-increment: list;
+
+  &::before {
+    content: counter(list);
+    display: inline-grid;
+    place-items: center;
+    margin-inline-end: var(--s-5);
+    color: var(--color-fern);
+    background-color: var(--color-dark-bone);
+    border-radius: 50%;
+    line-height: 1;
+    width: var(--s2);
+    height: var(--s2);
+    text-align: left;
+    letter-spacing: 0;
+  }
+}
+
+.separator {
+  position: relative;
+  background-color: transparent;
+  z-index: 10;
+}
+
+.svg-separator {
+  width: 100%;
+  height: auto;
+  color: var(--color-bone);
+  background-color: transparent;
+
+  & .drop-shadow {
+    filter: drop-shadow(rgba(21 20 15 / 20%) 0.06em 0.06em 0.06em);
+  }
+}
+
+.tel {
+  white-space: nowrap;
+  letter-spacing: -1px;
+}
+
 .visually-hidden:not(:focus, :active) {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
