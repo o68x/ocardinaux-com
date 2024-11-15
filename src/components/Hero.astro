@@ -39,13 +39,12 @@ import WIP from "./WIP.astro";
 <style>
   .hero {
     position: relative;
-    font-size: var(--s3);
-    padding-top: 15vh;
+    padding-top: 10vh;
     min-height: 100vh;
     min-height: 100dvh;
     display: grid;
     grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: max-content minmax(0, 1fr) max-content;
+    grid-template-rows: minmax(max-content, 50vh) minmax(0, 1fr) max-content;
     overflow: clip;
   }
 
@@ -60,11 +59,13 @@ import WIP from "./WIP.astro";
   .astronomy-fig {
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    place-self: end center;
   }
 
   .name {
-    margin-top: max(-15%, -15vh);
+    transform: translateY(-10%);
     font-family: var(--ff-heading);
+    font-size: var(--s3);
   }
 
   .subtitle {
