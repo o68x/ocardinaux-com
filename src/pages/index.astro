@@ -1,10 +1,15 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Section from "../components/Section.astro";
 import ScreenshotSlider from "../components/ScreenshotSlider.astro";
 import Footer from "../components/Footer.astro";
 import RawSvg from "../components/RawSvg.astro";
+import fig34 from "../assets/images/physics-fig-34.webp";
+import fig11 from "../assets/images/physics-fig-11.webp";
+import fig27 from "../assets/images/physics-fig-27.webp";
+import fig50 from "../assets/images/physics-fig-50.webp";
 import "../styles/tippy.css";
 ---
 
@@ -12,11 +17,17 @@ import "../styles/tippy.css";
   <main>
     <Hero />
 
-    <Section id="construction" />
+    <Section id="construction" >
+      <Image src={fig34} alt="" loading="eager" />
+      <Image src={fig50} alt="" loading="eager" slot="separator" />
+    </Section>
 
     <ScreenshotSlider />
 
-    <Section id="contact" />
+    <Section id="contact" >
+      <Image src={fig11} alt="" loading="eager" />
+      <Image src={fig27} alt="" loading="eager" slot="separator"/>
+    </Section>
   </main>
 
   <div class="separator">

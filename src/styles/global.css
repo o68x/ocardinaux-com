@@ -58,7 +58,8 @@ main > *:not(section) {
   color: var(--color-very-dark-bone);
   font-size: var(--s0);
   hyphens: auto;
-  columns: 22ch 3;
+  columns: 20ch 3;
+  column-gap: var(--s5);
   max-width: min(1200px, calc(100% - 2 * var(--s2)));
 }
 
@@ -151,6 +152,7 @@ p + p {
 
   position: relative;
   padding: 1px;
+  margin-inline-start: calc(-1 * var(--_border-extension));
 
   > * {
     margin: var(--_border-extension);
