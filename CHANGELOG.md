@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.2.0](https://github.com/o68x/ocardinaux-com/compare/v3.1.4...v3.2.0) (2024-11-16)
+
+
+### Features
+
+* footer is now in markdoc ([233a1a9](https://github.com/o68x/ocardinaux-com/commit/233a1a953f071607513a926ea9167e8af0a2cfb6))
+
 ## [3.1.4](https://github.com/o68x/ocardinaux-com/compare/v3.1.3...v3.1.4) (2024-11-16)
 
 
