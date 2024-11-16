@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.3.0](https://github.com/o68x/ocardinaux-com/compare/v3.2.0...v3.3.0) (2024-11-16)
+
+
+### Features
+
+* add decorations ([b612791](https://github.com/o68x/ocardinaux-com/commit/b612791c9c99373d74ef5e3492693e5783bb8921))
+
+
+### Bug Fixes
+
+* add title to external link ([8c5c71d](https://github.com/o68x/ocardinaux-com/commit/8c5c71d64c837a84dee7cab2d17e2288542d5672))
+
 ## [3.2.0](https://github.com/o68x/ocardinaux-com/compare/v3.1.4...v3.2.0) (2024-11-16)
 
 
