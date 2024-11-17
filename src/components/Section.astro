@@ -58,8 +58,9 @@ const { Content } = await render(entry);
       min-width: 180px;
       height: auto;
       object-fit: contain;
-      mix-blend-mode: multiply;
       margin-inline: auto;
+      mix-blend-mode: var(--fig-blend-mode);
+      opacity: var(--fig-opacity);
     }
 
     @media screen and (width < 768px) {
@@ -84,7 +85,8 @@ const { Content } = await render(entry);
       min-width: 180px;
       height: auto;
       object-fit: contain;
-      mix-blend-mode: multiply;
+      mix-blend-mode: var(--fig-blend-mode);
+      opacity: var(--fig-opacity);
       margin-inline: auto;
     }
   }

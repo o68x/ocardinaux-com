@@ -25,16 +25,20 @@
   --s3: clamp(1.944rem, 1.6861rem + 1.2896vw, 2.6855rem);
   --s4: clamp(2.3328rem, 1.9766rem + 1.7811vw, 3.3569rem);
   --s5: clamp(2.7994rem, 2.3135rem + 2.4292vw, 4.1962rem);
+  --fig-blend-mode: multiply;
+  --fig-opacity: 0.75;
 }
 
 :root.theme-dark {
   --color-bone: oklch(61.53% 0.04 90);
-  --color-light-bone: oklch(from var(--color-bone) calc(l * 0.9) calc(c * 0.5) h);
+  --color-light-bone: oklch(from var(--color-bone) calc(l * 0.9) calc(c * 1.2) h);
   --color-dark-bone: oklch(from var(--color-bone) calc(l * 1.1) c h);
   --color-very-dark-bone: oklch(from var(--color-bone) calc(l * 1.5) calc(c * 0.9) h);
   --color-fern: oklch(90% 0.1 136); /* #44744e */
   --color-light-fern: oklch(from var(--color-fern) calc(l * 1.08) c h);
   --color-citrine: oklch(85.86% 0.1674 101.41); /* #e8d331 */
+  --fig-blend-mode: luminosity;
+  --fig-opacity: 0.85;
 }
 
 body {
@@ -43,7 +47,7 @@ body {
   font-family: var(--ff-base);
   font-size: clamp(16px, calc(1rem + 0.333vw), 22px);
   line-height: 1.4;
-  letter-spacing: 0.025em;
+  letter-spacing: 0.03em;
   min-height: 100dvh;
   min-height: 100vh;
   quotes: "«\00A0" "\00A0»";
@@ -52,7 +56,13 @@ body {
 main {
   position: relative;
   min-height: 100vh;
+  overflow: clip;
   background-color: var(--color-bone);
+  background-image: radial-gradient(circle at 50% 8%,
+  var(--color-light-bone) 0,
+  var(--color-dark-bone) 55%,
+  var(--color-bone) 100%);
+  background-size: cover;
   z-index: 1;
 }
 
@@ -96,6 +106,7 @@ ol li {
     height: var(--s2);
     text-align: left;
     letter-spacing: 0;
+    font-family: var(--ff-heading);
   }
 }
 
