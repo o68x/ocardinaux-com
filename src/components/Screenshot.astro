@@ -134,6 +134,8 @@ const domain = url?.replace(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:/\n]+)/
       font-size: var(--s-1);
       padding: var(--s-3);
       color: var(--color-very-dark-bone);
+
+      & > p {max-width: 40ch;}
     }
 
     &.show-back:has(.backside) {
