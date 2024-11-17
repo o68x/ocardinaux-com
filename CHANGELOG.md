@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.4.0](https://github.com/o68x/ocardinaux-com/compare/v3.3.0...v3.4.0) (2024-11-17)
+
+
+### Features
+
+* add icon tag in markdoc ([2148fc6](https://github.com/o68x/ocardinaux-com/commit/2148fc659f7fd4d0c9c1080d95dcff2dfa873dd2))
+
+
+### Bug Fixes
+
+* changelog easter egg ([c31b121](https://github.com/o68x/ocardinaux-com/commit/c31b121b9e9590412afd832830442f344f3ea134))
+
 ## [3.3.0](https://github.com/o68x/ocardinaux-com/compare/v3.2.0...v3.3.0) (2024-11-16)
 
 
