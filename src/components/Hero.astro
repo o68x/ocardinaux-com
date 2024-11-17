@@ -7,6 +7,7 @@ import astronomyFig from "../assets/images/astronomy-fig-38.webp";
 ---
 
 <div class="hero">
+  <ThemeToggle />
   <div class="name">
     <svg class="title" viewBox="0 0 600 400" width="100%" height="auto" style="fill: transparent;">
         <path id="curve" d="
@@ -33,7 +34,6 @@ import astronomyFig from "../assets/images/astronomy-fig-38.webp";
     <p class="subtitle">Construction de sites internet</p>
     <p>Paris · Lausanne · L'Isle-sur-la-Sorgue</p>
     <!-- <WIP /> -->
-     <ThemeToggle />
   </div>
   <div class="more">
     <span>
@@ -43,6 +43,14 @@ import astronomyFig from "../assets/images/astronomy-fig-38.webp";
 </div>
 
 <style>
+  :global(theme-toggle) {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: var(--s-1);
+    z-index: 100;
+  }
+
   .hero {
     position: relative;
     padding-top: 10vh;
@@ -72,6 +80,7 @@ import astronomyFig from "../assets/images/astronomy-fig-38.webp";
     transform: translateY(-10%);
     font-family: var(--ff-heading);
     font-size: var(--s3);
+    letter-spacing: 0.1em;
   }
 
   .subtitle {
@@ -83,7 +92,8 @@ import astronomyFig from "../assets/images/astronomy-fig-38.webp";
   .astronomy-fig > img {
     object-fit: contain;
     height: auto;
-    mix-blend-mode: multiply;
+    mix-blend-mode: var(--fig-blend-mode);
+      opacity: var(--fig-opacity);
   }
 
   .line {
