@@ -112,13 +112,17 @@ import WIP from "./WIP.astro";
   }
 
   .line {
-    margin-top: var(--s2);
+    margin-top: var(--s3);
     font-size: var(--s-2);
-    letter-spacing: 2px;
+    letter-spacing: 0.3em;
     text-align: center;
     text-wrap: balance;
     text-transform: uppercase;
     line-height: 1;
+
+    & p {
+      margin-top: var(--s-4);
+    }
   }
 
   /* ----------------------------------------------
