@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.5.3](https://github.com/o68x/ocardinaux-com/compare/v3.5.2...v3.5.3) (2024-11-17)
+
+
+### Bug Fixes
+
+* better backgrounds with gradient ([1714d8d](https://github.com/o68x/ocardinaux-com/commit/1714d8d370d0a33ff4dc6b935e1cae1e230f5bc5))
+* fixed theme toggle ([fd40677](https://github.com/o68x/ocardinaux-com/commit/fd406774c917c1bd51403898ff53589268bf7a04))
+* remove call to google fonts ([c6ecbdb](https://github.com/o68x/ocardinaux-com/commit/c6ecbdb417e54e1acc8b356a51de135c9ef758e0))
+
 ## [3.5.2](https://github.com/o68x/ocardinaux-com/compare/v3.5.1...v3.5.2) (2024-11-17)
 
 
