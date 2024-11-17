@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.5.0](https://github.com/o68x/ocardinaux-com/compare/v3.4.0...v3.5.0) (2024-11-17)
+
+
+### Features
+
+* add theme with toggle ([d33e2f2](https://github.com/o68x/ocardinaux-com/commit/d33e2f24c97344cf4cf909773d760d262d858bcb))
+
 ## [3.4.0](https://github.com/o68x/ocardinaux-com/compare/v3.3.0...v3.4.0) (2024-11-17)
 
 
