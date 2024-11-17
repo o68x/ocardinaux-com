@@ -27,6 +27,16 @@
   --s5: clamp(2.7994rem, 2.3135rem + 2.4292vw, 4.1962rem);
 }
 
+:root.theme-dark {
+  --color-bone: oklch(61.53% 0.04 90);
+  --color-light-bone: oklch(from var(--color-bone) calc(l * 0.9) calc(c * 0.5) h);
+  --color-dark-bone: oklch(from var(--color-bone) calc(l * 1.1) c h);
+  --color-very-dark-bone: oklch(from var(--color-bone) calc(l * 1.5) calc(c * 0.9) h);
+  --color-fern: oklch(90% 0.1 136); /* #44744e */
+  --color-light-fern: oklch(from var(--color-fern) calc(l * 1.08) c h);
+  --color-citrine: oklch(85.86% 0.1674 101.41); /* #e8d331 */
+}
+
 body {
   background-color: var(--color-bone);
   color: var(--color-fern);

@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import Icon from "../components/Icon.astro";
+import ThemeToggle from "./ThemeToggle.astro";
 import astronomyFig from "../assets/images/astronomy-fig-38.webp";
 import WIP from "./WIP.astro";
 ---
@@ -28,6 +29,7 @@ import WIP from "./WIP.astro";
     <p class="subtitle">Construction de sites internet</p>
     <p>Paris · Lausanne · L'Isle-sur-la-Sorgue</p>
     <!-- <WIP /> -->
+     <ThemeToggle />
   </div>
   <div class="more">
     <span>
@@ -53,6 +55,16 @@ import WIP from "./WIP.astro";
   .line {
     width: clamp(300px, 50vw, 600px);
     place-self: start center;
+  }
+
+  .line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    :global(theme-toggle) {
+      padding-top: var(--s-1);
+    }
   }
 
   .name,

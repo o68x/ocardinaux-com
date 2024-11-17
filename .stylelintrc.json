@@ -5,6 +5,7 @@
   ],
   "rules": {
     "custom-property-pattern": null,
-    "selector-id-pattern": null
+    "selector-id-pattern": null,
+    "selector-pseudo-class-no-unknown": [true, {"ignorePseudoClasses": ["global"]}]
   }
 }
