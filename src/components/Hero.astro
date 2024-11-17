@@ -1,9 +1,9 @@
 ---
-import { Image } from "astro:assets";
+import { Image, getImage } from "astro:assets";
 import Icon from "../components/Icon.astro";
 import ThemeToggle from "./ThemeToggle.astro";
 import astronomyFig from "../assets/images/astronomy-fig-38.webp";
-import WIP from "./WIP.astro";
+// import WIP from "./WIP.astro";
 ---
 
 <div class="hero">
@@ -21,7 +21,7 @@ import WIP from "./WIP.astro";
   </div>
   <figure
     class="astronomy-fig"
-    style=`aspect-ratio: ${astronomyFig.width / astronomyFig.height}; mask-image: url(${astronomyFig.src});`
+    style=`aspect-ratio: ${astronomyFig.width / astronomyFig.height};`
   >
     <Image src={astronomyFig} alt="" loading="eager" />
   </figure>
@@ -74,37 +74,6 @@ import WIP from "./WIP.astro";
     font-family: var(--ff-base-light);
     font-size: var(--s1);
     letter-spacing: 0.1em;
-  }
-
-  .astronomy-fig {
-    mask-size: contain;
-    background-image: linear-gradient(
-      150deg,
-      var(--color-light-bone),
-      var(--color-bone),
-      var(--color-dark-bone)
-    );
-    background-size: 250%;
-    background-position: left;
-    animation: 8s infinite astronomy linear;
-  }
-
-  @keyframes astronomy {
-    0% {
-      background-position: left;
-    }
-
-    25% {
-      background-position: right;
-    }
-
-    75% {
-      background-position: right;
-    }
-
-    100% {
-      background-position: left;
-    }
   }
 
   .astronomy-fig > img {
