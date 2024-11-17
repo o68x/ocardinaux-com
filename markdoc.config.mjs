@@ -18,6 +18,14 @@ export default defineMarkdocConfig({
       attributes: {},
       render: component("./src/components/SectionTldr.astro"),
     },
+    icon: {
+      attributes: {
+        icon: {
+          type: String,
+        }
+      },
+      render: component("./src/components/Icon.astro"),
+    },
     div: {
       attributes: {},
       render: "div",
