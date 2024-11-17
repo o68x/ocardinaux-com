@@ -1,4 +1,5 @@
 ---
+// @ts-ignore
 import { getEntry, render } from "astro:content";
 import { Image } from "astro:assets";
 import portrait from "../assets/images/portrait.webp";
@@ -71,7 +72,7 @@ const { Content } = await render(entry);
     bottom: 0;
     left: 0;
     width: 25%;
-    color: #444;
+    color: var(--color-very-dark-bone);
     font-family: monospace;
     font-weight: 300;
     letter-spacing: 0;
