@@ -46,6 +46,7 @@ body {
   letter-spacing: 0.025em;
   min-height: 100dvh;
   min-height: 100vh;
+  quotes: "«\00A0" "\00A0»";
 }
 
 main {

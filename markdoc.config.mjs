@@ -14,6 +14,10 @@ export default defineMarkdocConfig({
     },
   },
   tags: {
+    q: {
+      attributes: {},
+      render: "q",
+    },
     tldr: {
       attributes: {},
       render: component("./src/components/SectionTldr.astro"),
