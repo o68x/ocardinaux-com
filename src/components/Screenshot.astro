@@ -30,7 +30,13 @@ const domain = url?.replace(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:/\n]+)/
   tabindex="0"
 >
   <figure>
-    <Image src={src} alt={alt} style=`aspect-ratio: ${src.width / src.height};` />
+    <Image
+      src={src}
+      alt={alt}
+      widths={[360, 540, src.width]}
+      sizes={`(min-width: 768px) 540px, 360px`}
+      style=`aspect-ratio: ${src.width / src.height};`
+      />
     <figcaption>
       <!-- Adapt link to anchor -->
       <a href={isAnchorLink ? url : `${url}?ref=ocx`} title="Nouvelle fenêtre" target={isAnchorLink ? "_self" : "_blank"}>{alt || domain}</a>
