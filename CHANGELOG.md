@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.5.1](https://github.com/o68x/ocardinaux-com/compare/v3.5.0...v3.5.1) (2024-11-17)
+
+
+### Bug Fixes
+
+* add quote q tag ([468248b](https://github.com/o68x/ocardinaux-com/commit/468248b78b7cff63857fc953bf9743018e810aae))
+* remove mask-image, duplicate loading of limage ([c8e539e](https://github.com/o68x/ocardinaux-com/commit/c8e539e573074681df68d0d8eb18ac94cb21c69f))
+
 ## [3.5.0](https://github.com/o68x/ocardinaux-com/compare/v3.4.0...v3.5.0) (2024-11-17)
 
 
