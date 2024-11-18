@@ -81,8 +81,7 @@ const { Content } = await render(entry);
     padding-block-start: 5vh;
 
     & img {
-      width: 100%;
-      min-width: 180px;
+      width: min(100%, 25vw);
       height: auto;
       object-fit: contain;
       mix-blend-mode: var(--fig-blend-mode);
