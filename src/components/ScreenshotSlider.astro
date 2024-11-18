@@ -35,9 +35,10 @@ const { class: className } = Astro.props;
   .swiper {
     --swiper-theme-color: var(--color-fern);
     --swiper-navigation-size: var(--s-1);
+    --swiper-rotation: 0.8deg;
 
     width: 101vw;
-    transform: rotate(-0.8deg);
+    transform: rotate(calc(var(--swiper-rotation) * -1));
     transform-origin: bottom left;
     height: 100%;
     max-width: none;
@@ -52,6 +53,8 @@ const { class: className } = Astro.props;
     align-items: center;
     padding-block-start: var(--s1);
     padding-inline: var(--s3);
+    transform: rotate(var(--swiper-rotation));
+    transform-origin: right;
   }
 
   .swiper-button-prev,
