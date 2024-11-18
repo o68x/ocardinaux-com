@@ -14,7 +14,7 @@ export interface Props {
 const { src, url, alt, backside, class: className } = Astro.props;
 
 // test if link is anchor link
-const isAnchorLink =url?.startsWith("#");
+const isAnchorLink = url?.startsWith("#");
 
 const filename = src.src.split("/").pop();
 const filenameWithoutExtension = filename?.split(".")[0];
@@ -36,19 +36,21 @@ const domain = url?.replace(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:/\n]+)/
       widths={[360, 720, src.width]}
       sizes={`(min-width: 768px) 720px, 360px`}
       style=`aspect-ratio: ${src.width / src.height};`
-      />
+    />
     <figcaption>
       <!-- Adapt link to anchor -->
-      <a href={isAnchorLink ? url : `${url}?ref=ocx`} title="Nouvelle fenêtre" target={isAnchorLink ? "_self" : "_blank"}>{alt || domain}</a>
+      <a
+        href={isAnchorLink ? url : `${url}?ref=ocx`}
+        title="Nouvelle fenêtre"
+        target={isAnchorLink ? "_self" : "_blank"}>{alt || domain}</a
+      >
     </figcaption>
     <div class="rotate-icon">
       <Icon icon="arrows-clockwise" />
     </div>
   </figure>
   <div class="backside">
-    <p>
-      <Fragment set:html={backside} />
-    </p>
+    <p set:html={backside} />
   </div>
 </div>
 
@@ -141,7 +143,9 @@ const domain = url?.replace(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:/\n]+)/
       padding: var(--s-3);
       color: var(--color-very-dark-bone);
 
-      & > p {max-width: 40ch;}
+      & > p {
+        max-width: 40ch;
+      }
     }
 
     &.show-back:has(.backside) {
@@ -172,7 +176,7 @@ const domain = url?.replace(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:/\n]+)/
 
     &:hover {
       & figure {
-      background-color: var(--color-bone);
+        background-color: var(--color-bone);
       }
 
       & .rotate-icon {
@@ -189,7 +193,9 @@ const domain = url?.replace(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:/\n]+)/
     right: 0;
     transform: translate(-10%, -10%) scale(0.5) rotate(90deg);
     opacity: 0;
-    transition: opacity 0.2s ease-in, transform 0.3s ease-in;
+    transition:
+      opacity 0.2s ease-in,
+      transform 0.3s ease-in;
     will-change: transform;
   }
 </style>
