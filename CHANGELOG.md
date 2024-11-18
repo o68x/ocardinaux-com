@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.6.1](https://github.com/o68x/ocardinaux-com/compare/v3.6.0...v3.6.1) (2024-11-18)
+
+
+### Bug Fixes
+
+* add body scrollbar styling ([aaaf843](https://github.com/o68x/ocardinaux-com/commit/aaaf8439710466317d97b7fc0592a64959b502ba))
+* unrotate swiper navigation ([f99fb02](https://github.com/o68x/ocardinaux-com/commit/f99fb0275afe5261f2fe8fcf37365376aed7c051))
+
 ## [3.6.0](https://github.com/o68x/ocardinaux-com/compare/v3.5.3...v3.6.0) (2024-11-18)
 
 
