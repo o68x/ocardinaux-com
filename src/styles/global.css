@@ -27,6 +27,8 @@
   --s5: clamp(2.7994rem, 2.3135rem + 2.4292vw, 4.1962rem);
   --fig-blend-mode: multiply;
   --fig-opacity: 0.75;
+  --text-shadow: 1px 1px 2px rgb(0 0 0 / 30%);
+  --text-shadow-high: 3px 3px 5px rgb(0 0 0 / 30%);
 }
 
 :root.theme-dark {
@@ -77,7 +79,8 @@ main {
   z-index: 1;
 
   &::before {
-    --s: 63px; /* control the size */
+    /* https://css-pattern.com/graph-paper/ */
+    --s: 63px;
     --c1: var(--color-very-dark-bone);
     --c2: transparent;
     --_g: #0000 90deg,var(--c1) 0;
