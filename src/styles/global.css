@@ -41,6 +41,16 @@
   --fig-opacity: 0.85;
 }
 
+html {
+  --scrollbar-foreground: var(--color-dark-bone);
+  --scrollbar-background: var(--color-light-bone);
+
+  scroll-behavior: smooth;
+  scrollbar-color: var(--scrollbar-foreground) var(--scrollbar-background);
+  scrollbar-width: auto;
+  scrollbar-gutter: stable;
+}
+
 body {
   background-color: var(--color-bone);
   color: var(--color-fern);
