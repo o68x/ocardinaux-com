@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.6.0](https://github.com/o68x/ocardinaux-com/compare/v3.5.3...v3.6.0) (2024-11-18)
+
+
+### Features
+
+* modern css scroll-timeline indicator ([740aa2e](https://github.com/o68x/ocardinaux-com/commit/740aa2efdd7c963448454ffb057e9b6072d6d6f9))
+
+
+### Bug Fixes
+
+* not so modern scroll with motion.dev ([19c7372](https://github.com/o68x/ocardinaux-com/commit/19c737223cca516df42b75b959017e7976d2b6be))
+
 ## [3.5.3](https://github.com/o68x/ocardinaux-com/compare/v3.5.2...v3.5.3) (2024-11-17)
 
 
