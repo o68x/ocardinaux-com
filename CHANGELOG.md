@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.6.2](https://github.com/o68x/ocardinaux-com/compare/v3.6.1...v3.6.2) (2024-11-18)
+
+
+### Bug Fixes
+
+* add graph paper pattern to main ([713814b](https://github.com/o68x/ocardinaux-com/commit/713814b7718dbfdc2e9fbbf5a814c9768ec0f3b9))
+* responsive section separator ([7046c09](https://github.com/o68x/ocardinaux-com/commit/7046c09792dea544904b8ac4eba557f9113801be))
+
 ## [3.6.1](https://github.com/o68x/ocardinaux-com/compare/v3.6.0...v3.6.1) (2024-11-18)
 
 
