@@ -29,6 +29,9 @@ importers:
       motion:
         specifier: ^11.11.17
         version: 11.11.17
+      open-props:
+        specifier: ^1.7.7
+        version: 1.7.7
       swiper:
         specifier: ^11.1.14
         version: 11.1.14
@@ -2308,6 +2311,9 @@ packages:
 
   oniguruma-to-es@0.1.2:
     resolution: {integrity: sha512-sBYKVJlIMB0WPO+tSu/NNB1ytSFeHyyJZ3Ayxfx3f/QUuXu0lvZk0VB4K7npmdlHSC0ldqanzh/sUSlAbgCTfw==}
+
+  open-props@1.7.7:
+    resolution: {integrity: sha512-yn4B4D2dG7HGiZQSSdS03+jnsKlVIfdcWk6XyvSeTHcu2oqRbIEnJ9BVT7Qfq5N9p6z7tEIHTuRZoxckAemfqA==}
 
   optionator@0.9.4:
     resolution: {integrity: sha512-6IpQ7mKUxRcZNLIObR0hz7lxsapSSIYNZJwXPGeF0mTVqGKFIXj1DQcMoT22S3ROcLyY/rz0PWaWZ9ayWmad9g==}
@@ -5718,6 +5724,8 @@ snapshots:
       emoji-regex-xs: 1.0.0
       regex: 4.4.0
       regex-recursion: 4.2.1
+
+  open-props@1.7.7: {}
 
   optionator@0.9.4:
     dependencies:

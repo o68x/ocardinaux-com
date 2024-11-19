@@ -31,7 +31,9 @@ import "../styles/tippy.css";
         />
     </Section>
 
-    <ScreenshotSlider />
+    <div class="swiper-outer">
+      <ScreenshotSlider />
+    </div>
 
     <Section id="contact" >
       <Image
@@ -53,6 +55,33 @@ import "../styles/tippy.css";
   <Footer />
 </Layout>
 
+<style>
+  .swiper-outer {
+    width: 100%;
+    max-width: none;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: var(--color-light-bone);
+      transform: skewY(-2deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top:90%;
+      bottom: 8px;
+      width: 100%;
+      background-color: red;
+      transform: skewY(-2deg) rotate(0.35deg);
+      box-shadow: var(--shadow-3);
+      z-index: -1;
+    }
+  }
+</style>
 <script>
   // Obfuscate email
   const email = document.querySelector("#email");

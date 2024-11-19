@@ -1,6 +1,8 @@
 /* stylelint-disable hue-degree-notation */
 @import url('./reset.css');
 @import url('./venus.css');
+/* stylelint-disable-next-line import-notation */
+@import "open-props/shadows";
 
 :root {
   --ff-base: 'Venus-Acier', sans-serif;
@@ -153,7 +155,7 @@ ol li {
   background-color: transparent;
 
   & .drop-shadow {
-    filter: drop-shadow(rgba(21 20 15 / 20%) 0.06em 0.06em 0.06em);
+    filter: drop-shadow(rgb(21 20 15 / 20%) 0.06em 0.06em 0.06em);
   }
 }
 

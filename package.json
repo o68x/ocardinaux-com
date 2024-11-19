@@ -18,6 +18,7 @@
     "browserslist": "^4.24.2",
     "lightningcss": "^1.28.1",
     "motion": "^11.11.17",
+    "open-props": "^1.7.7",
     "swiper": "^11.1.14",
     "tippy.js": "^6.3.7",
     "typescript": "^5.6.3"
