@@ -46,7 +46,7 @@
 }
 
 html {
-  --scrollbar-foreground: var(--color-dark-bone);
+  --scrollbar-foreground: var(--color-light-fern);
   --scrollbar-background: var(--color-light-bone);
 
   scroll-behavior: smooth;
@@ -131,6 +131,7 @@ ol li {
     place-items: center;
     margin-inline-end: var(--s-5);
     color: var(--color-fern);
+    text-shadow: var(--text-shadow);
     background-color: var(--color-dark-bone);
     border-radius: 50%;
     line-height: 1;
