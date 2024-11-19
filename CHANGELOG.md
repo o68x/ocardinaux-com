@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.6.5](https://github.com/o68x/ocardinaux-com/compare/v3.6.4...v3.6.5) (2024-11-19)
+
+
+### Bug Fixes
+
+* add motion (mainly opacity) ([95e0920](https://github.com/o68x/ocardinaux-com/commit/95e09205c9e9b63961bd06495452d390dde700c6))
+
 ## [3.6.4](https://github.com/o68x/ocardinaux-com/compare/v3.6.3...v3.6.4) (2024-11-19)
 
 
