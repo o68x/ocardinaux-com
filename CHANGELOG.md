@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.6.4](https://github.com/o68x/ocardinaux-com/compare/v3.6.3...v3.6.4) (2024-11-19)
+
+
+### Bug Fixes
+
+* add og metadata ([7e0ea62](https://github.com/o68x/ocardinaux-com/commit/7e0ea62165b2039e058e7a2af14a2c2d2232470c))
+
 ## [3.6.3](https://github.com/o68x/ocardinaux-com/compare/v3.6.2...v3.6.3) (2024-11-18)
 
 ## [3.6.2](https://github.com/o68x/ocardinaux-com/compare/v3.6.1...v3.6.2) (2024-11-18)
