@@ -1,14 +1,14 @@
 /* stylelint-disable hue-degree-notation */
-@import url('./reset.css');
-@import url('./venus.css');
+@import url("./reset.css");
+@import url("./venus.css");
 /* stylelint-disable-next-line import-notation */
 @import "open-props/shadows";
 
 :root {
-  --ff-base: 'Venus-Acier', sans-serif;
-  --ff-base-bold: 'Venus-Plomb', sans-serif;
-  --ff-base-light: 'Venus-Acier', sans-serif;
-  --ff-heading: 'Venus-Martre', sans-serif;
+  --ff-base: "Venus-Acier", sans-serif;
+  --ff-base-bold: "Venus-Plomb", sans-serif;
+  --ff-base-light: "Venus-Acier", sans-serif;
+  --ff-heading: "Venus-Martre", sans-serif;
   --color-bone: oklch(91.53% 0.023 83.41);
   --color-light-bone: oklch(from var(--color-bone) calc(l * 1.1) calc(c * 0.5) h);
   --color-dark-bone: oklch(from var(--color-bone) calc(l * 0.95) c h);
@@ -72,11 +72,12 @@ main {
   min-height: 100vh;
   overflow: clip;
   background-color: var(--color-bone);
-  background-image:
-      radial-gradient(circle at 50% 8%,
-      var(--color-light-bone) 0,
-      var(--color-dark-bone) 55%,
-      var(--color-bone) 100%);
+  background-image: radial-gradient(
+    circle at 50% 8%,
+    var(--color-light-bone) 0,
+    var(--color-dark-bone) 55%,
+    var(--color-bone) 100%
+  );
   background-size: cover;
   z-index: 1;
 
@@ -85,13 +86,14 @@ main {
     --s: 63px;
     --c1: var(--color-very-dark-bone);
     --c2: transparent;
-    --_g: #0000 90deg,var(--c1) 0;
+    --_g: #0000 90deg, var(--c1) 0;
 
-    background:
-      conic-gradient(from 90deg at 2px 2px,var(--_g)),
-      conic-gradient(from 90deg at 1px 1px,var(--_g)),
-      var(--c2);
-    background-size: var(--s) var(--s), calc(var(--s)/5) calc(var(--s)/5);    content: "";
+    background: conic-gradient(from 90deg at 2px 2px, var(--_g)),
+      conic-gradient(from 90deg at 1px 1px, var(--_g)), var(--c2);
+    background-size:
+      var(--s) var(--s),
+      calc(var(--s) / 5) calc(var(--s) / 5);
+    content: "";
     position: absolute;
     inset: 0;
     opacity: 0.1;
@@ -143,20 +145,20 @@ ol li {
   }
 }
 
-.separator {
+.footer-separator {
   position: relative;
   background-color: transparent;
   z-index: 10;
-}
 
-.svg-separator {
-  width: 100%;
-  height: auto;
-  color: var(--color-bone);
-  background-color: transparent;
+  & > div {
+    width: 100%;
+    height: auto;
+    color: var(--color-bone);
+    background-color: transparent;
 
-  & .drop-shadow {
-    filter: drop-shadow(rgb(21 20 15 / 20%) 0.06em 0.06em 0.06em);
+    & .drop-shadow {
+      filter: drop-shadow(rgb(21 20 15 / 20%) 0.06em 0.06em 0.06em);
+    }
   }
 }
 
@@ -187,7 +189,9 @@ h2 {
   opacity: 0.75;
 }
 
-.strong, b, strong {
+.strong,
+b,
+strong {
   font-family: var(--ff-base-bold);
   font-weight: 400;
   letter-spacing: 0.06em;

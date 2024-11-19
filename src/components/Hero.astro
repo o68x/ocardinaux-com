@@ -197,16 +197,10 @@ import astronomyFig from "../assets/images/astronomy-fig-38.webp";
 </style>
 
 <script>
+  import { inView } from "motion";
   const more = document.querySelector(".more");
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("faded-out");
-        }
-      });
-    },
-    { rootMargin: "-200px" },
-  );
-  if (more) observer.observe(more);
+
+  if (more) inView(more, (info) => {
+    info.target.classList.add("faded-out");
+  }, { margin: "0px 0px -200px 0px" });
 </script>

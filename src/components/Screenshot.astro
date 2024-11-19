@@ -88,7 +88,13 @@ const domain = url?.replace(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:/\n]+)/
     & > figure {
       padding: var(--s-1);
       position: relative;
-      transition: background-color 0.2s ease;
+      transition:
+        background-color 0.2s ease,
+        filter 0.5s ease-in-out;
+      transform: rotate3d(20, 40, 0, 30deg);
+      filter: drop-shadow(var(--s-5) var(--s-5) 10px rgb(0 0 0 / 20%));
+      transform-origin: center;
+      will-change: transform;
     }
 
     & figcaption {
@@ -120,14 +126,9 @@ const domain = url?.replace(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:/\n]+)/
 
     & img {
       width: 100%;
-      transform: rotate3d(20, 40, 0, 30deg);
-      filter: drop-shadow(var(--s-5) var(--s-5) 10px rgb(0 0 0 / 20%));
-      transform-origin: center;
       height: auto;
       object-fit: contain;
       padding: var(--s-5);
-      will-change: transform;
-      transition: filter 0.5s ease-in-out;
     }
 
     & .backside {

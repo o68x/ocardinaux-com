@@ -17,39 +17,23 @@ import "../styles/tippy.css";
   <main>
     <Hero />
 
-    <Section id="construction" >
-      <Image
-        src={fig34}
-        alt=""
-        width="240"
-        />
-      <Image
-        src={fig50}
-        alt=""
-        slot="separator"
-        width="240"
-        />
+    <Section id="construction">
+      <Image src={fig34} alt="" width="240" />
+      <Image src={fig50} alt="" slot="separator" width="240" />
     </Section>
 
     <div class="swiper-outer">
       <ScreenshotSlider />
     </div>
 
-    <Section id="contact" >
-      <Image
-        src={fig11} alt=""
-        width="240"
-      />
-      <Image
-        src={fig27} alt=""
-        slot="separator"
-        width="240"
-        />
+    <Section id="contact">
+      <Image src={fig11} alt="" width="240" />
+      <Image src={fig27} alt="" slot="separator" width="240" />
     </Section>
   </main>
 
-  <div class="separator">
-    <RawSvg className="svg-separator" svgFile="paper-tear" />
+  <div class="footer-separator">
+    <RawSvg className="footer-separator-svg" svgFile="paper-tear" />
   </div>
 
   <Footer />
@@ -72,7 +56,7 @@ import "../styles/tippy.css";
     &::after {
       content: "";
       position: absolute;
-      top:90%;
+      top: 90%;
       bottom: 8px;
       width: 100%;
       background-color: red;
@@ -82,12 +66,14 @@ import "../styles/tippy.css";
     }
   }
 </style>
+
 <script>
   // Obfuscate email
   const email = document.querySelector("#email");
   const user = "olivier";
   const domain = "ocardinaux.com";
-  if (email) email.innerHTML = `<a href='mailto:${user}@${domain}?subject=Mon site'>${user}@${domain}</a>`;
+  if (email)
+    email.innerHTML = `<a href='mailto:${user}@${domain}?subject=Mon site'>${user}@${domain}</a>`;
 
   // Obfuscate tel number (useful?)
   const tel = document.querySelector("#tel");

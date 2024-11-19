@@ -13,11 +13,7 @@ const { Content } = await render(entry);
 <footer class="footer">
   <div class="about">
     <figure class="portrait cut-out">
-      <Image
-        src={portrait}
-        alt="Portrait de Olivier"
-        width="240"
-        />
+      <Image src={portrait} alt="Portrait de Olivier" width="240" />
     </figure>
     <Content />
   </div>
@@ -104,7 +100,9 @@ const { Content } = await render(entry);
       white-space: inherit;
     }
 
-    h3 {display: none;}
+    h3 {
+      display: none;
+    }
 
     a,
     a:visited {
@@ -138,3 +136,31 @@ const { Content } = await render(entry);
     opacity: 0.6;
   }
 </style>
+
+<script>
+  import { inView, animate, stagger } from "motion";
+  const separator = document.querySelector(".footer-separator");
+  const about = document.querySelector(".about");
+  const aboutElements = about?.querySelectorAll("li, p");
+
+  if (aboutElements)
+    aboutElements.forEach((el) => {
+      (el as HTMLElement).style.opacity = "0";
+    });
+
+  const reveal = (area: Element) => {
+    inView(area, () => {
+      const areaElements = area.querySelectorAll("li, p");
+      animate(areaElements, { opacity: [0, 1] }, { duration: 2, delay: stagger(0.1) });
+    });
+  };
+
+  if (separator)
+    inView(
+      separator,
+      () => {
+        if (about) reveal(about);
+      },
+      { margin: "0px 0px -20% 0px" },
+    );
+</script>

@@ -90,3 +90,27 @@ const { Content } = await render(entry);
     }
   }
 </style>
+
+<script>
+  import { animate, stagger, inView } from "motion";
+
+  const reveal = (area: Element) => {
+    inView(area, () => {
+      const elements = area?.querySelectorAll("li, p") ?? [];
+        animate(
+          elements,
+          { opacity: [0, 1] },
+          { duration: 2, delay: stagger(0.1) }
+        );
+      });
+  };
+
+  const textAreas = document.querySelectorAll(".text") ?? [];
+
+  textAreas.forEach((textArea) => {
+    textArea.querySelectorAll("li, p")?.forEach((el) => {
+      (el as HTMLElement).style.opacity = "0";
+    });
+    reveal(textArea);
+  });
+</script>
