@@ -12,14 +12,14 @@ importers:
         specifier: ^0.9.4
         version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@3.3.3)(typescript@5.7.2)
       '@astrojs/markdoc':
-        specifier: 0.12.0-beta.0
-        version: 0.12.0-beta.0(astro@5.0.0-beta.11(lightningcss@1.28.2)(rollup@4.27.4)(typescript@5.7.2)(yaml@2.6.1))
+        specifier: 0.12.0-beta.1
+        version: 0.12.0-beta.1(astro@5.0.0-beta.12(lightningcss@1.28.2)(rollup@4.27.4)(typescript@5.7.2)(yaml@2.6.1))
       '@typescript-eslint/parser':
         specifier: ^8.16.0
         version: 8.16.0(eslint@9.15.0)(typescript@5.7.2)
       astro:
-        specifier: 5.0.0-beta.11
-        version: 5.0.0-beta.11(lightningcss@1.28.2)(rollup@4.27.4)(typescript@5.7.2)(yaml@2.6.1)
+        specifier: 5.0.0-beta.12
+        version: 5.0.0-beta.12(lightningcss@1.28.2)(rollup@4.27.4)(typescript@5.7.2)(yaml@2.6.1)
       browserslist:
         specifier: ^4.24.2
         version: 4.24.2
@@ -108,22 +108,22 @@ packages:
       prettier-plugin-astro:
         optional: true
 
-  '@astrojs/markdoc@0.12.0-beta.0':
-    resolution: {integrity: sha512-mtJFw+GRPI8l0zhERYMNb6IWk5dBiibfq0dlkhQe2oihgre6zmebqr4hsQH+2oN99JzFQMTWcO6AFfOa/X9etw==}
-    engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0}
+  '@astrojs/markdoc@0.12.0-beta.1':
+    resolution: {integrity: sha512-bHj0W9USM4VigaS32WPKEc1uo3Ub2SAG2JDCsTPqkmumx5YFQp4pKerX+Bilp0bfiS6t4GkmNXnw0S1s322hbw==}
+    engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0}
     peerDependencies:
       astro: ^5.0.0-alpha.0
 
-  '@astrojs/markdown-remark@6.0.0-beta.2':
-    resolution: {integrity: sha512-XHadnf3c+hb2A0kWBuwKA3TqBKi7bIF3bpRt49DTnE3dVlsHDPmByn0Wj3CZij1HvXL/ODmPiOJt2JGXMeivuQ==}
+  '@astrojs/markdown-remark@6.0.0-beta.3':
+    resolution: {integrity: sha512-M6wGxQH9rRwsmcJ+IVfYJ8moYmPVXE2u2pcPJx+VbOEMgJ7gmnJ1eso40KP0JOvq8nGPlcfeyqba45WrYxhKlA==}
 
-  '@astrojs/prism@3.1.0':
-    resolution: {integrity: sha512-Z9IYjuXSArkAUx3N6xj6+Bnvx8OdUSHA8YoOgyepp3+zJmtVYJIl/I18GozdJVW1p5u/CNpl3Km7/gwTJK85cw==}
-    engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0}
+  '@astrojs/prism@3.2.0-beta.0':
+    resolution: {integrity: sha512-0OZSIFV0accYiNZRoDjMkGsp+M3DNemBxEQJ4rphB6vL5mPBBgTKPwD+zf3H1PmOysIYltSJ6rzSI8JCnGqVIg==}
+    engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0}
 
-  '@astrojs/telemetry@3.1.0':
-    resolution: {integrity: sha512-/ca/+D8MIKEC8/A9cSaPUqQNZm+Es/ZinRv0ZAzvu2ios7POQSsVD+VOj7/hypWNsNM3T7RpfgNq7H2TU1KEHA==}
-    engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0}
+  '@astrojs/telemetry@3.2.0-beta.0':
+    resolution: {integrity: sha512-8KCnaFAVsm/0KdXzWN0Afz50Ijyr1uHT31bE5AgCF5CLMh0dUpEOvHgZ++zLLq+VFj+5e4o0L6TLXMeAVHECBg==}
+    engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0}
 
   '@astrojs/yaml2ts@0.2.2':
     resolution: {integrity: sha512-GOfvSr5Nqy2z5XiwqTouBBpy5FyI6DEe+/g/Mk5am9SjILN1S5fOEvYK0GuWHg98yS/dobP4m8qyqw/URW35fQ==}
@@ -987,9 +987,9 @@ packages:
     resolution: {integrity: sha512-F6NW1RJo5pp2kPnnM97M5Ohw8zAGjv83MpxHqfAochH68n/kiXN57+hYaNUCA7XkScoVNr6yzvly3hsY34TGfQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  astro@5.0.0-beta.11:
-    resolution: {integrity: sha512-Fvb8wP9g7/fyl64Fp0UGIGXxLeXc/0pIKAZNICuAK2zJYDuHwHpd3iz8JgoSls0SJM9AgPaJ+N2It64Jf5lNOQ==}
-    engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
+  astro@5.0.0-beta.12:
+    resolution: {integrity: sha512-ZZSjXSZXtgfE89iSW8bhOTgKFha5To6GL2rbkZH6IzXg60xplcIQFYJ2Q5/U0I2/2Qv+ydL3H79Jiaw/DTSHjw==}
+    engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
   astrojs-compiler-sync@1.0.1:
@@ -2994,12 +2994,12 @@ packages:
   vfile@6.0.3:
     resolution: {integrity: sha512-KzIbH/9tXat2u30jf+smMwFCsno4wHVdNmzFyL+T/L3UGqqk6JKfVqOFOZEpZSHADH1k40ab6NUIXZq422ov3Q==}
 
-  vite@6.0.0-beta.6:
-    resolution: {integrity: sha512-XbMzqwx2CDrOOKDDRvenHMQx+JwUTSm/1a/GgjTL6oC5XwpAk+PgoxmB6vGh2UQi0t9EIVS5d2GZXMWd4P5ahA==}
-    engines: {node: ^18.0.0 || >=20.0.0}
+  vite@6.0.1:
+    resolution: {integrity: sha512-Ldn6gorLGr4mCdFnmeAOLweJxZ34HjKnDm4HGo6P66IEqTxQb36VEdFJQENKxWjupNfoIjvRUnswjn1hpYEpjQ==}
+    engines: {node: ^18.0.0 || ^20.0.0 || >=22.0.0}
     hasBin: true
     peerDependencies:
-      '@types/node': ^18.0.0 || >=20.0.0
+      '@types/node': ^18.0.0 || ^20.0.0 || >=22.0.0
       jiti: '>=1.21.0'
       less: '*'
       lightningcss: ^1.21.0
@@ -3349,13 +3349,13 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@astrojs/markdoc@0.12.0-beta.0(astro@5.0.0-beta.11(lightningcss@1.28.2)(rollup@4.27.4)(typescript@5.7.2)(yaml@2.6.1))':
+  '@astrojs/markdoc@0.12.0-beta.1(astro@5.0.0-beta.12(lightningcss@1.28.2)(rollup@4.27.4)(typescript@5.7.2)(yaml@2.6.1))':
     dependencies:
       '@astrojs/internal-helpers': 0.4.1
-      '@astrojs/markdown-remark': 6.0.0-beta.2
-      '@astrojs/prism': 3.1.0
+      '@astrojs/markdown-remark': 6.0.0-beta.3
+      '@astrojs/prism': 3.2.0-beta.0
       '@markdoc/markdoc': 0.4.0
-      astro: 5.0.0-beta.11(lightningcss@1.28.2)(rollup@4.27.4)(typescript@5.7.2)(yaml@2.6.1)
+      astro: 5.0.0-beta.12(lightningcss@1.28.2)(rollup@4.27.4)(typescript@5.7.2)(yaml@2.6.1)
       esbuild: 0.21.5
       github-slugger: 2.0.0
       htmlparser2: 9.1.0
@@ -3364,9 +3364,9 @@ snapshots:
       - react
       - supports-color
 
-  '@astrojs/markdown-remark@6.0.0-beta.2':
+  '@astrojs/markdown-remark@6.0.0-beta.3':
     dependencies:
-      '@astrojs/prism': 3.1.0
+      '@astrojs/prism': 3.2.0-beta.0
       github-slugger: 2.0.0
       hast-util-from-html: 2.0.3
       hast-util-to-text: 4.0.2
@@ -3388,11 +3388,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/prism@3.1.0':
+  '@astrojs/prism@3.2.0-beta.0':
     dependencies:
       prismjs: 1.29.0
 
-  '@astrojs/telemetry@3.1.0':
+  '@astrojs/telemetry@3.2.0-beta.0':
     dependencies:
       ci-info: 4.1.0
       debug: 4.3.7
@@ -4086,12 +4086,12 @@ snapshots:
       - supports-color
       - typescript
 
-  astro@5.0.0-beta.11(lightningcss@1.28.2)(rollup@4.27.4)(typescript@5.7.2)(yaml@2.6.1):
+  astro@5.0.0-beta.12(lightningcss@1.28.2)(rollup@4.27.4)(typescript@5.7.2)(yaml@2.6.1):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.1
-      '@astrojs/markdown-remark': 6.0.0-beta.2
-      '@astrojs/telemetry': 3.1.0
+      '@astrojs/markdown-remark': 6.0.0-beta.3
+      '@astrojs/telemetry': 3.2.0-beta.0
       '@oslojs/encoding': 1.1.0
       '@rollup/pluginutils': 5.1.3(rollup@4.27.4)
       '@types/cookie': 0.6.0
@@ -4137,8 +4137,8 @@ snapshots:
       ultrahtml: 1.5.3
       unist-util-visit: 5.0.0
       vfile: 6.0.3
-      vite: 6.0.0-beta.6(lightningcss@1.28.2)(yaml@2.6.1)
-      vitefu: 1.0.4(vite@6.0.0-beta.6(lightningcss@1.28.2)(yaml@2.6.1))
+      vite: 6.0.1(lightningcss@1.28.2)(yaml@2.6.1)
+      vitefu: 1.0.4(vite@6.0.1(lightningcss@1.28.2)(yaml@2.6.1))
       which-pm: 3.0.0
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
@@ -6519,7 +6519,7 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-  vite@6.0.0-beta.6(lightningcss@1.28.2)(yaml@2.6.1):
+  vite@6.0.1(lightningcss@1.28.2)(yaml@2.6.1):
     dependencies:
       esbuild: 0.24.0
       postcss: 8.4.49
@@ -6529,9 +6529,9 @@ snapshots:
       lightningcss: 1.28.2
       yaml: 2.6.1
 
-  vitefu@1.0.4(vite@6.0.0-beta.6(lightningcss@1.28.2)(yaml@2.6.1)):
+  vitefu@1.0.4(vite@6.0.1(lightningcss@1.28.2)(yaml@2.6.1)):
     optionalDependencies:
-      vite: 6.0.0-beta.6(lightningcss@1.28.2)(yaml@2.6.1)
+      vite: 6.0.1(lightningcss@1.28.2)(yaml@2.6.1)
 
   volar-service-css@0.0.62(@volar/language-service@2.4.10):
     dependencies:

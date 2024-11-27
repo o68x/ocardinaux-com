@@ -12,9 +12,9 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/markdoc": "0.12.0-beta.0",
+    "@astrojs/markdoc": "0.12.0-beta.1",
     "@typescript-eslint/parser": "^8.16.0",
-    "astro": "5.0.0-beta.11",
+    "astro": "5.0.0-beta.12",
     "browserslist": "^4.24.2",
     "lightningcss": "^1.28.2",
     "motion": "^11.11.17",
