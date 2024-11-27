@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.6.6](https://github.com/o68x/ocardinaux-com/compare/v3.6.5...v3.6.6) (2024-11-27)
+
+
+### Bug Fixes
+
+* add selection color ([3b3b8e6](https://github.com/o68x/ocardinaux-com/commit/3b3b8e693ef85e81f6b213c83fcd0476bc1c5e33))
+
 ## [3.6.5](https://github.com/o68x/ocardinaux-com/compare/v3.6.4...v3.6.5) (2024-11-19)
 
 
