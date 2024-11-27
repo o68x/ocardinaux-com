@@ -1,8 +1,8 @@
 /* stylelint-disable hue-degree-notation */
 @import url("./reset.css");
 @import url("./venus.css");
-/* stylelint-disable-next-line import-notation */
-@import "open-props/shadows";
+@import url("open-props/shadows");
+@import url("./shame.css");
 
 :root {
   --ff-base: "Venus-Acier", sans-serif;
@@ -43,6 +43,11 @@
   --color-citrine: oklch(85.86% 0.1674 101.41); /* #e8d331 */
   --fig-blend-mode: luminosity;
   --fig-opacity: 0.85;
+}
+
+::selection {
+  color: var(--color-bone);
+  background-color: var(--color-light-fern);
 }
 
 html {
