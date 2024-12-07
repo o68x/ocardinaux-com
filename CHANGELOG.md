@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.6.7](https://github.com/o68x/ocardinaux-com/compare/v3.6.6...v3.6.7) (2024-12-07)
+
 ## [3.6.6](https://github.com/o68x/ocardinaux-com/compare/v3.6.5...v3.6.6) (2024-11-27)
 
 
