@@ -9,6 +9,7 @@ export interface Props {
 const { id } = Astro.props;
 
 const entry = await getEntry("sections", id);
+if (!entry) throw new Error(`No entry found for id ${id}`);
 const { Content } = await render(entry);
 
 ---

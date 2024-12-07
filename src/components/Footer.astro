@@ -7,6 +7,7 @@ import { version } from "../../package.json";
 import { Content as Changelog } from "../../CHANGELOG.md";
 
 const entry = await getEntry("sections", "about");
+if (!entry) throw new Error(`No entry found`);
 const { Content } = await render(entry);
 ---
 
