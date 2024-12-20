@@ -13,17 +13,17 @@
   "dependencies": {
     "@astrojs/check": "^0.9.4",
     "@astrojs/markdoc": "^0.12.3",
-    "@typescript-eslint/parser": "^8.18.0",
-    "astro": "^5.0.5",
+    "@typescript-eslint/parser": "^8.18.1",
+    "astro": "^5.1.0",
     "browserslist": "^4.24.3",
     "lightningcss": "^1.28.2",
-    "motion": "^11.14.4",
+    "motion": "^11.15.0",
     "open-props": "^1.7.8",
     "swiper": "^11.1.15",
     "tippy.js": "^6.3.7",
     "typescript": "^5.7.2"
   },
-  "packageManager": "pnpm@9.15.0+sha512.76e2379760a4328ec4415815bcd6628dee727af3779aaa4c914e3944156c4299921a89f976381ee107d41f12cfa4b66681ca9c718f0668fa0831ed4c6d8ba56c",
+  "packageManager": "pnpm@9.15.1+sha512.1acb565e6193efbebda772702950469150cf12bcc764262e7587e71d19dc98a423dff9536e57ea44c49bdf790ff694e83c27be5faa23d67e0c033b583be4bfcf",
   "devDependencies": {
     "@eslint/js": "^9.17.0",
     "@prettier/plugin-xml": "3.4.1",
@@ -35,7 +35,7 @@
     "prettier": "3.3.3",
     "prettier-plugin-astro": "^0.14.1",
     "sharp": "^0.33.5",
-    "stylelint": "^16.11.0",
+    "stylelint": "^16.12.0",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-standard": "^36.0.1"
   }
