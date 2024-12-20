@@ -9,6 +9,10 @@ export default defineConfig({
   publicDir: 'static',
   site: 'https://ocardinaux.com',
 
+  experimental: {
+    svg: true,
+  },
+
   vite: {
     css: {
       transformer: "lightningcss",

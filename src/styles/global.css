@@ -155,7 +155,7 @@ ol li {
   background-color: transparent;
   z-index: 10;
 
-  & > div {
+  & > svg {
     width: 100%;
     height: auto;
     color: var(--color-bone);
