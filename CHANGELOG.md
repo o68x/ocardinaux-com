@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [3.7.0](https://github.com/o68x/ocardinaux-com/compare/v3.6.9...v3.7.0) (2024-12-20)
+
+
+### Features
+
+* use new experimental svg component ([1d82510](https://github.com/o68x/ocardinaux-com/commit/1d82510b5ddf0795e0a98fe82d6a150bfc34fca6))
+
 ## [3.6.9](https://github.com/o68x/ocardinaux-com/compare/v3.6.8...v3.6.9) (2024-12-15)
 
 
