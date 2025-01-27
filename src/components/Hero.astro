@@ -129,6 +129,16 @@ import astronomyFig from "../assets/images/astronomy-fig-38.webp";
     font-size: var(--s-1);
     display: flex;
     gap: var(--s-1);
+
+    & span {
+      border: 1px solid var(--color-very-dark-bone);
+      padding: var(--s-3);
+      border-radius: var(--s-1);
+
+      &:has(a:hover) {
+      background-color: var(--color-light-bone);
+      }
+    }
   }
 
   /* ----------------------------------------------
@@ -219,8 +229,7 @@ import astronomyFig from "../assets/images/astronomy-fig-38.webp";
     const ref = getQueryParam('ref');
 
     // Do something with the 'ref' value
-    console.log(ref);
-    if (ref !== "bcard") {
+    if (ref === "bcard") {
       const more = document.querySelector("#bcard");
       more?.classList.remove("visually-hidden");
     }
