@@ -36,6 +36,9 @@ import astronomyFig from "../assets/images/astronomy-fig-38.webp";
     <p class="subtitle">Construction de sites internet</p>
     <p>Paris · Lausanne · L'Isle-sur-la-Sorgue</p>
     <!-- <WIP /> -->
+     <div id="bcard" class="visually-hidden">
+      <span><a href="mailto:olivier@ocardinaux.com?subject=Mon site"><Icon icon="paper-plane" /> E-mail</a></span><span><a href="tel:+33689638014"><Icon icon="phone" /> Téléphone</a></span>
+     </div>
   </div>
   <div class="more">
     <span>
@@ -119,6 +122,15 @@ import astronomyFig from "../assets/images/astronomy-fig-38.webp";
     }
   }
 
+  #bcard {
+    --size: var(--s1);
+
+    padding-top: var(--s2);
+    font-size: var(--s-1);
+    display: flex;
+    gap: var(--s-1);
+  }
+
   /* ----------------------------------------------
  * Modified from Animista on 2024-11-1 4:18:21
  * Licensed under FreeBSD License.
@@ -197,7 +209,23 @@ import astronomyFig from "../assets/images/astronomy-fig-38.webp";
 </style>
 
 <script>
-  import { inView } from "motion";
+      // Function to get the value of a URL parameter
+      function getQueryParam(param: string) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    // Get the 'ref' parameter from the URL
+    const ref = getQueryParam('ref');
+
+    // Do something with the 'ref' value
+    console.log(ref);
+    if (ref !== "bcard") {
+      const more = document.querySelector("#bcard");
+      more?.classList.remove("visually-hidden");
+    }
+
+    import { inView } from "motion";
   const more = document.querySelector(".more");
 
   if (more) inView(more, (element, info) => {
