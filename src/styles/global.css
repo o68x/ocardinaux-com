@@ -1,14 +1,15 @@
 /* stylelint-disable hue-degree-notation */
 @import url("./reset.css");
-@import url("./venus.css");
+
+/* @import url("./venus.css"); */
 @import url("open-props/shadows");
 @import url("./shame.css");
 
 :root {
-  --ff-base: "Venus-Acier", sans-serif;
-  --ff-base-bold: "Venus-Plomb", sans-serif;
-  --ff-base-light: "Venus-Acier", sans-serif;
-  --ff-heading: "Venus-Martre", sans-serif;
+  --ff-base: var(--venus-acier);
+  --ff-base-bold: var(--venus-plomb);
+  --ff-base-light: var(--venus-acier);
+  --ff-heading: var(--venus-martre);
   --color-bone: oklch(91.53% 0.023 83.41);
   --color-light-bone: oklch(from var(--color-bone) calc(l * 1.1) calc(c * 0.5) h);
   --color-dark-bone: oklch(from var(--color-bone) calc(l * 0.95) c h);

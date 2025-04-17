@@ -1,5 +1,6 @@
 ---
 // import "../styles/webfontsKit.css";
+import { Font } from 'astro:assets';
 import "../styles/global.css";
 interface Props {
   title?: string | undefined;
@@ -20,7 +21,9 @@ const {
     <meta name="description" content={description} />
     <meta name="viewport" content="width=device-width initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
-
+    <Font cssVariable='--venus-acier' />
+    <Font cssVariable='--venus-martre' />
+    <Font cssVariable='--venus-plomb' />
     <link rel="icon" href="/favicon.png" />
 
     <!-- HTML Meta Tags -->
