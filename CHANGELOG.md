@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [4.0.0](https://github.com/o68x/ocardinaux-com/compare/v3.7.0...v4.0.0) (2025-04-17)
+
+
+### ⚠ BREAKING CHANGES
+
+* upgrade to astro 5.7 with font loader, svg support
+
+### Features
+
+* add bcard parrm buttons ([8c3f0f9](https://github.com/o68x/ocardinaux-com/commit/8c3f0f9842b1baf9bf1858b35f208dcb4a14be2f))
+* upgrade to astro 5.7 with font loader, svg support ([8d74aea](https://github.com/o68x/ocardinaux-com/commit/8d74aea90635eb14880d5952b4491d8e178c9284))
+
+
+### Bug Fixes
+
+* correct and style contact buttons ([6a3c645](https://github.com/o68x/ocardinaux-com/commit/6a3c64502da225d4f4125b1344b526c9ef094d43))
+* full name in about ([d57feac](https://github.com/o68x/ocardinaux-com/commit/d57feacee6872c9b404ac3496c03a1b6bb2091a1))
+* inview parameter ([dd2e16a](https://github.com/o68x/ocardinaux-com/commit/dd2e16ad974f8fccb70534323f4a5b59d7b9fade))
+
 ## [3.7.0](https://github.com/o68x/ocardinaux-com/compare/v3.6.9...v3.7.0) (2024-12-20)
 
 
