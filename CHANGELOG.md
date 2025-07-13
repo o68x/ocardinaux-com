@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [4.1.0](https://github.com/o68x/ocardinaux-com/compare/v4.0.0...v4.1.0) (2025-07-13)
+
+
+### Features
+
+* add pascale collange ([340aa55](https://github.com/o68x/ocardinaux-com/commit/340aa5561081aed7b285c65df5fe8855ad901ca4))
+
 ## [4.0.0](https://github.com/o68x/ocardinaux-com/compare/v3.7.0...v4.0.0) (2025-04-17)
 
 
