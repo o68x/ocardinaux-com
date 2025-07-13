@@ -21,6 +21,13 @@
     "backside": "L'association des Artistes du V<sup>e</sup> vous propose de découvrir les œuvres de ses artistes et ses dernères expositions."
   },
   {
+    "id": "pcHome",
+    "src": "./pcHome.webp",
+    "url": "https://pascalecollange.fr",
+    "alt": "",
+    "backside": "Pascale Collange est illustratrice, et elle présente sur son site ses créations et ses actualités."
+  },
+  {
     "id": "votreSite",
     "src": "./votreSite.webp",
     "url": "#contact",
