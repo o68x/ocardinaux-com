@@ -6,23 +6,24 @@ import "swiper/css/navigation";
 const screenshots = await getCollection("screenshots");
 import Screenshot from "./Screenshot.astro";
 interface Props {
-  class?: string
+  class?: string;
 }
 
 // const { class: className } = Astro.props;
-
 ---
+
 <div class="swiper">
   <div class="swiper-wrapper">
-    {screenshots.map((screenshot) => (
-      <Screenshot
-        src={screenshot.data.src}
-        url={screenshot.data.url}
-        alt={screenshot.data.alt || ""}
-        backside={screenshot.data.backside || ""
-        }
-      />
-    ))}
+    {
+      screenshots.map((screenshot: any) => (
+        <Screenshot
+          src={screenshot.data.src}
+          url={screenshot.data.url}
+          alt={screenshot.data.alt || ""}
+          backside={screenshot.data.backside || ""}
+        />
+      ))
+    }
   </div>
   <div class="swiper-navigation">
     <div class="swiper-button-prev"></div>
@@ -31,7 +32,6 @@ interface Props {
 </div>
 
 <style>
-
   .swiper {
     --swiper-theme-color: var(--color-fern);
     --swiper-navigation-size: var(--s-1);
@@ -58,10 +58,11 @@ interface Props {
 
   .swiper-button-prev,
   .swiper-button-next {
-    position:unset;
+    position: unset;
     width: var(--s2);
     height: var(--s2);
-    border: 1px solid var(--color-fern);
+    /*border: 1px solid var(--color-fern);*/
+    padding: 4px;
     border-radius: 50%;
 
     &:hover {
@@ -71,16 +72,16 @@ interface Props {
 </style>
 
 <script>
-import Swiper from "swiper";
-import { Navigation } from "swiper/modules";
-new Swiper(".swiper", {
-  modules: [Navigation],
-  slidesPerView: "auto",
-  spaceBetween: 0,
-  loop: true,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
+  import Swiper from "swiper";
+  import { Navigation } from "swiper/modules";
+  new Swiper(".swiper", {
+    modules: [Navigation],
+    slidesPerView: "auto",
+    spaceBetween: 0,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
 </script>
