@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [4.1.1](https://github.com/o68x/ocardinaux-com/compare/v4.1.0...v4.1.1) (2025-10-26)
+
+
+### Bug Fixes
+
+* navigation with SVG ([a26f0be](https://github.com/o68x/ocardinaux-com/commit/a26f0be8158b83ec95e68b89e60d659c057b3cad))
+
 ## [4.1.0](https://github.com/o68x/ocardinaux-com/compare/v4.0.0...v4.1.0) (2025-07-13)
 
 
