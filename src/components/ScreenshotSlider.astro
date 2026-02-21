@@ -15,7 +15,7 @@ interface Props {
 <div class="swiper">
   <div class="swiper-wrapper">
     {
-      screenshots.map((screenshot: any) => (
+      screenshots.map((screenshot) => (
         <Screenshot
           src={screenshot.data.src}
           url={screenshot.data.url}
@@ -74,14 +74,50 @@ interface Props {
 <script>
   import Swiper from "swiper";
   import { Navigation } from "swiper/modules";
-  new Swiper(".swiper", {
-    modules: [Navigation],
-    slidesPerView: "auto",
-    spaceBetween: 0,
-    loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
+
+  const flipCard = (target: EventTarget | null, wrapper: Element) => {
+    if (!(target instanceof Element)) return;
+
+    const parent = target.closest(".swiper-slide");
+    if (!parent) return;
+
+    const cards = wrapper.querySelectorAll("[data-img='screenshot']");
+    const otherCards = [...cards].filter((card) => card !== parent);
+
+    parent.classList.toggle("show-back");
+    parent.classList.toggle("show-home");
+
+    otherCards.forEach((card) => {
+      card.classList.remove("show-back");
+      card.classList.add("show-home");
+    });
+  };
+
+  const swiperElement = document.querySelector<HTMLElement>(".swiper");
+  const wrapper = document.querySelector(".swiper-wrapper");
+
+  if (wrapper) {
+    wrapper.addEventListener("click", (event) => {
+      flipCard(event.target, wrapper);
+    });
+
+    wrapper.addEventListener("keydown", (event) => {
+      if (!(event instanceof KeyboardEvent)) return;
+      if (event.key !== "Enter" && event.key !== " ") return;
+      event.preventDefault();
+      flipCard(event.target, wrapper);
+    });
+  }
+
+  if (swiperElement)
+    new Swiper(swiperElement, {
+      modules: [Navigation],
+      slidesPerView: "auto",
+      spaceBetween: 0,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
 </script>

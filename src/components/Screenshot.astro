@@ -28,6 +28,8 @@ const domain = url?.replace(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:/\n]+)/
   id={filenameWithoutExtension}
   data-img="screenshot"
   tabindex="0"
+  role="button"
+  aria-label={`Basculer la carte du projet ${alt || domain}`}
 >
   <figure>
     <Image
@@ -200,23 +202,3 @@ const domain = url?.replace(/^(?:https?:\/\/)?(?:[^@\n]+@)?(?:www\.)?([^:/\n]+)/
     will-change: transform;
   }
 </style>
-
-<script>
-  const imgWrapper = document.querySelector(".swiper-wrapper");
-
-  imgWrapper?.addEventListener("click", (event) => {
-    const otherParents = imgWrapper.querySelectorAll("[data-img='screenshot']");
-    // get the elements that are not the target
-    // get the parent with class swiper-slide
-    if (event.target instanceof Element) {
-      const parent = event.target.closest(".swiper-slide");
-      const notTarget = [...otherParents].filter((el) => el !== parent);
-      parent?.classList.toggle("show-back");
-      parent?.classList.toggle("show-home");
-      notTarget.forEach((el) => {
-        el.classList.remove("show-back");
-        el.classList.add("show-home");
-      });
-    }
-  });
-</script>
