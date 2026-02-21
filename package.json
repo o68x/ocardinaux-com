@@ -16,7 +16,7 @@
     "astro": "^5.17.2",
     "motion": "^12.34.1",
     "open-props": "^1.7.23",
-    "swiper": "^12.1.1",
+    "swiper": "^12.1.2",
     "tippy.js": "^6.3.7",
     "typescript": "^5.9.3"
   },
