@@ -13,8 +13,8 @@
   "dependencies": {
     "@astrojs/check": "^0.9.6",
     "@astrojs/markdoc": "^0.15.10",
-    "astro": "^5.17.3",
-    "motion": "^12.34.3",
+    "astro": "^5.18.0",
+    "motion": "^12.35.0",
     "open-props": "^1.7.23",
     "swiper": "^12.1.2",
     "tippy.js": "^6.3.7",
@@ -22,11 +22,11 @@
   },
   "packageManager": "pnpm@10.28.2",
   "devDependencies": {
-    "@biomejs/biome": "^2.4.4",
+    "@biomejs/biome": "^2.4.5",
     "@eslint/js": "^9.39.3",
     "@prettier/plugin-xml": "^3.4.2",
     "@typescript-eslint/parser": "^8.56.1",
-    "autoprefixer": "^10.4.24",
+    "autoprefixer": "^10.4.27",
     "browserslist": "^4.28.1",
     "commit-and-tag-version": "^12.6.1",
     "esbuild": "^0.27.3",
@@ -37,7 +37,7 @@
     "prettier": "^3.8.1",
     "prettier-plugin-astro": "^0.14.1",
     "sharp": "^0.34.5",
-    "stylelint": "^17.3.0",
+    "stylelint": "^17.4.0",
     "stylelint-config-html": "^1.1.0",
     "stylelint-config-standard": "^40.0.0"
   },
