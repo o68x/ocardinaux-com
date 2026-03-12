@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [4.2.0](https://github.com/o68x/ocardinaux-com/compare/v4.1.2...v4.2.0) (2026-03-12)
+
+
+### Features
+
+* upgrade to astro v6 ([1076c0a](https://github.com/o68x/ocardinaux-com/commit/1076c0a3295583c8e9b0f6c1b9104c06cf18e7b9))
+
+
+### Bug Fixes
+
+* update font config for astro ([b0abf65](https://github.com/o68x/ocardinaux-com/commit/b0abf65ffed1565681554c713d76c6df3725aeaf))
+
 ## [4.1.2](https://github.com/o68x/ocardinaux-com/compare/v4.1.1...v4.1.2) (2026-01-16)
 
 ## [4.1.1](https://github.com/o68x/ocardinaux-com/compare/v4.1.0...v4.1.1) (2025-10-26)
