@@ -1,7 +1,7 @@
 {
   "name": "ocardinaux.com",
   "type": "module",
-  "version": "4.2.0",
+  "version": "4.2.1",
   "scripts": {
     "dev": "astro dev",
     "start": "dev && open",
@@ -13,8 +13,8 @@
   "dependencies": {
     "@astrojs/check": "^0.9.9",
     "@astrojs/markdoc": "^1.0.5",
-    "astro": "^6.3.3",
-    "motion": "^12.38.0",
+    "astro": "^6.3.4",
+    "motion": "^12.39.0",
     "open-props": "^1.7.23",
     "swiper": "^12.1.4",
     "tippy.js": "^6.3.7",
@@ -30,7 +30,7 @@
     "browserslist": "^4.28.2",
     "commit-and-tag-version": "^12.7.3",
     "esbuild": "^0.28.0",
-    "eslint": "^10.3.0",
+    "eslint": "^10.4.0",
     "eslint-plugin-astro": "^1.7.0",
     "lightningcss": "^1.32.0",
     "postcss-html": "^1.8.1",
