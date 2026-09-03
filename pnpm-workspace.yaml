@@ -7,5 +7,6 @@ minimumReleaseAgeExclude:
   - motion-dom@12.39.0
   - motion-utils@12.39.0
   - motion@12.39.0
+  - astro@7.3.0
 shamefullyHoist: true
 strictPeerDependencies: false
